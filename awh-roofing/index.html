@@ -1,0 +1,379 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
+<title>Audit &middot; AWH Roofing Ltd &middot; AG1 Consulting</title><style>
+:root{--bg:#0d1117;--panel:#161b22;--ink:#e6edf3;--mut:#9aa7b4;--line:#2a3340;--accent:#2f81f7;
+  --good:#3fb950;--bad:#f85149;--gradF:#f85149;--gradD:#e8702a;--gradC:#d29922;--gradB:#3fb950;--gradA:#2ea043;}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.5;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+.eyebrow{letter-spacing:.18em;text-transform:uppercase;font-size:12px;color:var(--mut);font-weight:600}
+header{padding:46px 0 28px;border-bottom:1px solid var(--line);background:radial-gradient(1200px 400px at 70% -10%,rgba(47,129,247,.18),transparent)}
+h1{font-size:30px;font-weight:800;margin:10px 0 6px;letter-spacing:-.01em}
+.sub{color:var(--mut);font-size:15px}
+.hero{display:grid;grid-template-columns:300px 1fr;gap:26px;align-items:center;margin:34px 0 8px}
+@media(max-width:760px){.hero{grid-template-columns:1fr}}
+.gradecard{border:1px solid var(--line);border-radius:18px;padding:26px;text-align:center;position:relative;overflow:hidden}
+.gc-F{background:linear-gradient(160deg,#2a1410,#1c2330)}.gc-D{background:linear-gradient(160deg,#2a1c10,#1c2330)}
+.gc-C{background:linear-gradient(160deg,#2a2410,#1c2330)}.gc-B{background:linear-gradient(160deg,#102a1a,#1c2330)}
+.bigletter{font-size:96px;font-weight:900;line-height:1;position:relative}
+.bl-F{color:var(--gradF);text-shadow:0 0 40px rgba(248,81,73,.45)}
+.bl-D{color:var(--gradD);text-shadow:0 0 40px rgba(232,112,42,.45)}
+.bl-C{color:var(--gradC);text-shadow:0 0 40px rgba(210,153,34,.45)}
+.score100{font-size:18px;color:var(--mut);margin-top:6px;position:relative}
+.heroread h2{font-size:21px;font-weight:800;margin-bottom:10px}
+.heroread p{color:var(--mut);font-size:15.5px}
+.heroread .tag{display:inline-block;margin-top:14px;padding:6px 12px;border:1px solid var(--line);border-radius:999px;font-size:13px;color:var(--ink);background:var(--panel)}
+section{padding:34px 0;border-bottom:1px solid var(--line)}
+.h{font-size:13px;color:var(--mut);text-transform:uppercase;letter-spacing:.14em;font-weight:700;margin-bottom:18px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:760px){.grid{grid-template-columns:1fr}}
+.row{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px;display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center}
+.rname{font-weight:600;font-size:15px}
+.bar{height:7px;background:#0b0f15;border-radius:99px;margin-top:9px;overflow:hidden}
+.fill{height:100%;border-radius:99px}
+.badge{font-weight:800;font-size:15px;min-width:46px;height:46px;border-radius:10px;display:flex;align-items:center;justify-content:center;color:#0d1117}
+.gF{background:var(--gradF)}.gD{background:var(--gradD)}.gC{background:var(--gradC)}.gB{background:var(--gradB);color:#06210f}.gA{background:var(--gradA);color:#06210f}
+.sc{font-size:12px;color:var(--mut);margin-top:3px}
+.flag{background:linear-gradient(160deg,#2a1410,#161b22);border:1px solid #6f2a1f;border-radius:14px;padding:20px 22px;margin-bottom:14px}
+.flag .lab{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--bad);font-weight:700;margin-bottom:8px}
+.win{background:linear-gradient(160deg,#0f2417,#161b22);border:1px solid #1f6f3a;border-radius:14px;padding:20px 22px;margin-bottom:14px}
+.win .lab{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--good);font-weight:700;margin-bottom:8px}
+.warn{background:linear-gradient(160deg,#2a2410,#161b22);border:1px solid #6f5a1f;border-radius:14px;padding:20px 22px;margin-bottom:14px}
+.warn .lab{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--gradC);font-weight:700;margin-bottom:8px}
+.flag p,.win p,.warn p{color:var(--mut);font-size:14.5px;margin-bottom:9px}
+.flag p:last-child,.win p:last-child,.warn p:last-child{margin-bottom:0}
+.flag b,.win b,.warn b{color:var(--ink)}
+.flag ul,.win ul,.warn ul{margin:0 0 9px 20px;color:var(--mut);font-size:14.5px}
+.flag li,.win li,.warn li{margin-bottom:6px}
+.code{background:#0b0f15;border:1px solid var(--line);border-radius:8px;padding:14px 16px;margin:12px 0;font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:12.5px;line-height:1.85;color:var(--mut);overflow-x:auto}
+.code .ph{color:#ff9d94;font-weight:700}.code .ok{color:#84e0a8;font-weight:700}.code .c{color:#5b6672}
+.cmp{width:100%;border-collapse:collapse;font-size:14px;background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.cmp th{text-align:left;padding:11px 14px;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--mut);border-bottom:1px solid var(--line);font-weight:700}
+.cmp td{padding:11px 14px;border-bottom:1px solid var(--line);color:var(--mut);vertical-align:top}
+.cmp tr:last-child td{border-bottom:none}.cmp td b{color:var(--ink)}.cmp tr.you td{background:#241a12}
+.cmp .yes{color:var(--good);font-weight:700}.cmp .no{color:var(--bad);font-weight:700}
+.opp{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media(max-width:760px){.opp{grid-template-columns:1fr}}
+.ocard{background:linear-gradient(160deg,#0f2417,#161b22);border:1px solid #1f6f3a;border-radius:14px;padding:20px;text-align:center}
+.ocard .lab{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--mut)}
+.ocard .big{font-size:30px;font-weight:900;color:var(--good);margin:8px 0 2px}
+.ocard .small{font-size:13px;color:var(--mut)}
+.oppnote{color:var(--mut);font-size:14px;margin-top:14px}.oppnote b{color:var(--ink)}
+.arrow{display:flex;align-items:center;justify-content:center;gap:18px;margin:6px 0 2px;flex-wrap:wrap}
+.pill{font-size:60px;font-weight:900;line-height:1}
+.pill.from-F{color:var(--gradF)}.pill.from-D{color:var(--gradD)}.pill.from-C{color:var(--gradC)}
+.pill.to{color:var(--gradA)}
+.pilllab{font-size:12px;color:var(--mut);text-align:center;text-transform:uppercase;letter-spacing:.1em}
+.ar{font-size:34px;color:var(--mut)}
+ul.road{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(max-width:760px){ul.road{grid-template-columns:1fr}}
+ul.road li{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:8px;padding:11px 14px;font-size:14.5px}
+.road2 li{border-left-color:var(--good)}
+.cta{text-align:center;padding:40px 0 56px}
+.cta h2{font-size:22px;font-weight:800;margin-bottom:8px}
+.cta p{color:var(--mut);font-size:15px}
+footer{color:var(--mut);font-size:12.5px;text-align:center;padding:22px 0 40px;line-height:1.7}
+.gscale{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:26px 26px 20px;margin-top:16px}
+.gscale .gtitle{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--mut);font-weight:700;margin-bottom:26px;text-align:center}
+.gtrack{position:relative;height:14px;border-radius:8px;background:linear-gradient(90deg,#f85149 0%,#f85149 18%,#e3833c 34%,#d4a72c 52%,#7ec46a 74%,#3fb950 100%);margin:0 4px}
+.gmark{position:absolute;top:-46px;transform:translateX(-50%);text-align:center;white-space:nowrap}
+.gmark .gm-lab{font-size:10.5px;text-transform:uppercase;letter-spacing:.1em;color:var(--mut);font-weight:700}
+.gmark .gm-val{font-size:19px;font-weight:900;line-height:1.15}
+.gmark:after{content:"";position:absolute;left:50%;top:100%;width:2px;height:22px;transform:translateX(-50%);background:currentColor;opacity:.75}
+.gmark.now{color:var(--bad)}.gmark.now .gm-val{color:var(--bad)}
+.gmark.proj{color:var(--good)}.gmark.proj .gm-val{color:var(--good)}
+.gmark.proj{top:auto;bottom:-52px}
+.gmark.proj:after{top:auto;bottom:100%}
+.gdot{position:absolute;top:50%;width:16px;height:16px;border-radius:50%;transform:translate(-50%,-50%);border:3px solid #0d1117}
+.gdot.now{background:var(--bad)}.gdot.proj{background:var(--good)}
+.gticks{display:flex;justify-content:space-between;margin:66px 4px 0;font-size:11px;letter-spacing:.08em;color:var(--mut);font-weight:700}
+@media(max-width:620px){.gmark .gm-lab{font-size:9px}.gmark .gm-val{font-size:16px}}
+
+/* ---------- injected asset nav ---------- */
+/* display/padding/margin are declared explicitly so a page carrying its own bare
+   nav{} element rule (concept mockups do) cannot restyle the AG1 bar. */
+.agnav{display:block;padding:0;margin:0;position:sticky;top:0;z-index:80;background:rgba(13,17,23,.92);backdrop-filter:saturate(1.5) blur(10px);border-bottom:1px solid var(--line)}
+.agnav .inner{max-width:1080px;margin:0 auto;padding:0 22px;display:flex;flex-wrap:wrap;align-items:center;gap:6px}
+.agnav a{display:inline-block;padding:12px 14px;font-size:14px;font-weight:600;color:var(--mut);text-decoration:none;border-bottom:2px solid transparent;transition:color .15s,border-color .15s}
+.agnav a:hover{color:var(--ink);border-bottom-color:var(--accent)}
+.agnav a.on{color:var(--ink);border-bottom-color:var(--accent)}
+.agnav a.ext{color:var(--accent)}
+.agnav a.ext:hover{color:#fff}
+@media(max-width:560px){.agnav .inner{padding:0 14px}.agnav a{padding:10px 9px;font-size:13px}}
+</style></head><body>
+<nav class="agnav"><div class="inner"><a href="assets.html">All Assets</a><a href="value.html">Two Jobs At Once</a><a href="hiring.html">Hiring</a><a href="./" class="on">Audit</a><a href="https://andrei170.github.io/awh-roofing-demo/" class="ext">Recruitment Page</a></div></nav>
+<header>
+  <div class="wrap">
+    <div class="eyebrow">Pre-Call Audit &middot; AWH Roofing Ltd</div>
+    <h1>You Said The Problem Has Never Been Quantity. We Agree.</h1>
+    <div class="sub">Prepared for Alex Hickin &middot; updated 3 October 2026 after our call &middot; AG1 Consulting</div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="h">Why We Are Not Going To Pitch You More Leads</div>
+    <div class="warn">
+      <div class="lab">You told our team the bottleneck, and it is not enquiries</div>
+      <p>What came back from that conversation was this: <b>you do not have the staffing to handle the jobs you
+      already have, let alone more of them.</b> In your words, the problem has never been quantity.</p>
+      <p>⛔ <b>So an agency turning up to sell you a bigger pipeline is selling you a worse week.</b> If we filled
+      your inbox tomorrow you would be quoting work you cannot resource, and the honest outcome of that is slower
+      quotes, later starts and a reputation you spent nineteen years building taking the hit.</p>
+      <p>⭐ <b>There is a different lever, and it is the one your own numbers point at.</b> You told us your jobs
+      run from <b>&pound;20,000 to &pound;100,000</b>. That is a five-fold spread. <b>With the same crew and the
+      same number of jobs, which end of that range you work at is worth more than any amount of extra
+      enquiry.</b></p>
+      <p>That is the entire conversation we want to have, and it is set out on <a href="value.html"
+      style="color:var(--accent)">the job value page</a>.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="h">First, A Correction To What We Were Told</div>
+    <div class="flag">
+      <div class="lab">⚠️ You were described to us as having no online presence. That is not accurate</div>
+      <p>We read your site before writing this. <b>You have a considerably better website than we were led to
+      expect</b>, and it would be dishonest to open a call pretending otherwise:</p>
+      <ul>
+        <li><b>Four named project write-ups</b> &mdash; Bray Refurbishment, Hale End Road, Maldon Lane, Middleway
+        Roof Refurbishment. ⭐ Most roofers have a gallery of photographs. You have named projects.</li>
+        <li><b>Dedicated pages for three specified systems</b> &mdash; Protan, Res-Tec, RubberBond.</li>
+        <li><b>Separate service pages</b> for flat roofs, leadwork, pitched roofs and repairs.</li>
+        <li><b>A working enquiry form</b> that asks for a postcode and a description of the work.</li>
+        <li><b>A clear service area</b> &mdash; Essex, Hertfordshire, London and surrounding counties.</li>
+      </ul>
+      <p><b>Whoever built that understood your trade.</b> The problems below are real, but &ldquo;you have
+      nothing&rdquo; is not one of them, and we would rather say so than flatter a finding.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="h">What Your Own Site Says About You, Which Is The Interesting Part</div>
+    <div class="win">
+      <div class="lab">⭐ This is not a commodity roofing business and the site proves it</div>
+      <p>Reading your About section back to you, because it is the most valuable thing you own and we suspect you
+      undersell it:</p>
+      <ul>
+        <li>Founded <b>March 2007</b> by you.</li>
+        <li><b>Traditional apprenticeship</b>, then <b>specialist studies with the Lead Sheet Association</b>.</li>
+        <li>Worked in <b>New Zealand</b>, learning corrugated and sheet metal roofing.</li>
+        <li>Returned to the UK in 2006 and <b>trained in Belgium in European zinc roofing techniques</b>.</li>
+        <li>Described on the site as <i>&ldquo;specialising in expert leadwork and advanced roofing
+        systems&rdquo;</i>.</li>
+      </ul>
+      <p>⚠️ <b>Corrected after the call:</b> you told us <b>zinc and asphalt go out to your own specialists</b>
+      and you add your margin, with asphalt perhaps one job a quarter. <b>So lead is the specialism that is
+      genuinely yours</b>, and the flat systems are what brings the enquiries.</p>
+      <p>⭐⭐ <b>Leadwork is not what a general roofer does.</b> It is heritage and architectural work, it gets
+      specified rather than shopped on price, and you said yourself that central London <i>&ldquo;comes with a lot
+      of the high-end lead work&rdquo;</i> &mdash; which is why you will not write London off despite the
+      travel.</p>
+      <p>⚠️ <b>And yet your homepage leads with &ldquo;all aspects of roof replacement and repair&rdquo;.</b> The
+      specialism is in there, but it is behind the general offer, which means the cheapest enquiries reach you
+      just as easily as the best ones. <b>You agreed on the call that the cheap emergency repair calls are not
+      worth your time, so saying that on the site turns them away before they ring.</b></p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="h">The Real Problems, Hardest First</div>
+
+    <div class="flag">
+      <div class="lab">🔴 1. There is no measurement on your website whatsoever</div>
+      <p>We checked for every standard tool. <b>No Google Analytics, no Tag Manager, no advertising tag, no
+      pixel.</b> Nothing.</p>
+      <p>So you cannot currently answer: how many people visit, which pages they read, whether anyone looks at the
+      Maldon Lane write-up you paid to have produced, or how many of those visitors filled in the form. <b>You have
+      four project case studies and no way of knowing whether a single person has read one.</b></p>
+      <p>⭐ <b>This is the cheapest thing on the list and it has to come first</b>, because every other decision
+      below is a guess until something is counting.</p>
+    </div>
+
+    <div class="flag" style="margin-top:16px">
+      <div class="lab">🔴 2. No trade accreditation appears anywhere on the site &mdash; and for your specialism that is a real gap</div>
+      <p>We found no mention of <b>NFRC</b>, <b>CompetentRoofer</b>, <b>CHAS</b>, <b>Constructionline</b>,
+      <b>TrustMark</b>, <b>Checkatrade</b> or any other scheme.</p>
+      <p>🔴 <b>Most pointedly, there is no Lead Contractors Association membership.</b> Your site says you studied
+      with the Lead Sheet Association, which is training. <b>The LCA is the thing specifiers actually look for on
+      leadwork</b>, and it carries a workmanship warranty.</p>
+      <p>⭐ <b>If you already hold any of these and they are simply not on the site, that is a ten-minute fix worth
+      more than a month of advertising.</b> If you hold none of them, that is a genuine question about whether the
+      top of your range is reachable, because architect-specified and insurance-backed work tends to require
+      them. <b>We are asking, not assuming.</b></p>
+    </div>
+
+    <div class="flag" style="margin-top:16px">
+      <div class="lab">🔴 3. Your website never says where you are, in the place that counts</div>
+      <p>Your page text does say your service area &mdash; <i>&ldquo;Essex, Hertfordshire, London and the
+      surrounding counties&rdquo;</i> &mdash; and that is good. ⭐ <b>So this is not the usual complaint that
+      nobody can tell where you work.</b></p>
+      <p>🔴 <b>But there is no local business information in your site's code at all.</b> We checked: no business
+      address, no town, no postcode, no opening hours, no map coordinates, and no local business markup of any
+      kind. There is no postal address published anywhere on the site in any form.</p>
+      <p>⚠️ <b>Search engines read that code to decide which businesses to show for &ldquo;roofer near
+      me&rdquo;.</b> Prose in a paragraph is not the same thing and does not do the same job. ⭐ <b>For
+      comparison, another firm we audited this week has its address, hours and coordinates all correctly
+      published &mdash; and it is a smaller operation than yours.</b></p>
+      <p>⭐ <b>This is a technical fix of an hour or two with no ongoing cost</b>, and for a business whose work is
+      local and whose jobs are large, it is one of the better-value items on the list.</p>
+    </div>
+
+    <div class="flag" style="margin-top:16px">
+      <div class="lab">⚠️ 4. A mobile number is your only published contact route</div>
+      <p><b>07889 140051</b> is the one number on the site. No landline.</p>
+      <p>For a homeowner, that is fine. ⚠️ <b>For a &pound;100,000 commercial or architect-specified job it reads
+      as a smaller operation than you are</b>, and it means every enquiry &mdash; a &pound;400 repair and a
+      &pound;100k zinc roof alike &mdash; rings the same phone, which is almost certainly in your pocket while you
+      are on a roof.</p>
+      <p>⭐ You do have <b>alex@</b> and <b>info@</b> on your own domain, which is better than most. The routing is
+      the issue, not the addresses.</p>
+    </div>
+
+    <div class="flag" style="margin-top:16px">
+      <div class="lab">⚠️ 5. Your sitemap lists two pages. Your website has around seventeen</div>
+      <p>A sitemap is the file that tells Google what exists. Yours declares two addresses, while your navigation
+      offers roughly seventeen &mdash; every service page, all four projects, all three roofing systems.</p>
+      <p><b>That does not make those pages invisible, but it does mean nothing is actively pointing Google at
+      them.</b> The most valuable content you own is the part least likely to be indexed.</p>
+    </div>
+
+    <div class="flag" style="margin-top:16px">
+      <div class="lab">⚠️ 6. The four project write-ups carry no money, no scope and no client voice</div>
+      <p>They are named projects, which already puts you ahead. <b>But a specifier comparing contractors wants to
+      know what was wrong, what you specified, what it cost roughly, how long it took and what the client
+      said.</b></p>
+      <p>⭐ <b>You almost certainly have all of that in your own records.</b> Turning four write-ups into four real
+      case studies is a writing job, not a marketing spend, and it is the single highest-value thing that could be
+      done to the site as it stands.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="h">The Staffing Problem, Said Honestly</div>
+    <div class="warn">
+      <div class="lab">⛔ We are not a recruiter, and we will not pretend to be one</div>
+      <p>You said you cannot get quality people. <b>We cannot interview, vet, train or guarantee a roofer, and any
+      agency that implies otherwise is selling you something it cannot deliver.</b></p>
+      <p>⭐ <b>What we can genuinely do is the advertising half of recruitment</b> &mdash; which is a real
+      discipline and is closer to our actual trade than most people realise. Skilled leadwork and zinc people are
+      findable, they are not reading job boards, and reaching them is an audience-targeting problem.</p>
+      <p>That is set out properly on <a href="hiring.html" style="color:var(--accent)">the hiring page</a>,
+      including what it cannot do.</p>
+      <p>⚠️ <b>And there is an uncomfortable possibility worth naming now:</b> if you genuinely cannot resource
+      more work and cannot hire, then <b>the only remaining growth lever is price and job selection</b> &mdash;
+      doing the same number of jobs at the top of your range. That is not a consolation prize. On a
+      &pound;20k&ndash;&pound;100k spread it is the largest lever you have.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="h">Answered On The Call &mdash; No Need To Go Over It Again</div>
+    <div class="win">
+      <div class="lab">⭐ What we were guessing at before, and what you actually told us</div>
+      <ul>
+        <li><b>Accreditation.</b> No NFRC and no Lead Contractors Association. You are a member of the <b>Lead
+        Sheet Association</b> and accredited on the flat roofing systems. The <b>CompetentRoofer</b> application
+        is sat half-finished because of the paperwork. ⚠️ And insurance-backed guarantees have become difficult
+        because of a leak on a job about ten years ago under <b>Prospect Roofing</b>.</li>
+        <li><b>The crew.</b> Six or seven skilled men, <b>all subcontract</b>. You employ nobody directly, because
+        the trade works that way.</li>
+        <li><b>The specialism.</b> <b>Lead is yours.</b> Zinc and asphalt go out to trusted specialists and you
+        add your margin, and asphalt is perhaps one job a quarter. ⭐ <b>The flat systems are what is actually
+        bringing work in</b> &mdash; RubberBond, Protan, Res-Tec and Flexitech.</li>
+        <li><b>Where the work comes from.</b> Word of mouth, and people searching specific systems and landing on
+        your pages. ⭐⭐ <b>You said people ring you out of the blue having read the Res-Tec and Protan pages.
+        That is the most valuable sentence of the call</b> and it tells us those pages are earning their keep.</li>
+        <li><b>The patch.</b> Inside the M25 and a little north, based in Bishop's Stortford. Sick of the London
+        travel but not writing London off, because that is where the high-end lead work is.</li>
+        <li><b>How you run it.</b> A working boss, on site at least half the week, doing your own quotes and
+        dealing with clients directly.</li>
+        <li><b>The company history.</b> AWH sole trader, then AWH Limited, then Prospect Roofing, now AWH Roofing
+        Ltd. ⭐ Which explains the stale listings below, and you raised it before we did.</li>
+      </ul>
+    </div>
+
+    <div class="flag" style="margin-top:16px">
+      <div class="lab">🔴 And one finding that only emerged because you mentioned it</div>
+      <p>You said old versions of the business are still floating about online &mdash; AWH sole trader, AWH
+      Limited, Prospect Roofing, and your mother's old address at Kingsman still showing as AWH Roofing.</p>
+      <p>Your words: <i>&ldquo;It'd be nice to get them removed or understand why they stay there or clean that up,
+      for sure.&rdquo;</i></p>
+      <p>⭐ <b>Agreed, and it matters more than it sounds.</b> Somebody checking you out before a large job should
+      find one business at one address, not three businesses and a house you have no connection to. <b>It is also
+      the sort of thing that quietly undermines a quote without anybody telling you why.</b></p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="h">What Is Still Open</div>
+    <ul class="road road2">
+      <li><b>1. Transport.</b> Does a lad need his own van or car, or can he meet the crew? ⭐ This decides who we can realistically reach more than anything else.</li>
+      <li><b>2. Kit.</b> Tools, boots, hard hat &mdash; yours or his?</li>
+      <li><b>3. Any ticket needed?</b> A CSCS card or similar for your sites, or will you take somebody with nothing?</li>
+      <li><b>4. How should applicants reach you?</b> ⚠️ You are on a roof half the week. If twenty-five people apply, does your mobile ring, or does it come in as a form you read of an evening &mdash; and who rings them back, you or Tracy?</li>
+      <li><b>5. Hemel Hempstead.</b> Is that work still live, and roughly when would you need bodies for it? It decides whether this is urgent or a January job.</li>
+      <li><b>6. The pay line.</b> Not what you pay anyone. Just whether you want a figure on the page, a range, or nothing. ⚠️ Blank is the worst of the three.</li>
+      <li><b>7. 🔴 Subcontract or employed.</b> You employ nobody, and a lad being trained and supervised usually has to be employed. <b>That is a question for your accountant, not for us</b>, but it changes what we advertise. <a href="hiring.html" style="color:var(--accent)">Set out properly here</a>.</li>
+      <li><b>8. Did Eugene come back to you?</b> If he produces three labourers, none of this is needed.</li>
+    </ul>
+    <div class="oppnote" style="margin-top:14px">
+      <b>Question one is the one that changes the advert, and question seven is the one that changes the job.</b>
+      ⭐ Everything else on this page can be got on with regardless of the answers.
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <h2>Nineteen years, Lead Sheet Association training, New Zealand sheet metal and Belgian zinc.</h2>
+    <p>Your homepage leads with &ldquo;all aspects of roof replacement and repair&rdquo;.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    Prepared by Andrei Givero &middot; AG1 Consulting &middot; 3 October 2026, for discussion with Alex Hickin at
+    AWH Roofing Ltd. <b>This is a discussion document, not a proposal or a statement of work, and nothing on it is
+    priced.</b>
+    <b>&#9888; All findings about the website &mdash; the absence of analytics and advertising tags, the absence of
+    any LocalBusiness markup, postal address, opening hours or map coordinates, the sitemap contents, the page and
+    navigation structure, the working enquiry form, the published telephone number and email addresses, the four
+    named projects, the three roofing systems and the absence of any trade accreditation &mdash; were established by
+    automated and manual read of awhroofing.co.uk on 2 October 2026 and describe that site as it stood on that
+    date.</b>
+    <b>&#9888; The comparison with another firm's correctly published local business information refers to an
+    unrelated business audited separately by AG1 and is included only to show the fix is ordinary and achievable. No
+    other company is named, assessed or compared on any other measure.</b>
+    <b>&#9888; The founding date of March 2007, the apprenticeship, the Lead Sheet Association studies, the work in
+    New Zealand, the training in Belgium, the service area and the reference to a skilled workforce are QUOTED FROM
+    THE COMPANY'S OWN WEBSITE and have not been independently verified by AG1.</b>
+    <b>&#9888; The statements that AWH Roofing lacks the staffing to handle its current or additional workload, that
+    quantity has never been the problem, that it relies on referrals, and that job values run from &pound;20,000 to
+    &pound;100,000 are as recorded by AG1's team from a booking call on 29 September 2026. They are reported, NOT
+    verified, and AG1 has not seen any financial record.</b>
+    <b>&#9888; AG1 makes NO finding as to whether AWH Roofing holds any trade accreditation, what its crew size is,
+    whether its people are employed or subcontracted, or what proportion of its work is specialist. The absence of
+    an accreditation from a website is NOT evidence that it is not held.</b>
+    <b>&#9888; The remark about the Lead Contractors Association describes what specifiers in that field commonly
+    look for. It is NOT a statement that AWH Roofing is ineligible, non-compliant or lacking in competence, and AG1
+    has made no enquiry of the LCA or any other body.</b>
+    <b>&#9888; No enquiry volume, ranking position, job value, win rate, recruitment outcome or revenue result is
+    forecast, promised or implied anywhere on this page. Whether AG1 can help depends on information AG1 does not
+    yet have.</b>
+  </div>
+</footer>
+</body></html>
