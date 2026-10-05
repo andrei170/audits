@@ -1,0 +1,383 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
+<title>Diagnostic &middot; Solar Fuel Ltd &middot; AG1 Consulting</title><style>
+:root{--bg:#0d1117;--panel:#161b22;--ink:#e6edf3;--mut:#9aa7b4;--line:#2a3340;--accent:#2f81f7;
+  --good:#3fb950;--bad:#f85149;--gradF:#f85149;--gradD:#e8702a;--gradC:#d29922;--gradB:#3fb950;--gradA:#2ea043;}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.5;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+.eyebrow{letter-spacing:.18em;text-transform:uppercase;font-size:12px;color:var(--mut);font-weight:600}
+header{padding:46px 0 28px;border-bottom:1px solid var(--line);background:radial-gradient(1200px 400px at 70% -10%,rgba(47,129,247,.18),transparent)}
+h1{font-size:30px;font-weight:800;margin:10px 0 6px;letter-spacing:-.01em}
+.sub{color:var(--mut);font-size:15px}
+.hero{display:grid;grid-template-columns:300px 1fr;gap:26px;align-items:center;margin:34px 0 8px}
+@media(max-width:760px){.hero{grid-template-columns:1fr}}
+.gradecard{border:1px solid var(--line);border-radius:18px;padding:26px;text-align:center;position:relative;overflow:hidden}
+.gc-F{background:linear-gradient(160deg,#2a1410,#1c2330)}.gc-D{background:linear-gradient(160deg,#2a1c10,#1c2330)}
+.gc-C{background:linear-gradient(160deg,#2a2410,#1c2330)}.gc-B{background:linear-gradient(160deg,#102a1a,#1c2330)}
+.bigletter{font-size:96px;font-weight:900;line-height:1;position:relative}
+.bl-F{color:var(--gradF);text-shadow:0 0 40px rgba(248,81,73,.45)}
+.bl-D{color:var(--gradD);text-shadow:0 0 40px rgba(232,112,42,.45)}
+.bl-C{color:var(--gradC);text-shadow:0 0 40px rgba(210,153,34,.45)}
+.score100{font-size:18px;color:var(--mut);margin-top:6px;position:relative}
+.heroread h2{font-size:21px;font-weight:800;margin-bottom:10px}
+.heroread p{color:var(--mut);font-size:15.5px}
+.heroread .tag{display:inline-block;margin-top:14px;padding:6px 12px;border:1px solid var(--line);border-radius:999px;font-size:13px;color:var(--ink);background:var(--panel)}
+section{padding:34px 0;border-bottom:1px solid var(--line)}
+.h{font-size:13px;color:var(--mut);text-transform:uppercase;letter-spacing:.14em;font-weight:700;margin-bottom:18px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:760px){.grid{grid-template-columns:1fr}}
+.row{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px;display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center}
+.rname{font-weight:600;font-size:15px}
+.bar{height:7px;background:#0b0f15;border-radius:99px;margin-top:9px;overflow:hidden}
+.fill{height:100%;border-radius:99px}
+.badge{font-weight:800;font-size:15px;min-width:46px;height:46px;border-radius:10px;display:flex;align-items:center;justify-content:center;color:#0d1117}
+.gF{background:var(--gradF)}.gD{background:var(--gradD)}.gC{background:var(--gradC)}.gB{background:var(--gradB);color:#06210f}.gA{background:var(--gradA);color:#06210f}
+.sc{font-size:12px;color:var(--mut);margin-top:3px}
+.flag{background:linear-gradient(160deg,#2a1410,#161b22);border:1px solid #6f2a1f;border-radius:14px;padding:20px 22px;margin-bottom:14px}
+.flag .lab{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--bad);font-weight:700;margin-bottom:8px}
+.win{background:linear-gradient(160deg,#0f2417,#161b22);border:1px solid #1f6f3a;border-radius:14px;padding:20px 22px;margin-bottom:14px}
+.win .lab{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--good);font-weight:700;margin-bottom:8px}
+.warn{background:linear-gradient(160deg,#2a2410,#161b22);border:1px solid #6f5a1f;border-radius:14px;padding:20px 22px;margin-bottom:14px}
+.warn .lab{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--gradC);font-weight:700;margin-bottom:8px}
+.flag p,.win p,.warn p{color:var(--mut);font-size:14.5px;margin-bottom:9px}
+.flag p:last-child,.win p:last-child,.warn p:last-child{margin-bottom:0}
+.flag b,.win b,.warn b{color:var(--ink)}
+.flag ul,.win ul,.warn ul{margin:0 0 9px 20px;color:var(--mut);font-size:14.5px}
+.flag li,.win li,.warn li{margin-bottom:6px}
+.code{background:#0b0f15;border:1px solid var(--line);border-radius:8px;padding:14px 16px;margin:12px 0;font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:12.5px;line-height:1.85;color:var(--mut);overflow-x:auto}
+.code .ph{color:#ff9d94;font-weight:700}.code .ok{color:#84e0a8;font-weight:700}.code .c{color:#5b6672}
+.cmp{width:100%;border-collapse:collapse;font-size:14px;background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.cmp th{text-align:left;padding:11px 14px;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--mut);border-bottom:1px solid var(--line);font-weight:700}
+.cmp td{padding:11px 14px;border-bottom:1px solid var(--line);color:var(--mut);vertical-align:top}
+.cmp tr:last-child td{border-bottom:none}.cmp td b{color:var(--ink)}.cmp tr.you td{background:#241a12}
+.cmp .yes{color:var(--good);font-weight:700}.cmp .no{color:var(--bad);font-weight:700}
+.opp{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media(max-width:760px){.opp{grid-template-columns:1fr}}
+.ocard{background:linear-gradient(160deg,#0f2417,#161b22);border:1px solid #1f6f3a;border-radius:14px;padding:20px;text-align:center}
+.ocard .lab{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--mut)}
+.ocard .big{font-size:30px;font-weight:900;color:var(--good);margin:8px 0 2px}
+.ocard .small{font-size:13px;color:var(--mut)}
+.oppnote{color:var(--mut);font-size:14px;margin-top:14px}.oppnote b{color:var(--ink)}
+.arrow{display:flex;align-items:center;justify-content:center;gap:18px;margin:6px 0 2px;flex-wrap:wrap}
+.pill{font-size:60px;font-weight:900;line-height:1}
+.pill.from-F{color:var(--gradF)}.pill.from-D{color:var(--gradD)}.pill.from-C{color:var(--gradC)}
+.pill.to{color:var(--gradA)}
+.pilllab{font-size:12px;color:var(--mut);text-align:center;text-transform:uppercase;letter-spacing:.1em}
+.ar{font-size:34px;color:var(--mut)}
+ul.road{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(max-width:760px){ul.road{grid-template-columns:1fr}}
+ul.road li{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:8px;padding:11px 14px;font-size:14.5px}
+.road2 li{border-left-color:var(--good)}
+.cta{text-align:center;padding:40px 0 56px}
+.cta h2{font-size:22px;font-weight:800;margin-bottom:8px}
+.cta p{color:var(--mut);font-size:15px}
+footer{color:var(--mut);font-size:12.5px;text-align:center;padding:22px 0 40px;line-height:1.7}
+.gscale{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:26px 26px 20px;margin-top:16px}
+.gscale .gtitle{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--mut);font-weight:700;margin-bottom:26px;text-align:center}
+.gtrack{position:relative;height:14px;border-radius:8px;background:linear-gradient(90deg,#f85149 0%,#f85149 18%,#e3833c 34%,#d4a72c 52%,#7ec46a 74%,#3fb950 100%);margin:0 4px}
+.gmark{position:absolute;top:-46px;transform:translateX(-50%);text-align:center;white-space:nowrap}
+.gmark .gm-lab{font-size:10.5px;text-transform:uppercase;letter-spacing:.1em;color:var(--mut);font-weight:700}
+.gmark .gm-val{font-size:19px;font-weight:900;line-height:1.15}
+.gmark:after{content:"";position:absolute;left:50%;top:100%;width:2px;height:22px;transform:translateX(-50%);background:currentColor;opacity:.75}
+.gmark.now{color:var(--bad)}.gmark.now .gm-val{color:var(--bad)}
+.gmark.proj{color:var(--good)}.gmark.proj .gm-val{color:var(--good)}
+.gmark.proj{top:auto;bottom:-52px}
+.gmark.proj:after{top:auto;bottom:100%}
+.gdot{position:absolute;top:50%;width:16px;height:16px;border-radius:50%;transform:translate(-50%,-50%);border:3px solid #0d1117}
+.gdot.now{background:var(--bad)}.gdot.proj{background:var(--good)}
+.gticks{display:flex;justify-content:space-between;margin:66px 4px 0;font-size:11px;letter-spacing:.08em;color:var(--mut);font-weight:700}
+@media(max-width:620px){.gmark .gm-lab{font-size:9px}.gmark .gm-val{font-size:16px}}
+
+/* ---------- injected asset nav ---------- */
+/* display/padding/margin are declared explicitly so a page carrying its own bare
+   nav{} element rule (concept mockups do) cannot restyle the AG1 bar. */
+.agnav{display:block;padding:0;margin:0;position:sticky;top:0;z-index:80;background:rgba(13,17,23,.92);backdrop-filter:saturate(1.5) blur(10px);border-bottom:1px solid var(--line)}
+.agnav .inner{max-width:1080px;margin:0 auto;padding:0 22px;display:flex;flex-wrap:wrap;align-items:center;gap:6px}
+.agnav a{display:inline-block;padding:12px 14px;font-size:14px;font-weight:600;color:var(--mut);text-decoration:none;border-bottom:2px solid transparent;transition:color .15s,border-color .15s}
+.agnav a:hover{color:var(--ink);border-bottom-color:var(--accent)}
+.agnav a.on{color:var(--ink);border-bottom-color:var(--accent)}
+.agnav a.ext{color:var(--accent)}
+.agnav a.ext:hover{color:#fff}
+@media(max-width:560px){.agnav .inner{padding:0 14px}.agnav a{padding:10px 9px;font-size:13px}}
+</style></head><body>
+<nav class="agnav"><div class="inner"><a href="assets.html">All Assets</a><a href="./" class="on">Diagnostic</a><a href="scorecard.html">Scorecard</a><a href="discovery.html">Discovery</a></div></nav>
+<style>
+/* The house stylesheet is a DARK theme driven by CSS variables. Rather than fight
+   each rule, redefine the variables so everything downstream flips at once. */
+:root{
+  --bg:#f6f8fb !important; --panel:#ffffff !important; --ink:#10131a !important;
+  --mut:#53627a !important; --line:#d7e0ea !important; --accent:#1f6feb !important;
+  --soft:#eef3f9 !important; --slate:#33475b !important;
+  --amber:#c7971a !important; --amber-d:#9c7510 !important;
+}
+html,body{background:#f6f8fb !important;color:#10131a !important}
+body *{border-color:#d7e0ea}
+
+/* every block of running text */
+p,li,td,th,span,div,dt,dd,small{color:#1f2a38 !important}
+h1,h2,h3,h4,.h,.sec,.lab{color:#0b1016 !important}
+b,strong{color:#000 !important}
+a{color:#1458c4 !important}
+.wrap{max-width:1060px}
+
+/* header stays dark, text stays white */
+header{background:linear-gradient(145deg,#07231b,#0f5438 58%,#157a52) !important}
+header *{color:#ffffff !important}
+header .eyebrow{color:#86f3bb !important;letter-spacing:1.4px}
+header .sub{color:#cfe9dd !important}
+
+/* panels */
+.warn,.flag,.win,.oppnote,.card,.calc,.q,.step,.faq{
+  background:#ffffff !important;border:1px solid #d7e0ea !important;border-radius:10px;
+  padding:18px 20px;margin-bottom:4px}
+.warn{border-left:5px solid #c7971a !important}
+.flag{border-left:5px solid #c0392b !important}
+.win{border-left:5px solid #157a52 !important}
+.oppnote{background:#eff5ff !important;border-left:5px solid #1f6feb !important}
+.warn *,.flag *,.win *,.oppnote *,.card *{color:#1f2a38 !important}
+.warn b,.flag b,.win b,.oppnote b,.card b{color:#000 !important}
+.lab{font-weight:800;font-size:16px;margin-bottom:8px;display:block}
+
+/* tables */
+table,table.cmp,table.spec{width:100%;border-collapse:collapse;background:#fff !important;
+  border:1px solid #cfdae6 !important;margin-top:6px}
+table th,table td{border:1px solid #d7e0ea !important;padding:12px 13px;text-align:left;
+  vertical-align:top;background:#ffffff !important;color:#1f2a38 !important}
+table th{background:#0b1016 !important;color:#ffffff !important;font-size:12px;
+  letter-spacing:.9px;text-transform:uppercase;font-weight:700}
+table tr:nth-child(even) td{background:#f4f8fc !important}
+tr.you td{background:#fff6d9 !important}
+tr.you td b,tr.you td{color:#000 !important}
+td.o{text-align:right;font-weight:800;color:#000 !important;white-space:nowrap}
+
+/* the money block, deliberately dark */
+.money{background:linear-gradient(135deg,#07231b,#0f5438) !important;border:0 !important;
+  border-radius:12px;padding:26px 28px}
+.money *{color:#eafaf1 !important}
+.money .fig{font-size:44px;font-weight:800;color:#86f3bb !important;line-height:1.1;
+  letter-spacing:-1px}
+.money b{color:#ffffff !important}
+
+/* closing band */
+.cta{background:#07231b !important;border-radius:12px;padding:38px 24px;margin-top:10px}
+.cta *{color:#ffffff !important}
+.cta p{color:#b9d9c9 !important}
+
+/* footer disclaimers, quiet but legible */
+footer{background:transparent !important;border-top:1px solid #d7e0ea !important;margin-top:28px}
+footer *{color:#6b7b8f !important;background:transparent !important;font-size:11.5px;line-height:1.6}
+footer b{color:#56657a !important}
+
+ul.road,ul.road2{list-style:none;padding-left:0}
+ul.road li,ul.road2 li{background:#fff !important;border:1px solid #d7e0ea !important;
+  border-left:4px solid #1f6feb !important;border-radius:8px;padding:13px 16px;margin-bottom:9px}
+section{padding:26px 0}
+</style>
+
+<header>
+  <div class="wrap">
+    <div class="eyebrow">Diagnostic &middot; Solar Fuel Ltd</div>
+    <h1>You Convert Eight Or Nine Out Of Ten, And You Are Not Advertising.</h1>
+    <div class="sub">Prepared for Matthew Hantschar and John &middot; 5 October 2026 &middot; AG1 Consulting</div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="h">Your Numbers, As You Gave Them To Us Today</div>
+    <table class="cmp">
+      <tr><th>&nbsp;</th><th>What you told us</th></tr>
+      <tr><td><b>Turnover</b></td><td>Was <b>&pound;800,000</b>. On track for about <b>&pound;1.1M</b> this year. <b>&pound;120,000 this month.</b></td></tr>
+      <tr class="you"><td><b>The goal</b></td><td><b>&pound;2M a year</b>, and in your words no reason you cannot hit it</td></tr>
+      <tr><td><b>Average job</b></td><td><b>&pound;8,000</b></td></tr>
+      <tr><td><b>Margin</b></td><td>40% gross, 20% net</td></tr>
+      <tr><td><b>Jobs</b></td><td><b>2 a week</b>, on pace for <b>4 to 5</b></td></tr>
+      <tr><td><b>Team</b></td><td>4 plus self-employed fitters. ⭐ A few people waiting to join</td></tr>
+      <tr><td><b>Where work comes from</b></td><td><b>70% word of mouth</b>, <b>30% website and organic</b></td></tr>
+      <tr class="you"><td><b>Website leads</b></td><td><b>2 to 3 a week</b> &middot; <b>40&ndash;50% book</b> &middot; <b>80&ndash;90% of those convert</b></td></tr>
+      <tr><td><b>Lead supplier</b></td><td>6&ndash;8 a week, 60&ndash;70% answer rate. Started 2&ndash;3 weeks ago</td></tr>
+      <tr><td><b>Bark</b></td><td>&pound;40 a lead, paused because recommendations increased</td></tr>
+      <tr class="you"><td><b>Advertising</b></td><td>🔴 <b>None</b></td></tr>
+      <tr><td><b>Premises</b></td><td>None. Supplier is local and stores the kit</td></tr>
+    </table>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="h">🔴 The Finding, And It Is One Number</div>
+    <div class="flag">
+      <div class="lab">🔴🔴 Forty to fifty per cent of your website enquiries book, and eight or nine out of ten of those buy</div>
+      <p>We audit a lot of trade websites. ⭐⭐ <b>We have not seen a conversion rate like that
+      before.</b> Most installers would be pleased with a quarter of enquiries booking and a third of
+      those closing.</p>
+      <p><b>Yours is roughly four times that, and it holds because of things you have already paid
+      for:</b> MCS, NAPIT, TrustMark and RECC on the site, thirty pages of real content, a maintained
+      blog, a team page, reviews and a guarantee. <b>By the time somebody fills in your form they have
+      already decided you are credible.</b></p>
+      <p>🔴 <b>And you are not advertising.</b> So the best-converting part of your business is the one
+      part nobody is feeding.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="h">What One Website Enquiry Is Actually Worth</div>
+    <div class="money">
+      <p style="margin-bottom:6px;opacity:.85">Your own figures, multiplied out</p>
+      <div class="fig">&pound;8,000 &times; 45% &times; 85% &asymp; &pound;3,060</div>
+      <p style="margin-top:12px">Average job &pound;8,000. Forty-five per cent of website enquiries book
+      a survey. Eighty-five per cent of those convert. <b>So every enquiry that reaches your website is
+      worth about &pound;3,060 in revenue, and roughly &pound;612 in net profit at your 20%.</b></p>
+      <p style="margin-top:10px;opacity:.9">⚠️ Midpoints of the ranges you gave us. Use your own ends
+      and it moves between roughly &pound;2,560 and &pound;3,600.</p>
+    </div>
+    <div class="oppnote" style="margin-top:16px">
+      ⭐⭐ <b>Now set that against Bark at &pound;40 a lead.</b> Even if a Bark lead converts at a
+      fraction of a website lead, the arithmetic is not close. <b>The question is not whether paid
+      acquisition works for you. It is why nobody has pointed any at the thing that converts at
+      eighty-five per cent.</b>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="h">The Road From &pound;1.1M To &pound;2M</div>
+    <p style="color:#5a6b7d;font-size:15px;max-width:76ch;margin-bottom:16px">Not a forecast. Just your
+    own numbers arranged so the size of the gap is visible.</p>
+    <table class="cmp">
+      <tr><th>&nbsp;</th><th>The step</th><th>Your figures</th></tr>
+      <tr><td><b>A</b></td><td>Where you are on pace to land</td><td class="o">&pound;1.1M</td></tr>
+      <tr><td><b>B</b></td><td>Where you want to be</td><td class="o">&pound;2.0M</td></tr>
+      <tr class="you"><td><b>C</b></td><td><b>The gap</b></td><td class="o"><b>&pound;900,000</b></td></tr>
+      <tr><td><b>D</b></td><td>At &pound;8,000 a job, that is</td><td class="o">~113 more jobs</td></tr>
+      <tr><td><b>E</b></td><td>Which is</td><td class="o">~2.2 more jobs a week</td></tr>
+      <tr class="you"><td><b>F</b></td><td><b>At &pound;3,060 of revenue per website enquiry, that is</b></td><td class="o"><b>~6 more enquiries a week</b></td></tr>
+    </table>
+    <div class="oppnote">
+      ⭐⭐ <b>Six more enquiries a week is the whole gap.</b> You already get two or three from the
+      website with no advertising behind it at all. <b>This is not a transformation. It is roughly
+      tripling one channel that already works.</b>
+      <br><br>⚠️ <b>And the honest caveat: that assumes advertised enquiries convert like your organic
+      ones.</b> They usually convert a bit worse, because somebody who searched for you has more intent
+      than somebody shown an advert. <b>So treat six as the floor of the number, not the target.</b>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="h">⚠️ The Thing That Decides Whether Any Of This Is Wise</div>
+    <div class="warn">
+      <div class="lab">⚠️ Capacity, and you half answered it already</div>
+      <p>You are at <b>2 jobs a week</b>, on pace for <b>4 to 5</b>. Four staff plus self-employed
+      fitters, a few people waiting to join, and still looking for an air conditioning engineer.</p>
+      <p>⭐ <b>So the capacity is arriving, which is why this conversation is worth having now rather
+      than in six months.</b> But it is the question to answer before any money is spent:</p>
+      <ul>
+        <li><b>If six more enquiries a week arrived from Monday, could you install them?</b></li>
+        <li><b>What is the ceiling with the fitters you have plus the ones waiting to join?</b></li>
+        <li><b>Is the air con engineer the thing standing between you and 4 to 5 a week, or a separate
+        problem?</b></li>
+      </ul>
+      <p>⛔ <b>If the answer is that you cannot resource it, we would say so.</b> More enquiries into a
+      business that cannot install them produces slower quotes and a worse reputation, and you have
+      spent years building the reputation that gives you an eighty-five per cent conversion rate.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="h">What Is Standing In The Way, Cheapest First</div>
+    <table class="cmp">
+      <tr><th>&nbsp;</th><th>What we measured on your site</th><th>Why it matters now</th></tr>
+      <tr class="you"><td><b>1</b></td><td><b>One enquiry form across thirty pages</b></td><td>Thirty pages of persuasion with one place to act. ⭐ The cheapest fix on the list and the one that lifts the channel you want to triple</td></tr>
+      <tr><td><b>2</b></td><td><b>No conversion tracking</b></td><td>You cannot currently tell which page produced an enquiry. ⛔ You cannot buy traffic you cannot measure</td></tr>
+      <tr><td><b>3</b></td><td><b>No Google Ads tag</b></td><td>There is a Meta pixel, so social was prepared. Search never has been, and search is where somebody types &ldquo;MCS certified installer&rdquo;</td></tr>
+      <tr><td><b>4</b></td><td><b>Two tap-to-call links across thirty pages</b></td><td>Most people read a trade site on a phone</td></tr>
+      <tr><td><b>5</b></td><td><b>No local business markup</b></td><td>No address, postcode, hours or coordinates where search engines read them. An hour or two of work</td></tr>
+      <tr><td><b>6</b></td><td><b>A broken email link</b> &mdash; %20info@solar-fuel.co.uk</td><td>Opens blank or fails depending on the device. Minutes to fix</td></tr>
+      <tr><td><b>7</b></td><td>🔴 <b>No mention of air conditioning anywhere</b></td><td>If air con is work you want, you are invisible for it &mdash; to customers and to the engineer you are trying to hire</td></tr>
+      <tr><td><b>8</b></td><td><b>No careers page</b></td><td>Same point. A properly accredited firm is a good place to work and nothing says so</td></tr>
+    </table>
+    <div class="oppnote">
+      ⭐ <b>None of those is a campaign.</b> They are the things that have to be true before a campaign
+      can be judged at all, and most are hours rather than weeks.
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="h">⭐ What We Would Not Touch</div>
+    <div class="win">
+      <div class="lab">⭐ The hard part is already done and we would protect it</div>
+      <p><b>MCS, NAPIT, TrustMark and RECC.</b> All four. ⭐ That combination is rare and it is a large
+      part of why your conversion rate is what it is.</p>
+      <p>Thirty pages, a maintained blog, a team page, battery and storage covered, commercial work
+      named, reviews and a guarantee, and a correct heading structure. <b>Your site is the best built
+      of anybody we are speaking to this week and we are not going to pretend otherwise to sell you a
+      rebuild.</b></p>
+      <p>⭐ <b>And 70% word of mouth is not a weakness.</b> It is the reason the other 30% converts so
+      well. <b>Nothing we do should put it at risk.</b></p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="h">What We Still Need To Know</div>
+    <ul class="road road2">
+      <li><b>1. Are you running Google Ads anywhere?</b> Nothing on the site says so, and it changes the plan completely.</li>
+      <li><b>2. Can you see how many people enquired last month and from which page?</b> Tag Manager is installed but we cannot see inside it. If you cannot answer, it is sitting empty.</li>
+      <li><b>3. Who is the lead supplier, and what is it costing?</b> 6 to 8 a week at 60&ndash;70% answered is a real channel and we would want to know what it converts at against the website.</li>
+      <li><b>4. Why did Bark actually stop?</b> ⚠️ Lead quality, or just that recommendations filled the diary? Those are very different answers.</li>
+      <li><b>5. What is the ceiling on installs with the people you have and the ones joining?</b></li>
+      <li><b>6. Is air conditioning a growing part of the business, or a specific contract?</b></li>
+    </ul>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <h2>Six more enquiries a week is the gap between &pound;1.1M and &pound;2M.</h2>
+    <p>You already get two or three, with nothing pointed at it.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    Prepared by Andrei Givero &middot; AG1 Consulting &middot; 5 October 2026, for discussion with
+    Matthew Hantschar and John at Solar Fuel Ltd. <b>This is a discussion document, not a proposal or a
+    statement of work, and nothing on it is priced.</b>
+    <b>&#9888; EVERY BUSINESS FIGURE ON THIS PAGE WAS GIVEN TO AG1 VERBALLY BY SOLAR FUEL ON 5 OCTOBER
+    2026 AND IS REPORTED, NOT VERIFIED. AG1 has seen no accounts, no analytics, no CRM and no financial
+    record of any kind. Turnover, target, job value, margins, job volume, lead volumes, booking rates,
+    conversion rates, team size and lead costs are all as stated on that call.</b>
+    <b>&#9888; THE &pound;3,060 PER ENQUIRY FIGURE AND THE ROAD-TO-&pound;2M TABLE ARE ARITHMETIC ON
+    THOSE REPORTED FIGURES, NOT FORECASTS, PROJECTIONS OR PROMISES. They use the midpoints of ranges
+    Solar Fuel supplied and are shown to make the size of the gap visible for discussion. AG1 does NOT
+    predict that any number of enquiries will be produced, that any will convert at the stated rate, or
+    that any revenue will result. The page states explicitly that advertised enquiries typically convert
+    worse than organic ones.</b>
+    <b>&#9888; All website findings &mdash; the four accreditations, page count, the single enquiry
+    form, two tap-to-call links, the Meta pixel, the absence of a Google Ads conversion tag, the absence
+    of LocalBusiness markup, the malformed mailto link, and the absence of any mention of air
+    conditioning or any careers page &mdash; were established by automated and manual read of
+    solar-fuel.co.uk on 5 October 2026 and describe that site as it stood on that date.</b>
+    <b>&#9888; MCS, NAPIT, TrustMark and RECC are QUOTED FROM THAT WEBSITE. AG1 has made no enquiry of
+    any of those bodies and has NOT verified that any accreditation is held or current.</b>
+    <b>&#9888; ⚠️ The absence of a Google Ads tag is NOT proof that Solar Fuel is not advertising on
+    Google, and AG1 cannot see inside Google Tag Manager. Both are listed above as open questions.</b>
+    <b>&#9888; The statement that AG1 has not seen a comparable conversion rate is an observation about
+    the sites AG1 has audited, not a market study. AG1 has conducted no benchmarking, keyword, cost or
+    competitor research for this business.</b>
+    <b>&#9888; AG1 IS NOT A RECRUITMENT AGENCY and gives no employment, HR, tax or legal advice.</b>
+  </div>
+</footer>
+</body></html>
