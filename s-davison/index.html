@@ -1,0 +1,423 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Website &amp; Lead Audit · S Davison Electrical · AG1 Consulting</title><style>
+:root{--bg:#0d1117;--panel:#161b22;--ink:#e6edf3;--mut:#9aa7b4;--line:#2a3340;--accent:#2f81f7;
+  --good:#3fb950;--bad:#f85149;--gradF:#f85149;--gradD:#e8702a;--gradC:#d29922;--gradB:#3fb950;--gradA:#2ea043;}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.5;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+.eyebrow{letter-spacing:.18em;text-transform:uppercase;font-size:12px;color:var(--mut);font-weight:600}
+header{padding:46px 0 28px;border-bottom:1px solid var(--line);background:radial-gradient(1200px 400px at 70% -10%,rgba(47,129,247,.18),transparent)}
+h1{font-size:30px;font-weight:800;margin:10px 0 6px;letter-spacing:-.01em}
+.sub{color:var(--mut);font-size:15px}
+.hero{display:grid;grid-template-columns:300px 1fr;gap:26px;align-items:center;margin:34px 0 8px}
+@media(max-width:760px){.hero{grid-template-columns:1fr}}
+.gradecard{border:1px solid var(--line);border-radius:18px;padding:26px;text-align:center;position:relative;overflow:hidden}
+.gc-F{background:linear-gradient(160deg,#2a1410,#1c2330)}.gc-D{background:linear-gradient(160deg,#2a1c10,#1c2330)}
+.gc-C{background:linear-gradient(160deg,#2a2410,#1c2330)}.gc-B{background:linear-gradient(160deg,#102a1a,#1c2330)}
+.bigletter{font-size:96px;font-weight:900;line-height:1;position:relative}
+.bl-F{color:var(--gradF);text-shadow:0 0 40px rgba(248,81,73,.45)}
+.bl-D{color:var(--gradD);text-shadow:0 0 40px rgba(232,112,42,.45)}
+.bl-C{color:var(--gradC);text-shadow:0 0 40px rgba(210,153,34,.45)}
+.score100{font-size:18px;color:var(--mut);margin-top:6px;position:relative}
+.heroread h2{font-size:21px;font-weight:800;margin-bottom:10px}
+.heroread p{color:var(--mut);font-size:15.5px}
+.heroread .tag{display:inline-block;margin-top:14px;padding:6px 12px;border:1px solid var(--line);border-radius:999px;font-size:13px;color:var(--ink);background:var(--panel)}
+section{padding:34px 0;border-bottom:1px solid var(--line)}
+.h{font-size:13px;color:var(--mut);text-transform:uppercase;letter-spacing:.14em;font-weight:700;margin-bottom:18px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:760px){.grid{grid-template-columns:1fr}}
+.row{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px;display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center}
+.rname{font-weight:600;font-size:15px}
+.bar{height:7px;background:#0b0f15;border-radius:99px;margin-top:9px;overflow:hidden}
+.fill{height:100%;border-radius:99px}
+.badge{font-weight:800;font-size:15px;min-width:46px;height:46px;border-radius:10px;display:flex;align-items:center;justify-content:center;color:#0d1117}
+.gF{background:var(--gradF)}.gD{background:var(--gradD)}.gC{background:var(--gradC)}.gB{background:var(--gradB);color:#06210f}.gA{background:var(--gradA);color:#06210f}
+.sc{font-size:12px;color:var(--mut);margin-top:3px}
+.flag{background:linear-gradient(160deg,#2a1410,#161b22);border:1px solid #6f2a1f;border-radius:14px;padding:20px 22px;margin-bottom:14px}
+.flag .lab{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--bad);font-weight:700;margin-bottom:8px}
+.win{background:linear-gradient(160deg,#0f2417,#161b22);border:1px solid #1f6f3a;border-radius:14px;padding:20px 22px;margin-bottom:14px}
+.win .lab{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--good);font-weight:700;margin-bottom:8px}
+.warn{background:linear-gradient(160deg,#2a2410,#161b22);border:1px solid #6f5a1f;border-radius:14px;padding:20px 22px;margin-bottom:14px}
+.warn .lab{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--gradC);font-weight:700;margin-bottom:8px}
+.flag p,.win p,.warn p{color:var(--mut);font-size:14.5px;margin-bottom:9px}
+.flag p:last-child,.win p:last-child,.warn p:last-child{margin-bottom:0}
+.flag b,.win b,.warn b{color:var(--ink)}
+.flag ul,.win ul,.warn ul{margin:0 0 9px 20px;color:var(--mut);font-size:14.5px}
+.flag li,.win li,.warn li{margin-bottom:6px}
+.code{background:#0b0f15;border:1px solid var(--line);border-radius:8px;padding:14px 16px;margin:12px 0;font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:12.5px;line-height:1.85;color:var(--mut);overflow-x:auto}
+.code .ph{color:#ff9d94;font-weight:700}.code .ok{color:#84e0a8;font-weight:700}.code .c{color:#5b6672}
+.cmp{width:100%;border-collapse:collapse;font-size:14px;background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.cmp th{text-align:left;padding:11px 14px;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--mut);border-bottom:1px solid var(--line);font-weight:700}
+.cmp td{padding:11px 14px;border-bottom:1px solid var(--line);color:var(--mut);vertical-align:top}
+.cmp tr:last-child td{border-bottom:none}.cmp td b{color:var(--ink)}.cmp tr.you td{background:#241a12}
+.cmp .yes{color:var(--good);font-weight:700}.cmp .no{color:var(--bad);font-weight:700}
+.opp{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media(max-width:760px){.opp{grid-template-columns:1fr}}
+.ocard{background:linear-gradient(160deg,#0f2417,#161b22);border:1px solid #1f6f3a;border-radius:14px;padding:20px;text-align:center}
+.ocard .lab{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--mut)}
+.ocard .big{font-size:30px;font-weight:900;color:var(--good);margin:8px 0 2px}
+.ocard .small{font-size:13px;color:var(--mut)}
+.oppnote{color:var(--mut);font-size:14px;margin-top:14px}.oppnote b{color:var(--ink)}
+.arrow{display:flex;align-items:center;justify-content:center;gap:18px;margin:6px 0 2px;flex-wrap:wrap}
+.pill{font-size:60px;font-weight:900;line-height:1}
+.pill.from-F{color:var(--gradF)}.pill.from-D{color:var(--gradD)}.pill.from-C{color:var(--gradC)}
+.pill.to{color:var(--gradA)}
+.pilllab{font-size:12px;color:var(--mut);text-align:center;text-transform:uppercase;letter-spacing:.1em}
+.ar{font-size:34px;color:var(--mut)}
+ul.road{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(max-width:760px){ul.road{grid-template-columns:1fr}}
+ul.road li{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:8px;padding:11px 14px;font-size:14.5px}
+.road2 li{border-left-color:var(--good)}
+.cta{text-align:center;padding:40px 0 56px}
+.cta h2{font-size:22px;font-weight:800;margin-bottom:8px}
+.cta p{color:var(--mut);font-size:15px}
+footer{color:var(--mut);font-size:12.5px;text-align:center;padding:22px 0 40px;line-height:1.7}
+.gscale{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:26px 26px 20px;margin-top:16px}
+.gscale .gtitle{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--mut);font-weight:700;margin-bottom:26px;text-align:center}
+.gtrack{position:relative;height:14px;border-radius:8px;background:linear-gradient(90deg,#f85149 0%,#f85149 18%,#e3833c 34%,#d4a72c 52%,#7ec46a 74%,#3fb950 100%);margin:0 4px}
+.gmark{position:absolute;top:-46px;transform:translateX(-50%);text-align:center;white-space:nowrap}
+.gmark .gm-lab{font-size:10.5px;text-transform:uppercase;letter-spacing:.1em;color:var(--mut);font-weight:700}
+.gmark .gm-val{font-size:19px;font-weight:900;line-height:1.15}
+.gmark:after{content:"";position:absolute;left:50%;top:100%;width:2px;height:22px;transform:translateX(-50%);background:currentColor;opacity:.75}
+.gmark.now{color:var(--bad)}.gmark.now .gm-val{color:var(--bad)}
+.gmark.proj{color:var(--good)}.gmark.proj .gm-val{color:var(--good)}
+.gmark.proj{top:auto;bottom:-52px}
+.gmark.proj:after{top:auto;bottom:100%}
+.gdot{position:absolute;top:50%;width:16px;height:16px;border-radius:50%;transform:translate(-50%,-50%);border:3px solid #0d1117}
+.gdot.now{background:var(--bad)}.gdot.proj{background:var(--good)}
+.gticks{display:flex;justify-content:space-between;margin:66px 4px 0;font-size:11px;letter-spacing:.08em;color:var(--mut);font-weight:700}
+@media(max-width:620px){.gmark .gm-lab{font-size:9px}.gmark .gm-val{font-size:16px}}
+
+/* ---------- injected asset nav ---------- */
+.agnav{position:sticky;top:0;z-index:80;background:rgba(13,17,23,.92);backdrop-filter:saturate(1.5) blur(10px);border-bottom:1px solid var(--line)}
+.agnav .inner{max-width:1080px;margin:0 auto;padding:0 22px;display:flex;flex-wrap:wrap;align-items:center;gap:6px}
+.agnav a{display:inline-block;padding:12px 14px;font-size:14px;font-weight:600;color:var(--mut);text-decoration:none;border-bottom:2px solid transparent;transition:color .15s,border-color .15s}
+.agnav a:hover{color:var(--ink);border-bottom-color:var(--accent)}
+.agnav a.on{color:var(--ink);border-bottom-color:var(--accent)}
+.agnav a.ext{color:var(--accent)}
+.agnav a.ext:hover{color:#fff}
+@media(max-width:560px){.agnav .inner{padding:0 14px}.agnav a{padding:10px 9px;font-size:13px}}
+</style></head><body>
+<nav class="agnav"><div class="inner"><a href="assets.html">All Assets</a><a href="./" class="on">Audit</a><a href="competitors.html">Competitors</a><a href="tenders.html">Where The Work Is Published</a></div></nav>
+<header>
+  <div class="wrap">
+    <div class="eyebrow">Website &amp; Commercial Presence Audit &middot; S Davison (Electrical) Ltd &middot; South Shields</div>
+    <div class="sub">Prepared for Michael Davison &middot; 24 September 2026, rebuilt for the commercial side 25 September 2026 &middot; AG1 Consulting</div>
+    <h1>You Are The Only Firm In Your Market Measuring Anything. You Are Also The Only One Whose Site A Buyer Cannot Open.</h1>
+
+    <div class="hero">
+      <div class="gradecard gc-F">
+        <div class="bigletter bl-F" style="font-size:44px">0</div>
+        <div class="score100">visitors can reach your site without clicking past a security warning</div>
+      </div>
+      <div class="heroread">
+        <h2>We rebuilt this document after our call. The first version was aimed at winning domestic enquiries through a form, and that is not your business.</h2>
+        <p>This one is aimed at the people who actually buy from you: <b>council and government procurement, engineering
+        firms, and the person checking you out before a tender.</b></p>
+        <p><b>The headline finding has not changed, and it is still the first thing to fix.</b> Your certificate is
+        broken. We could not load your site over a normal secure connection at all. It only loaded once we told our
+        tools to ignore the certificate.</p>
+        <div class="tag">Every figure read directly from the named sites on 25 September 2026 &mdash; sources and limits at the foot</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="h">Finding 1 &mdash; The Certificate, And Why It Is Worse For You Than For A Domestic Firm</div>
+    <div class="code">
+  Normal secure request to sdavisonelectrical.com     <span class="ph">failed &mdash; no response at all</span>
+  Same request, ignoring the certificate              <span class="ok">200 OK, site loads fine</span>
+    </div>
+    <div class="flag">
+      <div class="lab">Nothing is broken behind it. The building is fine, the front door is jammed.</div>
+      <p><b>Your site works.</b> The content is there, the pages load, nothing has been lost. The only problem is that
+      a browser will not open it without showing a warning that says the connection is not private.</p>
+      <p><b>On domestic work you would lose some enquiries to this. On your work it is more serious than that.</b> A
+      procurement officer running pre-qualification checks on a bidder, or a facilities manager who has been given your
+      name, will not click past a security warning on a company they are considering handing a contract to. <b>It reads
+      as a firm that does not look after its own house.</b></p>
+      <p><b>You mentioned you may already be paying GoDaddy for this.</b> If the domain and email are with them, there
+      is a reasonable chance the certificate is already bought and simply not applied. <b>Check that before paying
+      anybody, including us.</b></p>
+      <p class="tag">You told us it has been like this "probably two years". We can only confirm it is broken today.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="h">Finding 2 &mdash; You Have The Only Working Analytics In This Market</div>
+    <div class="code">
+  S Davison            <span class="ok">GA4 live &mdash; G-BRQGM2ME5Z</span>    (plus a dead UA tag, UA-304221277-1)
+  AEL Electrical       <span class="ok">GA4 live</span>
+  Switch Electrical    <span class="ph">none found</span>
+  M E C (North East)   <span class="ph">none found</span>
+  North East Electrical <span class="ph">dead Universal Analytics only &mdash; stopped collecting July 2023</span>
+  Retroflo             <span class="ph">none found</span>
+  Electrical Solutions NE <span class="ph">none found</span>
+    </div>
+    <div class="win">
+      <div class="lab">We owe you a correction on this one, and it is in your favour</div>
+      <p><b>On our call we said we could not find any Google tracking on your site. That was wrong.</b> You have a live
+      Google Analytics 4 property and it has been running. The reason our first look missed it is the certificate:
+      an automated read over a normal secure connection gets nothing back at all, so it reported an empty site.
+      <b>The written audit had it right; the spoken version did not.</b></p>
+      <p><b>Why this matters commercially.</b> Two of six competitors have any working measurement. One of them, North
+      East Electrical, is running Google's old analytics product which stopped collecting data in July 2023 &mdash;
+      they have twenty-eight pages and twenty-eight enquiry forms and no idea which of them works.</p>
+      <p><b>So you are ahead, in a market where nearly nobody is counting.</b> The frustrating part is that the thing
+      doing the counting sits behind a door that will not open.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="h">Finding 3 &mdash; Thirty Years Of Contracts And Not One Of Them Written Down</div>
+    <div class="code">
+  Named projects or case studies published:
+
+    S Davison               <span class="ph">none</span>
+    Switch Electrical       <span class="ph">none found</span>
+    M E C (North East)      <span class="ph">none found</span>
+    North East Electrical   <span class="ok">2 pages</span>
+
+  Your own examples, from our call:
+    A school rewire, around &pound;300,000
+    A sub-sea engineering client &mdash; ROV manufacture, power and generator installation
+    Distribution circuits and large cable installation that few local firms take on
+    </div>
+    <div class="flag">
+      <div class="lab">This is the largest gap in the document and it costs nothing but time to close</div>
+      <p><b>You told us there are not many firms locally doing the bigger cable installations you do.</b> That is a
+      genuine competitive position and there is no evidence of it anywhere a buyer can see.</p>
+      <p><b>Commercial and public-sector work is not bought the way domestic work is bought.</b> A homeowner picks on
+      price and on who answers the phone. A procurement officer has to justify the award, often in writing, to somebody
+      above them. <b>What they are looking for is evidence you have done this exact thing, at this size, before.</b></p>
+      <p><b>Three written up properly would put you ahead of every firm in this comparison bar one.</b> Each needs the
+      building and its use, what the job involved, the scale, how long it took, and how you worked around an occupied
+      site. The school is the obvious first one.</p>
+      <p><b>You raised this yourself on the call.</b> You said you want case studies on the site, and demonstrations of
+      what you do. We agree, and we would put it above everything else on this list except the certificate.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="h">Finding 4 &mdash; "Nobody Searches For A Commercial Electrician." One Of Your Competitors Disagrees, With Money.</div>
+    <div class="code">
+  Google Ads conversion tracking found on each firm:
+
+    AEL Electrical          <span class="ok">AW-17594297886, with a conversion tag</span>
+    S Davison               <span class="ph">none</span>
+    Switch Electrical       <span class="ph">none</span>
+    M E C (North East)      <span class="ph">none</span>
+    North East Electrical   <span class="ph">none</span>
+    Retroflo                <span class="ph">none</span>
+    Electrical Solutions NE <span class="ph">none</span>
+    </div>
+    <div class="warn">
+      <div class="lab">You made a fair point on the call and it deserves a real answer rather than a sales one</div>
+      <p><b>You said you could never understand how Google Ads would work for you, because somebody browsing is not
+      looking for a commercial electrician, and that an industrial electrician is a specialist thing.</b> That is a
+      reasonable position and plenty of trades genuinely do not suit paid search.</p>
+      <p><b>So we checked instead of arguing.</b> AEL Electrical, working the same North East commercial ground
+      &mdash; fit-outs, schools, care facilities, factories &mdash; is running Google Ads <b>with a conversion tag
+      installed</b>. The conversion tag is the part that matters. It means they are not just spending, they are
+      measuring what the spend produces.</p>
+      <p><b>A firm that is measuring and has not switched it off is a firm for whom it is working.</b> That is not
+      proof it would work for you, and we are not going to pretend it is. It does mean the question is open rather
+      than closed.</p>
+      <p><b>What we would actually suggest, and it is smaller than it sounds.</b> Not a broad campaign. A narrow one
+      against a handful of specific terms &mdash; the kind of thing a facilities manager types when a distribution
+      board has failed or a building needs rewiring &mdash; geographically fenced to your travel radius, with a hard
+      monthly cap. <b>If it produces nothing in two months, it gets switched off and you have lost very little.</b></p>
+      <p class="tag">We have not seen AEL's account, spend or results. We observe only that the tags are present on their site.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="h">Finding 5 &mdash; Half Your Work Comes From Councils. All Twelve Publish In One Place.</div>
+    <div class="code">
+  Your own figures, from our call:
+
+    Council and government work        <span class="ok">~50% of turnover</span>
+    Engineering companies              <span class="ok">~30%</span>
+    Everything over &pound;10,000 goes to tender
+    Tenders you currently bid          <span class="ph">roughly one a month</span>
+    </div>
+    <div class="warn">
+      <div class="lab">This is the channel that actually matches how you sell, and it is not a website problem</div>
+      <p><b>The twelve North East councils advertise their opportunities through a single procurement body, NEPO, on
+      its tendering portal.</b> Framework agreements sit behind it, and getting onto a framework means being invited to
+      bid rather than hunting for notices.</p>
+      <p><b>You told us you bid about one tender a month.</b> We do not know whether that is because one is all that
+      comes up that suits you, or because you are only seeing some of what is published. <b>That is a genuine question
+      and we are not going to guess the answer.</b> It is the first thing we would want to establish on Monday.</p>
+      <p><b>Why we are raising it at all:</b> you asked on the call where the jobs would actually come from. For a firm
+      that is half public sector and where everything worth having goes to tender, the honest answer is that the
+      largest single lever is probably not advertising. It is being visible, credible and registered where your buyers
+      are already legally obliged to publish.</p>
+      <p><b>And that loops back to Finding 3.</b> Frameworks and pre-qualification ask for evidence of comparable work
+      at comparable value. The school rewire is exactly that, and it is written down nowhere.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="h">Finding 6 &mdash; Your Accreditations Are Stated But Not Evidenced</div>
+    <div class="code">
+  Accreditations named on each firm's own site:
+
+    S Davison               <span class="ok">NICEIC, CHAS</span>
+    Retroflo                <span class="ok">NICEIC, CHAS</span>
+    AEL Electrical          <span class="ok">NICEIC, Constructionline</span>
+    Switch Electrical       NICEIC
+    M E C (North East)      NICEIC
+    North East Electrical   NICEIC
+    Electrical Solutions NE <span class="ph">none found</span>
+
+  On your site:
+    Registration numbers    <span class="ph">not shown</span>
+    Insurance cover levels  <span class="ph">not shown</span>
+    </div>
+    <div class="warn">
+      <div class="lab">NICEIC is table stakes here. CHAS is where you separate.</div>
+      <p><b>Every firm we checked bar one names NICEIC.</b> It does not distinguish you. <b>CHAS does</b> &mdash; only
+      you and Retroflo show it, and it is a health and safety assessment that public sector buyers and main contractors
+      specifically ask about.</p>
+      <p><b>But naming a scheme is not the same as evidencing it.</b> Your registration numbers are not published and
+      neither are your insurance cover levels. Those are the two things a procurement form asks for by name, and
+      putting them in the footer means they appear on every page rather than being requested by email.</p>
+      <p><b>AEL carries Constructionline, which you do not show.</b> Worth a conversation about whether you hold it,
+      because it appears on a great many public sector pre-qualification requirements.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="h">Finding 7 &mdash; No Sector Pages, And No Structured Data</div>
+    <div class="code">
+  Your two strongest pages:
+    /industrial   <span class="ok">1,109 words</span>
+    /commercial   <span class="ok">1,096 words</span>
+    Homepage      305 words
+    About         294 words
+
+  Sector pages (local authority, education, healthcare, industrial client types)
+    <span class="ph">none</span>
+
+  Structured data:
+    S Davison               <span class="ph">none found</span>
+    M E C (North East)      <span class="ok">FAQ, address, opening hours, coordinates</span>
+    North East Electrical   <span class="ok">LocalBusiness, reviews, ratings, breadcrumbs</span>
+    </div>
+    <div class="warn">
+      <div class="lab">Your two best pages are better than anything local. They are also doing all the work alone.</div>
+      <p><b>Your commercial and industrial pages are over a thousand words each and they are the strongest thing on
+      the site.</b> Your homepage is three hundred. The depth is in the right place, but there is nothing underneath
+      it.</p>
+      <p><b>You named the sectors you want on the call:</b> hospitals, new construction, schools, and the engineering
+      and sub-sea clients you already serve. <b>None of those has a page.</b> A page per sector, written for that
+      buyer, is what gets found by somebody searching for a contractor with experience in their specific setting.</p>
+      <p><b>Two competitors publish structured data and you publish none.</b> That is the code that tells Google what
+      kind of business you are, where you are and when you are open, rather than leaving it to guess from your words.
+      It is a one-off job, not an ongoing cost.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="h">The Scorecard</div>
+    <div class="sheet">
+      <div class="row"><div><div class="rname">Site reachable</div><div class="sc">No &mdash; secure connection fails entirely, loads only if the certificate is ignored</div></div><div class="badge gF">F</div></div>
+      <div class="row"><div><div class="rname">Named contracts</div><div class="sc">30 years of work, none written up anywhere</div></div><div class="badge gF">F</div></div>
+      <div class="row"><div><div class="rname">Sector pages</div><div class="sc">None &mdash; no local authority, education, healthcare or new build page</div></div><div class="badge gF">F</div></div>
+      <div class="row"><div><div class="rname">Structured data</div><div class="sc">None found; two competitors publish it</div></div><div class="badge gF">F</div></div>
+      <div class="row"><div><div class="rname">Accreditation evidence</div><div class="sc">NICEIC and CHAS named, but no registration numbers or cover levels</div></div><div class="badge gD">D</div></div>
+      <div class="row"><div><div class="rname">Paid search</div><div class="sc">None &mdash; one direct competitor runs it with conversion tracking</div></div><div class="badge gD">D</div></div>
+      <div class="row"><div><div class="rname">Homepage depth</div><div class="sc">305 words carrying a commercial and industrial contractor</div></div><div class="badge gD">D</div></div>
+      <div class="row"><div><div class="rname">Commercial &amp; industrial pages</div><div class="sc">1,096 and 1,109 words &mdash; the best local content we found</div></div><div class="badge gA">A</div></div>
+      <div class="row"><div><div class="rname">Analytics</div><div class="sc">GA4 live &mdash; only two of seven firms have working measurement</div></div><div class="badge gA">A</div></div>
+      <div class="row"><div><div class="rname">Enquiry routes</div><div class="sc">Four tappable numbers and a form</div></div><div class="badge gB">B</div></div>
+      <div class="row"><div><div class="rname">Positioning</div><div class="sc">Clearly commercial and industrial, no domestic drift</div></div><div class="badge gA">A</div></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="h">What We Would Do, In Order</div>
+    <ul class="road">
+      <li><b>Fix the certificate.</b> Today if possible, and check GoDaddy first in case you have already paid for it.
+      Nothing else on this list matters while the front door is jammed.</li>
+      <li><b>Write up three contracts.</b> The school, the sub-sea client, and one large cable installation. This is
+      the item that wins tenders and pre-qualifications, and it is the one no competitor except North East Electrical
+      has bothered with.</li>
+      <li><b>Put registration numbers and insurance cover in the footer.</b> Twenty minutes, appears on every page,
+      and it answers the questions a procurement form asks by name.</li>
+      <li><b>Establish what you are actually seeing on the tender side.</b> One bid a month may be all that suits you,
+      or it may be a fraction of what is published. We should find out before deciding anything else.</li>
+      <li><b>Build a page per sector</b> &mdash; local authority, education, healthcare, industrial and new build.
+      Your commercial and industrial pages prove you can write them.</li>
+      <li><b>Add structured data.</b> One-off job, and two of your competitors already have it.</li>
+      <li><b>Only then, a narrow paid search test</b>, capped and geo-fenced, against a handful of specific terms. If
+      it produces nothing in two months, switch it off.</li>
+    </ul>
+  </div>
+</section>
+
+<div class="cta">
+  <div class="wrap">
+    <h2>Eight staff, thirty years, a £300,000 school rewire, and the only working analytics in your market.</h2>
+    <p>None of it is visible to anyone deciding whether to invite you to bid.</p>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    Prepared by Andrei Givero &middot; AG1 Consulting &middot; issued 24 September 2026, rebuilt for the commercial side 25 September 2026.
+    For Michael Davison, S Davison (Electrical) Ltd, South Shields.
+    <b>⚠ WE RECORD TWO CORRECTIONS. First, this document was originally addressed to Stephen Davison. Stephen previously owned the business and
+    no longer does; it is corrected throughout. Second, during our call of 24 September it was stated verbally that no Google analytics or tags
+    could be found on the site. That was wrong: a live Google Analytics 4 property, G-BRQGM2ME5Z, is present, along with a dead Universal
+    Analytics tag, UA-304221277-1. The error was caused by reading the site over a normal secure connection, which fails because of the expired
+    certificate and returns nothing. The written audit recorded the GA4 property correctly.</b>
+    <b>The certificate finding was tested on 25 September 2026: a standard HTTPS request to sdavisonelectrical.com returned no response at all,
+    and the identical request with certificate verification disabled returned HTTP 200 and the full page. We make no claim about how long it has
+    been in that state; the statement that it has been so for around two years is as you described it and has not been verified.</b>
+    <b>Page counts, word counts, analytics tags, Google Ads tags, structured data and accreditation mentions for every named firm were read
+    directly from those firms' own websites on 25 September 2026 by following each site's own navigation, and are reproducible. Word counts
+    exclude script, style and comment blocks. Page counts are capped at the first 30 pages reached from each homepage and are a floor, not a
+    total.</b>
+    <b>Items recorded as "not found" or "none" describe what a static read of the served HTML returned on that date and are not proof of absence:
+    tags can load after render, and pages may exist that are not linked from the pages we read. Accreditation findings record what each firm
+    displays on its own site, not what it holds; a firm may hold accreditations it has not published, and publication is not verification &mdash;
+    we have not checked any scheme's register.</b>
+    <b>⚠ Regarding AEL Electrical: we observe only that Google Ads and conversion tags are present on their website. We have no access to their ad
+    account, spend, bidding, keywords or results, and we make no claim that their advertising is profitable, nor that paid search would work for
+    your business. The inference that a measured campaign left running is likely to be working is a general commercial observation, not a finding
+    about that firm.</b>
+    <b>Caztec Group was excluded from this comparison: the domain caztec.co.uk currently serves an unrelated parked page rather than that firm's
+    website, so no measurement of them was possible and none is implied.</b>
+    <b>Statements about NEPO, council tendering and framework agreements are a general description of how North East public procurement is
+    published and are not procurement, legal or compliance advice. We have not checked whether your business is registered on any portal or named
+    on any framework, and nothing here asserts that it is or is not. Requirements vary by buyer, contract and framework.</b>
+    <b>Your turnover, profit, staff numbers, job volumes, job values, travel radius, tender frequency and sector split are as you described them
+    on our call of 24 September 2026 and have not been independently verified.</b>
+    <b>⚠ No enquiry, call, tender outcome, framework place, ranking or revenue result is promised, forecast or guaranteed anywhere in this
+    document.</b> Nothing here is a comment on the competence, licensing, insurance or workmanship of this or any other business. Company and
+    scheme names are used for identification only and belong to their respective owners. The grades are AG1's own editorial assessment.
+  </div>
+</footer>
+</body></html>
