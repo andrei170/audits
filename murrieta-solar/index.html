@@ -89,25 +89,32 @@
   </div>
 </header>
 <style>
-.sc{background:#fff;border:1px solid #d7e0ea;border-radius:12px;padding:0;margin:14px 0 6px;overflow:hidden}
-.sc-hero{background:linear-gradient(145deg,#0a1f3d,#123a6b 58%,#17539b);padding:26px 24px;
-display:flex;align-items:center;gap:26px;flex-wrap:wrap}
-.sc-g{font-size:62px;font-weight:800;line-height:1;color:#fff;letter-spacing:-2px}
-.sc-s{font-size:15px;color:#cfe0f5;margin-top:4px}
-.sc-v{flex:1;min-width:230px;color:#e8f1fc;font-size:15px;line-height:1.55}
-.sc-v b{color:#fff}
-table.scd{width:100%;border-collapse:collapse;background:#fff;margin:0}
-table.scd th{background:#0b1016;color:#fff;font-size:11.5px;letter-spacing:.9px;
-text-transform:uppercase;font-weight:700;padding:10px 12px;text-align:left}
-table.scd td{border-top:1px solid #e3eaf2;padding:11px 12px;vertical-align:top;
-color:#1f2a38;font-size:14.5px;line-height:1.5}
-table.scd td b{color:#000}
-.gb{display:inline-block;min-width:30px;text-align:center;font-weight:800;color:#fff;
+.sc{background:#fff !important;border:1px solid #d7e0ea !important;border-radius:12px;
+padding:0 !important;margin:14px 0 6px;overflow:hidden}
+.sc *{box-sizing:border-box}
+.sc-hero{background:linear-gradient(145deg,#0a1f3d,#123a6b 58%,#17539b) !important;
+padding:26px 24px !important;display:flex;align-items:center;gap:26px;flex-wrap:wrap}
+.sc-g{font-size:62px !important;font-weight:800;line-height:1;color:#fff !important;letter-spacing:-2px}
+.sc-s{font-size:15px !important;color:#cfe0f5 !important;margin-top:4px}
+.sc-s b{color:#fff !important}
+.sc-v{flex:1;min-width:230px;color:#e8f1fc !important;font-size:15px !important;line-height:1.55}
+.sc-v b{color:#fff !important}
+table.scd{width:100%;border-collapse:collapse;background:#fff !important;margin:0;border:0 !important}
+table.scd th{background:#0b1016 !important;color:#fff !important;font-size:11.5px !important;
+letter-spacing:.9px;text-transform:uppercase;font-weight:700;padding:10px 12px !important;
+text-align:left;border:0 !important}
+table.scd td{border:0 !important;border-top:1px solid #e3eaf2 !important;padding:11px 12px !important;
+vertical-align:top;color:#1f2a38 !important;font-size:14.5px !important;line-height:1.5;
+background:#fff !important}
+table.scd tr:nth-child(even) td{background:#fafcfe !important}
+table.scd td b{color:#000 !important}
+table.scd td p{color:#1f2a38 !important;margin:0 0 7px}
+.gb{display:inline-block;min-width:30px;text-align:center;font-weight:800;color:#fff !important;
 border-radius:6px;padding:3px 7px;font-size:14px}
-.bar{height:6px;background:#e9eff6;border-radius:4px;margin-top:7px;overflow:hidden}
+.sc-cat{white-space:nowrap;font-weight:700;color:#0b1016 !important}
+.bar{height:6px;background:#e9eff6 !important;border-radius:4px;margin-top:7px;overflow:hidden}
 .bar i{display:block;height:6px;border-radius:4px}
-.sc-cat{white-space:nowrap;font-weight:700;color:#0b1016}
-@media(max-width:620px){.sc-cat{white-space:normal}.sc-g{font-size:48px}}
+@media(max-width:620px){.sc-cat{white-space:normal}.sc-g{font-size:48px !important}}
 </style><section><div class="wrap"><div class="h">Digital Presence Audit</div><div class="sc"><div class="sc-hero"><div><div class="sc-g" style="color:#fff">F</div><div class="sc-s"><b style="color:#fff">39</b> / 100</div></div><div class="sc-v">Failing the cheap, mechanical things. &#11088; <b>Which is the good news</b> &mdash; nothing on this list needs a bigger company, a better reputation or more years in the trade. It is all installable.<br><br><b>5 of 14 passed, 8 outright failed.</b></div></div><table class="scd"><tr><th>Grade</th><th>What we checked</th><th>What we found</th></tr><tr><td><span class="gb" style="background:#b02a20">F</span></td><td class="sc-cat">Enquiry forms<div class="bar"><i style="width:3%;background:#b02a20"></i></div></td><td>&#128308;&#128308; <b>Not one enquiry form anywhere on the site.</b> Every visitor who will not phone has nowhere to go.</td></tr><tr><td><span class="gb" style="background:#2f7d32">B</span></td><td class="sc-cat">Tap-to-call<div class="bar"><i style="width:70%;background:#2f7d32"></i></div></td><td><b>4 tap-to-call links.</b> Reasonable coverage.</td></tr><tr><td><span class="gb" style="background:#b02a20">F</span></td><td class="sc-cat">Analytics installed<div class="bar"><i style="width:3%;background:#b02a20"></i></div></td><td>&#128308;&#128308; <b>No analytics of any kind.</b> Nothing records how many people reach the site or what they do on it.</td></tr><tr><td><span class="gb" style="background:#b02a20">F</span></td><td class="sc-cat">Ads readiness<div class="bar"><i style="width:3%;background:#b02a20"></i></div></td><td>&#128308; <b>No advertising tag of any kind.</b> Spend could not be measured today even if it started tomorrow.</td></tr><tr><td><span class="gb" style="background:#b02a20">F</span></td><td class="sc-cat">Local business markup<div class="bar"><i style="width:25%;background:#b02a20"></i></div></td><td>&#128308; Structured data exists but <b>only describes the website</b> (OpeningHoursSpecification, Organization, WebPage). No address, no coordinates, no opening hours.</td></tr><tr><td><span class="gb" style="background:#9c7510">C</span></td><td class="sc-cat">Content depth<div class="bar"><i style="width:65%;background:#9c7510"></i></div></td><td><b>18 pages, 577 words on the homepage.</b></td></tr><tr><td><span class="gb" style="background:#157a52">A-</span></td><td class="sc-cat">Code structure<div class="bar"><i style="width:85%;background:#157a52"></i></div></td><td>One main heading per page, as it should be.</td></tr><tr><td><span class="gb" style="background:#0f6b45">A</span></td><td class="sc-cat">Accreditation shown<div class="bar"><i style="width:90%;background:#0f6b45"></i></div></td><td>&#11088; <b>BBB, CSLB, NABCEP</b> on the site. This is the cheapest trust signal there is and it is being used.</td></tr><tr><td><span class="gb" style="background:#157a52">A-</span></td><td class="sc-cat">Reviews on site<div class="bar"><i style="width:80%;background:#157a52"></i></div></td><td>Present. &#9888; Volume and recency not assessed.</td></tr><tr><td><span class="gb" style="background:#b02a20">F</span></td><td class="sc-cat">Proof of work<div class="bar"><i style="width:10%;background:#b02a20"></i></div></td><td>&#128308; <b>No gallery or past-work section.</b> Nothing shows the standard of the work.</td></tr><tr><td><span class="gb" style="background:#b02a20">F</span></td><td class="sc-cat">Who you are<div class="bar"><i style="width:15%;background:#b02a20"></i></div></td><td>&#9888; <b>Nothing saying who runs the business.</b></td></tr><tr><td><span class="gb" style="background:#b02a20">F</span></td><td class="sc-cat">Careers page<div class="bar"><i style="width:10%;background:#b02a20"></i></div></td><td>&#128308; <b>None.</b> Nothing aimed at somebody who might want to work there.</td></tr><tr><td><span class="gb" style="background:#b02a20">F</span></td><td class="sc-cat">Blog or news<div class="bar"><i style="width:20%;background:#b02a20"></i></div></td><td>&#9888; <b>None.</b> Nothing that earns search traffic over time.</td></tr><tr><td><span class="gb" style="background:#157a52">A-</span></td><td class="sc-cat">Professional email<div class="bar"><i style="width:80%;background:#157a52"></i></div></td><td>Email is on the business's own domain.</td></tr></table></div><div class="oppnote" style="margin-top:12px">&#11088;&#11088; <b>Every one of the failures above is mechanical.</b> None of them is about your workmanship, your prices or your reputation. &#11088; <b>Fixing the whole list would move this from F (39/100) to roughly A-</b> &mdash; and the work is measured in days, not months.<br><br>&#9888; <b>What this grade is not:</b> it scores what a visitor and a search engine can see on your website today. <b>It is not a judgement of your business</b>, and it predicts no enquiry volume, ranking or revenue. Site speed, review volume and social activity were <b>not assessed</b> and are excluded from the score rather than guessed at.</div></div></section>
 
 
