@@ -101,8 +101,23 @@ footer{color:var(--mut);font-size:12.5px;text-align:center;padding:22px 0 40px;l
 .agnav a.ext{color:var(--accent)}
 .agnav a.ext:hover{color:#fff}
 @media(max-width:560px){.agnav .inner{padding:0 14px}.agnav a{padding:10px 9px;font-size:13px}}
+
+nav.hb{background:#0f1720;border-bottom:1px solid var(--line);padding:0}
+nav.hb .wrap{display:flex;gap:4px;align-items:stretch;max-width:1080px;margin:0 auto;
+padding:7px 22px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+nav.hb .wrap::-webkit-scrollbar{display:none}
+nav.hb a{display:flex;align-items:center;white-space:nowrap;padding:9px 13px;border-radius:7px;
+font-size:13.5px;font-weight:650;color:#9fb3c8;text-decoration:none;border:1px solid transparent;
+transition:background .15s,color .15s,border-color .15s}
+nav.hb a:hover{background:#18242f;color:#e6edf3}
+nav.hb a.on{background:#1f6feb;color:#fff;border-color:#2f81f7}
+nav.hb a.demo{color:#7ee2b8;border-color:#1d5c45;background:#0d2a21;margin-left:auto}
+nav.hb a.demo:hover{background:#12402f;color:#b8f5da}
+@media(max-width:760px){nav.hb .wrap{padding:7px 14px}
+nav.hb a{font-size:13px;padding:9px 11px}
+nav.hb a.demo{margin-left:4px}}
 </style></head><body>
-<nav class="agnav"><div class="inner"><a href="./" class="on">Pre-Call Diagnostic</a></div></nav>
+<nav class="agnav"><div class="inner"><a href="./" style="color:#e6edf3;font-weight:800">AG1 Consulting</a><span style="color:#6e7d8d;font-size:13px;padding:12px 2px">F &amp; G Electrical &middot; pre-call pack</span></div></nav>
 <style>
 :root{--bg:#f6f8fb !important;--panel:#fff !important;--ink:#10131a !important;--mut:#53627a !important;
 --line:#d7e0ea !important;--accent:#1f6feb !important;--soft:#eef3f9 !important;--slate:#33475b !important;
@@ -146,7 +161,7 @@ border-left:4px solid #1f6feb !important;border-radius:8px;padding:13px 16px;mar
 section{padding:24px 0}
 </style>
 <header><div class="wrap"><div class="eyebrow">Pre-Call Diagnostic &middot; F&amp;G Electrical Ltd</div>
-<h1>Twenty-Four Ways To Ring You, And Nothing Counting Who Does.</h1><div class="sub">Prepared for Jonathon Fitzpatrick &middot; Tuesday 6 October, 2pm &middot; AG1 Consulting</div></div></header><nav class="hb"><div class="wrap"><a href="assets.html">Start here</a><a href="plan.html">The revised plan</a><a href="pricing.html">The two options</a><a href="scorecard.html">Graded scorecard</a><a href="measurement.html">What you'd see</a><a href="index.html" class="on">The audit</a></div></nav>
+<h1>Twenty-Four Ways To Ring You, And Nothing Counting Who Does.</h1><div class="sub">Prepared for Jonathon Fitzpatrick &middot; Tuesday 6 October, 2pm &middot; AG1 Consulting</div></div></header><nav class="hb"><div class="wrap"><a href="assets.html">Start here</a><a href="scorecard.html">Graded scorecard</a><a href="index.html" class="on">The audit</a><a href="measurement.html">What you would see</a><a href="plan.html">The revised plan</a><a href="pricing.html">The two options</a><a class="demo" href="https://andrei170.github.io/fg-electrical-demo/" target="_blank" rel="noopener">Demo site &nearr;</a></div></nav>
 <style>
 .sc{background:#fff !important;border:1px solid #d7e0ea !important;border-radius:12px;
 padding:0 !important;margin:14px 0 6px;overflow:hidden}
