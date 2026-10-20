@@ -43,18 +43,27 @@ footer{border-top:1px solid var(--line);margin-top:24px;padding:18px 0 34px}
 footer b,footer{color:#6b7b8f;font-size:11.5px;line-height:1.62}
 footer b{display:block;margin-top:7px}
 @media(max-width:620px){h1{font-size:24px}}
+</style><style>
+nav.hb a.demo{margin-left:auto;color:#8fd97f}
+table{width:100%;border-collapse:collapse;background:#fff;border:1px solid #d7e0ea;border-radius:10px;overflow:hidden}
+table th{background:#0b1016;color:#fff;font-size:11.5px;letter-spacing:.9px;text-transform:uppercase;text-align:left;padding:10px 12px}
+table td{border-top:1px solid #e3eaf2;padding:11px 12px;vertical-align:top;font-size:14.5px;line-height:1.5}
+.tw{overflow-x:auto;-webkit-overflow-scrolling:touch;margin-top:14px}.tw table{min-width:720px}
+.cta{display:block;background:linear-gradient(135deg,#15211b,#1e6b2e);color:#fff !important;border-radius:12px;padding:22px 24px;margin-bottom:14px;text-decoration:none}
+.cta .t{font-weight:800;font-size:21px;color:#fff}.cta .d{color:#d6eed0;font-size:15px;margin-top:4px}.cta .m{color:#a6e897;font-weight:700;margin-top:10px;font-size:14px}
+.plan{counter-reset:p;list-style:none;padding:0}.plan li{counter-increment:p;padding:9px 0 9px 40px;position:relative;border-bottom:1px solid #e3eaf2}
+.plan li:before{content:counter(p);position:absolute;left:0;top:8px;width:27px;height:27px;border-radius:50%;background:#123a6b;color:#fff;font-weight:800;font-size:13px;display:grid;place-items:center}
+.qs li{margin-bottom:8px}
+html,body{overflow-x:hidden}
 </style></head>
 <body>
-<header><div class="wrap"><div class="eyebrow">The audit &middot; read 12 October 2026</div><h1>A Good-Looking Site, Published Before It Was Finished.</h1>
+<header><div class="wrap"><div class="eyebrow">The audit &middot; read 12 October, re-checked 20 October 2026</div><h1>A Good-Looking Site, Published Before It Was Finished.</h1>
 <div class="sub">CKML PAT Test Ltd &middot; Blyth, Northumberland &middot; PAT testing across the North East</div></div></header>
-<nav class="hb"><div class="wrap"><a href="assets.html">Start here</a><a href="recap.html">Call recap</a><a href="index.html" class="on">The audit</a><a href="audit-pt2.html">Audit Pt.2</a><a href="scorecard.html">Graded scorecard</a><a href="competitors.html">Your competitors</a><a href="competitors-pt2.html">Competitors Pt.2</a><a href="proposal.html">What we would do</a><a class="demo" href="https://andrei170.github.io/ckml-pat-test-demo/" target="_blank" rel="noopener">Demo site &nearr;</a></div></nav>
+<nav class="hb"><div class="wrap"><a href="assets.html">Start here</a><a href="recap.html">Call recap</a><a href="index.html" class="on">The audit</a><a href="audit-pt2.html">Audit Pt.2</a><a href="scorecard.html">Graded scorecard</a><a href="search.html">Search, AI &amp; ads</a><a href="competitors.html">Your competitors</a><a href="competitors-pt2.html">Competitors Pt.2</a><a href="proposal.html">What we would do</a><a class="demo" href="https://andrei170.github.io/ckml-pat-test-demo/" target="_blank" rel="noopener">&#11088; Demo site &nearr;</a></div></nav>
 <section><div class="wrap"><div class="h">What we found</div><div class="card bad"><span class="lab">&#128308;&#128308; The headline</span>
 <p><b>The website reads well and looks modern. But it was published before it was finished, and the unfinished parts are the ones that bring in work.</b></p></div>
-<div class="card bad"><span class="lab">&#128308;&#128308; 1. The enquiry forms go nowhere</span>
-<p>There are two forms. In the page code, <b>both are set to send to "YOUR-EMAIL@example.com"</b>, the placeholder a site builder leaves for the owner's address.</p>
-<p>&#128308; <b>As it stands, somebody who fills in "Get your free, no-obligation quote" and presses Send is not reaching you.</b> And nothing tells them, or you.</p>
-<p>&#9888; We read this from the page code and did not send a test. A test enquiry takes one minute and settles it.</p></div>
-<div class="card bad"><span class="lab">&#128308; 2. Four more placeholders a customer or Google can see</span>
+<div class="card good"><span class="lab">&#11088; 1. The enquiry forms: fixed since we first looked</span><p>On 12 October both forms were set to send to <b>"YOUR-EMAIL@example.com"</b>, and they still were on 15 October. <b>On 20 October both are wired to a form service (EmailJS) with real account keys.</b> That is the biggest fix on this page, and it is done.</p><p>&#9888; We read this from the page code and did not send a test. <b>One test enquiry settles which inbox it lands in.</b></p></div>
+<div class="card bad"><span class="lab">&#128308; 2. Four placeholders a customer or Google can still see</span>
 <ul><li>The browser tab reads <b>"CKML PAT Testing - Full Site Preview"</b>. That is what Google shows as your headline</li>
 <li>The price slider says, on the page: <b>"Example pricing shown for illustration - replace with CKML's real rates before publishing"</b></li>
 <li>The phone number given to Google is <b>"+44-XXXX-XXXXXX"</b></li>
@@ -73,16 +82,10 @@ footer b{display:block;margin-top:7px}
 <li><b>Free socket testing and microwave leakage checks</b> with a visit. A real reason to choose you, stated plainly</li>
 <li><b>A named, local, two-person contact</b>: Clair and Neil, on your own email domain</li>
 <li><b>The "Do you need PAT testing?" quiz</b> is a good idea that most competitors do not have</li></ul></div>
-<div class="card note"><p>&#9888; <b>Not assessed:</b> your Google Business Profile, social pages, and where you rank in search. We have not guessed.</p></div></div></section>
-<footer><div class="wrap">Prepared by Andrei Givero &middot; AG1 Consulting &middot; 6 October 2026,
-for discussion with Neil Taylor at CKML PAT Test Ltd.
-<b>&#9888; This is a discussion document, not a proposal or a statement of work, and nothing on it
-is priced.</b>
-<b>&#9888; Everything stated about the website was established by automated read of the live site on
-5-6 October 2026 and describes what was in the page code at that moment. Site speed, review volume
-and social activity were NOT assessed.</b>
-<b>&#9888; Anything attributed to Neil Taylor was recorded by AG1's team on a booking call and is
-REPORTED, NOT VERIFIED.</b>
-<b>&#9888; No enquiry volume, cost, ranking, conversion rate, job count or revenue outcome is
-forecast, promised or implied anywhere in this pack.</b>
+<div class="card note"><p><b>New since our first call:</b> <a href="search.html">Search, AI answers and ads</a> covers what buyers find when they search, and whether anybody is advertising. &#9888; <b>Still not assessed:</b> your Google Business Profile and social pages. We have not guessed.</p></div></div></section>
+<footer><div class="wrap">Prepared by Andrei Givero &middot; AG1 Consulting &middot; updated 20 October 2026, for our call with Neil Taylor at CKML PAT Test Ltd on Wednesday 21 October.
+<b>&#9888; This is a discussion document, not a statement of work, and nothing on it is priced.</b>
+<b>&#9888; Anything in quotation marks is what Neil told us on our 13 October call. His figures have not been checked by us.</b>
+<b>&#9888; ckmlpattest.co.uk was re-read on 20 October 2026 (page code, form script and file sizes). Searches and the Google and Meta ad libraries were checked the same day. Competitor pages were read on 12 and 15 October. Listings can be out of date. We contacted nobody and sent no test enquiry.</b>
+<b>&#9888; No enquiry volume, review count, ranking, job count or revenue outcome is forecast, promised or implied anywhere in this pack.</b>
 </div></footer></body></html>
