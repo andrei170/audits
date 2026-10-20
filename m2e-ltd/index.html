@@ -1,82 +1,134 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8">
+<html lang="en-GB"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
 <title>The Audit &middot; M2E Ltd</title>
 <style>
-:root{--bg:#f6f8fb;--panel:#fff;--ink:#10131a;--mut:#53627a;--line:#d7e0ea;--accent:#1f6feb}
+:root{--bg:#f6f8fb;--ink:#10131a;--mut:#53627a;--line:#d7e0ea}
 *{box-sizing:border-box}
-html,body{margin:0;background:var(--bg);color:var(--ink);
+html,body{margin:0;background:var(--bg);color:var(--ink);overflow-x:hidden;
 font:16px/1.62 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
 .wrap{max-width:1040px;margin:0 auto;padding:0 16px}
-header{background:linear-gradient(145deg,#0a1f3d,#123a6b 58%,#17539b);padding:30px 0 26px}
-header *{color:#fff}
-.eyebrow{font-size:12px;letter-spacing:1.4px;text-transform:uppercase;color:#8ec5ff;font-weight:700}
+header.hd{background:linear-gradient(145deg,#0a1f3d,#123a6b 58%,#17539b);padding:30px 0 26px}
+header.hd *{color:#fff}
+.eyebrow{font-size:12px;letter-spacing:1.4px;text-transform:uppercase;color:#8ec5ff !important;font-weight:700}
 h1{font-size:30px;line-height:1.22;margin:8px 0 10px;letter-spacing:-.4px}
-.sub{color:#cfe0f5;font-size:14.5px}
+.sub{color:#cfe0f5 !important;font-size:14.5px}
 nav.hb{background:#0b1016;position:sticky;top:0;z-index:9;overflow-x:auto}
 nav.hb .wrap{display:flex;gap:4px;padding:0 16px}
-nav.hb a{color:#b7c6d8;text-decoration:none;font-size:13.5px;font-weight:600;
-padding:12px 13px;white-space:nowrap;border-bottom:3px solid transparent}
-nav.hb a:hover{color:#fff}
-nav.hb a.on{color:#fff;border-bottom-color:#2f81f7}
+nav.hb a{color:#b7c6d8;text-decoration:none;font-size:13.5px;font-weight:600;padding:12px 13px;white-space:nowrap;border-bottom:3px solid transparent}
+nav.hb a:hover{color:#fff}nav.hb a.on{color:#fff;border-bottom-color:#2f81f7}
+nav.hb a.demo{color:#5fd4ff;margin-left:auto}
 section{padding:26px 0}
-.h{font-size:12px;letter-spacing:1.3px;text-transform:uppercase;color:#53627a;
-font-weight:800;margin-bottom:12px}
+.h{font-size:12px;letter-spacing:1.3px;text-transform:uppercase;color:#53627a;font-weight:800;margin:6px 0 12px}
 h2{font-size:21px;margin:0 0 12px;letter-spacing:-.2px}
-.card{background:#fff;border:1px solid var(--line);border-radius:11px;padding:19px 21px;
-margin-bottom:11px}
+.card{background:#fff;border:1px solid var(--line);border-radius:11px;padding:19px 21px;margin-bottom:11px}
 .card.bad{border-left:5px solid #b02a20}.card.warn{border-left:5px solid #c7971a}
 .card.good{border-left:5px solid #157a52}.card.note{background:#eff5ff;border-left:5px solid #1f6feb}
 .lab{font-weight:800;font-size:16px;display:block;margin-bottom:7px}
 p{margin:0 0 9px}p:last-child{margin-bottom:0}
-b{color:#000}
-a{color:#1458c4}
-ul{margin:0 0 4px;padding-left:20px}li{margin-bottom:6px}
-.tile{display:block;background:#fff;border:1px solid var(--line);border-radius:11px;
-padding:18px 20px;margin-bottom:11px;text-decoration:none;color:inherit}
+b{color:#000}a{color:#1458c4}code{background:#f0f3f7;padding:1px 5px;border-radius:4px;font-size:.9em}
+ul,ol{margin:0 0 4px;padding-left:20px}li{margin-bottom:6px}
+.tile{display:block;background:#fff;border:1px solid var(--line);border-radius:11px;padding:18px 20px;margin-bottom:11px;text-decoration:none;color:inherit}
 .tile:hover{border-color:#1f6feb;box-shadow:0 2px 14px rgba(31,111,235,.10)}
 .tile .t{font-weight:800;font-size:17px;color:#0b1016;margin-bottom:5px}
 .tile .d{color:#3b4a5e;font-size:14.5px}
 .tile .m{color:#1458c4;font-size:13px;font-weight:700;margin-top:8px}
-footer{border-top:1px solid var(--line);margin-top:24px;padding:18px 0 34px}
-footer b,footer{color:#6b7b8f;font-size:11.5px;line-height:1.62}
-footer b{display:block;margin-top:7px}
-@media(max-width:620px){h1{font-size:24px}}
+.tiles{display:grid;grid-template-columns:1fr 1fr;gap:11px}.tiles>*{min-width:0;margin-bottom:0}
+@media(max-width:700px){.tiles{grid-template-columns:1fr}}
+.demohero{display:block;text-decoration:none;color:#fff;border-radius:14px;padding:26px 26px;margin-bottom:14px;
+background:radial-gradient(700px 260px at 90% 0%,rgba(0,180,239,.35),transparent 60%),linear-gradient(135deg,#08121c,#132a3c);border:1px solid #213649}
+.demohero .k{font-size:12px;letter-spacing:1.4px;text-transform:uppercase;color:#5fd4ff;font-weight:800}
+.demohero .t{font-size:24px;font-weight:800;margin:6px 0 6px;color:#fff}
+.demohero .d{color:#c2d0de;font-size:15px;max-width:720px}
+.demohero .b{display:inline-block;margin-top:14px;background:#00b4ef;color:#04202d;font-weight:800;padding:10px 18px;border-radius:7px}
+.plan{counter-reset:p;list-style:none;padding:0}
+.plan li{counter-increment:p;position:relative;padding:10px 0 10px 44px;border-bottom:1px solid #e3eaf2;margin:0}
+.plan li:last-child{border-bottom:0}
+.plan li:before{content:counter(p);position:absolute;left:0;top:10px;width:30px;height:30px;border-radius:50%;background:#123a6b;color:#fff;font-weight:800;display:grid;place-items:center;font-size:14px}
+.qs li{margin-bottom:9px}
+.tw{overflow-x:auto;border:1px solid var(--line);border-radius:11px;background:#fff;margin-bottom:11px}
+table.t{width:100%;border-collapse:collapse;min-width:640px}
+table.t th{background:#0b1016;color:#fff;font-size:11.5px;letter-spacing:.9px;text-transform:uppercase;font-weight:700;padding:10px 12px;text-align:left}
+table.t td{border-top:1px solid #e3eaf2;padding:11px 12px;vertical-align:top;font-size:14.5px;line-height:1.5}
+table.t tr:nth-child(even) td{background:#fafcfe}
+.pill{display:inline-block;font-size:12px;font-weight:800;border-radius:5px;padding:2px 8px;color:#fff;white-space:nowrap}
+.pill.no{background:#b02a20}.pill.yes{background:#157a52}
+footer.ft{border-top:1px solid var(--line);margin-top:24px;padding:18px 0 34px}
+footer.ft,footer.ft b{color:#6b7b8f;font-size:11.5px;line-height:1.62}
+footer.ft b{display:block;margin-top:7px}
+.sc{background:#fff;border:1px solid #d7e0ea;border-radius:12px;margin:14px 0 6px;overflow:hidden}
+.sc-hero{background:linear-gradient(145deg,#0a1f3d,#123a6b 58%,#17539b);padding:26px 24px;display:flex;align-items:center;gap:26px;flex-wrap:wrap}
+.sc-g{font-size:62px;font-weight:800;line-height:1;color:#fff;letter-spacing:-2px}
+.sc-s{font-size:15px;color:#cfe0f5;margin-top:4px}.sc-s b{color:#fff}
+.sc-v{flex:1;min-width:230px;color:#e8f1fc;font-size:15px;line-height:1.55}.sc-v b{color:#fff}
+.scw{overflow-x:auto}
+table.scd{width:100%;border-collapse:collapse}
+table.scd th{background:#0b1016;color:#fff;font-size:11.5px;letter-spacing:.9px;text-transform:uppercase;font-weight:700;padding:10px 12px;text-align:left}
+table.scd td{border-top:1px solid #e3eaf2;padding:11px 12px;vertical-align:top;color:#1f2a38;font-size:14.5px;line-height:1.5}
+table.scd tr:nth-child(even) td{background:#fafcfe}
+.gb{display:inline-block;min-width:30px;text-align:center;font-weight:800;color:#fff;border-radius:6px;padding:3px 7px;font-size:14px}
+.sc-cat{font-weight:700;color:#0b1016;min-width:170px}
+.bar{height:6px;background:#e9eff6;border-radius:4px;margin-top:7px;overflow:hidden}.bar i{display:block;height:6px;border-radius:4px}
+.mini{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+.mini .g{font-size:46px;font-weight:800;color:#b02a20;line-height:1}
+@media(max-width:620px){h1{font-size:24px}.sc-g{font-size:48px}.sc-cat{min-width:120px}}
 </style></head>
 <body>
-<header><div class="wrap"><div class="eyebrow">The audit &middot; read 15 October 2026</div><h1>Your Homepage Is Telling Google Not To List It.</h1>
-<div class="sub">M2E Ltd &middot; Tamworth and Lichfield, Staffordshire &middot; control systems and panels</div></div></header>
-<nav class="hb"><div class="wrap"><a href="assets.html">Start here</a><a href="index.html" class="on">The audit</a><a href="aeo.html">AI &amp; search audit</a><a href="scorecard.html">Graded scorecard</a><a href="competitors.html">Your competitors</a><a href="proposal.html">What we would do</a><a class="demo" href="https://andrei170.github.io/m2e-ltd-demo/" target="_blank" rel="noopener">Demo site &nearr;</a></div></nav>
-<section><div class="wrap"><div class="h">What we found</div><div class="card bad"><span class="lab">&#128308;&#128308; The headline</span>
-<p><b>Your homepage has a <code>noindex</code> tag.</b> It is an instruction to Google: do not show this page in search results. We confirmed it in the page code on 15 October 2026.</p>
-<p>&#128308; It is usually left on by accident when a site is first built. <b>Removing it is a five-minute change</b>, and until it is gone, the most important page you own cannot be found on Google.</p></div>
-<div class="card bad"><span class="lab">&#128308; 1. No proof for buyers spending up to £100,000</span>
-<p>An engineering manager choosing a panel builder wants to see <b>what you have built, for whom, and to what standard</b>. Your site shows no clients, no projects, no case studies and no testimonials.</p>
-<p>&#9888; Competitors lead with exactly this: SM Control Engineering shows case studies by sector, Controlsforce shows projects and a customer quote, Towerglens shows its panel standards.</p></div>
-<div class="card bad"><span class="lab">&#128308; 2. No standards named</span>
-<p>Buyers in food, pharma and baggage handling check standards before they shortlist. <b>Your site names none.</b> Every competitor that lists one shows ISO 9001, and Towerglens shows BS EN 61439, the standard for low-voltage switchgear assemblies.</p>
-<p>&#9888; If you build to a standard, it belongs on every page. If you do not hold one, it may be worth a conversation.</p></div>
-<div class="card warn"><span class="lab">&#9888; 3. Nothing is being counted</span>
-<p>No Google Analytics, no tags of any kind. <b>So nobody can say how many engineers visit, from where, or what they look at.</b></p></div>
-<div class="card warn"><span class="lab">&#9888; 4. It has not changed since 2022</span>
-<p>The sitemap was last updated in July 2022, pages run 100 to 300 words, and the footer still shows the Tamworth address, though your registered office moved in May 2026. <b>To a buyer, an unchanged site can read as a business that is not busy</b>, when the opposite is true.</p></div>
-<div class="card good"><span class="lab">&#11088; What is already strong</span>
-<ul><li><b>A real specialism:</b> panel design and build, EPLAN and AutoCAD Electrical schematics, and <b>an in-house functional safety engineer</b>, from Sistema calculations to performance levels</li>
-<li><b>Panels built and tested by your own team</b></li>
-<li><b>Named sectors:</b> baggage and parcel conveyors, food and beverage, pharmaceutical, special purpose machinery</li>
+<header class="hd"><div class="wrap"><div class="eyebrow">The audit &middot; re-checked 20 October 2026</div><h1>Your Homepage Is Telling Google Not To List It.</h1>
+<div class="sub">M2E Ltd &middot; Tamworth, Staffordshire &middot; control systems and panels</div></div></header>
+<nav class="hb"><div class="wrap"><a href="assets.html">Start here</a><a href="index.html" class="on">The audit</a><a href="scorecard.html">Graded scorecard</a><a href="aeo.html">SEO &amp; AI search</a><a href="competitors.html">Your competitors</a><a href="proposal.html">What we would do</a><a class="demo" href="https://andrei170.github.io/m2e-ltd-demo/" target="_blank" rel="noopener">Demo site &nearr;</a></div></nav>
+<section><div class="wrap"><div class="card bad"><span class="lab">&#128308;&#128308; The headline</span>
+<p><b>Your homepage has a <code>noindex</code> tag.</b> It is an instruction to Google: do not show this page in search results. We found it on 15 October and it was still there on 20 October.</p>
+<p>It is usually left on by accident when a site is built. <b>Removing it is a five-minute change</b>, and until it goes, the most important page you own cannot appear on Google or in the search results AI assistants draw on.</p></div>
+
+<div class="card"><div class="mini"><div class="g">F</div><div><b>Graded scorecard: 31 out of 100.</b> 14 checks, each one something we could see or test.<br><a href="scorecard.html">See every grade &rarr;</a></div></div></div>
+
+<div class="h" style="margin-top:22px">1. Google and search</div>
+<div class="card bad"><span class="lab">&#128308; Hard for Google to find, and nothing local about it</span>
+<ul><li>Homepage set to <b>noindex</b>, and missing from your sitemap, which was last updated in <b>July 2022</b></li>
+<li>Page titles say &ldquo;UK&rdquo;. <b>No page names Tamworth, Lichfield or the Midlands</b>, though you prefer local work</li>
+<li>Google is given no address, phone, services or business type, only the site name</li>
+<li>Five short pages, so there is little for a search to match against</li></ul>
+<p>&#9888; We could not run reliable Google ranking checks: Google blocks automated searches. With the homepage set to noindex, it cannot rank for anything.</p></div>
+
+<div class="h" style="margin-top:22px">2. AI assistants (ChatGPT and the like)</div>
+<div class="card bad"><span class="lab">&#128308; Asked six times, it named other firms every time</span>
+<p>On 20 October we asked an AI web-search assistant six questions a buyer might ask, including &ldquo;control panel design and build company near Tamworth&rdquo; and &ldquo;who builds control panels for baggage and parcel conveyors in the Midlands&rdquo;. <b>M2E appeared in none of the answers.</b> Asked about M2E by name, it said it <b>&ldquo;returned nothing about M2E Ltd in Tamworth&rdquo;</b>.</p>
+<p>&#11088; The good news: three of the answers said it could not find <b>exactly what you do</b>, near where you are. That is a gap waiting for you. <a href="aeo.html">See all six questions and answers &rarr;</a></p></div>
+
+<div class="h" style="margin-top:22px">3. What a buyer sees when they land</div>
+<div class="card bad"><span class="lab">&#128308; No proof and no standards</span>
+<p>An engineering manager choosing a panel builder wants to see <b>what you have built, for whom, and to what standard</b>. Your site shows no projects, clients, photos of panels or testimonials, and names no standard.</p>
+<p>&#9888; The competitors we read lead with exactly this: case studies by sector, named projects, ISO 9001, BS EN 61439. <a href="competitors.html">See the comparison &rarr;</a></p></div>
+<div class="card warn"><span class="lab">&#9888; The homepage on a phone</span>
+<p>In our phone-width test, the headline and the opening paragraph run off the right-hand edge of the screen. Many first looks happen on a phone.</p></div>
+<div class="card warn"><span class="lab">&#9888; The enquiry form asks almost nothing</span>
+<p>Name, email, phone, message. It does not ask the type of work, the sector or the timescale, so the first call has to collect all of it.</p></div>
+<div class="card warn"><span class="lab">&#9888; Nothing is being counted</span>
+<p>No Google Analytics, no tags of any kind. <b>Nobody can say how many people visit, from where, or which enquiries came from Google, ChatGPT or a referral.</b></p></div>
+
+<div class="h" style="margin-top:22px">4. Ads</div>
+<div class="card note"><span class="lab">No ads running, which matches what you told us</span>
+<ul><li><b>Google:</b> the Google Ads Transparency Centre shows <b>0 ads</b> for m2eltd.com in the UK, at any time (checked 20 October). <a href="https://adstransparency.google.com/?region=GB&domain=m2eltd.com" target="_blank" rel="noopener">Check it yourself</a></li>
+<li><b>Meta (Facebook and Instagram):</b> your site has no Meta pixel and links to no Facebook page. &#9888; Meta&rsquo;s ad library would not load for our tools, so we have not confirmed it there. <a href="https://www.facebook.com/ads/library/?active_status=all&ad_type=all&country=GB&q=M2E%20Ltd&search_type=keyword_unordered" target="_blank" rel="noopener">Open the Meta ad library search</a></li></ul>
+<p>&#11088; <b>The opportunity:</b> engineers search for this work by name (&ldquo;control panel builder&rdquo;, &ldquo;EPLAN schematic design&rdquo;, &ldquo;functional safety assessment&rdquo;). Google search ads can show M2E for those searches only, only within the distance you choose around Tamworth, and only once there is a page worth landing on and tracking to count the enquiries. None of the competitors we read showed a Google Ads tag on 15 October.</p></div>
+
+<div class="h" style="margin-top:22px">5. Google Business Profile</div>
+<div class="card warn"><p>&#9888; We could not confirm whether M2E has a Google Business Profile: Google blocked our automated check, and your site links to none. <b>We will check it with you on the call.</b> For &ldquo;near me&rdquo; searches, the profile is often what shows first.</p></div>
+
+<div class="card good" style="margin-top:22px"><span class="lab">&#11088; What is already strong</span>
+<ul><li><b>A real specialism:</b> control system design, EPLAN and AutoCAD Electrical schematics, and <b>an in-house functional safety engineer</b>, from Sistema calculations to performance levels</li>
+<li><b>Panels built and tested by your own team</b>, plus installation documentation and supervision</li>
+<li><b>Named sectors:</b> baggage and parcel conveyors, food and beverage, pharmaceutical, R&amp;D, special purpose machinery</li>
 <li><b>Trading since 2015</b>, according to Companies House, though the site never says so</li>
-<li><b>Tap-to-call</b> on every page</li></ul></div>
-<div class="card note"><p>&#9888; <b>Not assessed:</b> your Google Business Profile, LinkedIn, where you rank, and page speed. We have not guessed.</p></div></div></section>
-<footer><div class="wrap">Prepared by Andrei Givero &middot; AG1 Consulting &middot; 6 October 2026,
-for discussion with Steven Milton at M2E Ltd.
-<b>&#9888; This is a discussion document, not a proposal or a statement of work, and nothing on it
-is priced.</b>
-<b>&#9888; Everything stated about the website was established by automated read of the live site on
-5-6 October 2026 and describes what was in the page code at that moment. Site speed, review volume
-and social activity were NOT assessed.</b>
-<b>&#9888; Anything attributed to Steven Milton was recorded by AG1's team on a booking call and is
-REPORTED, NOT VERIFIED.</b>
-<b>&#9888; No enquiry volume, cost, ranking, conversion rate, job count or revenue outcome is
-forecast, promised or implied anywhere in this pack.</b>
+<li><b>Tap-to-call</b> on every page, and AI crawlers are allowed in</li></ul></div></div></section>
+<footer class="ft"><div class="wrap">Prepared by Andrei Givero &middot; AG1 Consulting &middot; 20 October 2026,
+for our call with Steven Milton at M2E Ltd on Wednesday 21 October 2026 at 11:00am.
+<b>&#9888; A discussion document, not a proposal or a statement of work. Nothing on it is priced.</b>
+<b>&#9888; Website facts come from reading the live m2eltd.com on 15 and 20 October 2026. Company facts come from Companies House.
+AI answers were tested on 15 and 20 October with an AI web-search assistant; answers change from day to day and by wording.</b>
+<b>&#9888; Not assessed: page speed (Google's test tool was unavailable to us), your Google Business Profile (Google blocked our automated check), and Meta ads (Meta's ad library would not load for us). We have not guessed any of them.</b>
+<b>&#9888; Anything attributed to Steven was noted by AG1's team on the booking call: reported, not verified.
+No enquiry volume, ranking, cost or revenue outcome is forecast or promised anywhere in this pack.</b>
 </div></footer></body></html>
