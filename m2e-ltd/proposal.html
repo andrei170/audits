@@ -1,74 +1,103 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8">
+<html lang="en-GB"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
 <title>What We Would Do &middot; M2E Ltd</title>
 <style>
-:root{--bg:#f6f8fb;--panel:#fff;--ink:#10131a;--mut:#53627a;--line:#d7e0ea;--accent:#1f6feb}
+:root{--bg:#f6f8fb;--ink:#10131a;--mut:#53627a;--line:#d7e0ea}
 *{box-sizing:border-box}
-html,body{margin:0;background:var(--bg);color:var(--ink);
+html,body{margin:0;background:var(--bg);color:var(--ink);overflow-x:hidden;
 font:16px/1.62 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
 .wrap{max-width:1040px;margin:0 auto;padding:0 16px}
-header{background:linear-gradient(145deg,#0a1f3d,#123a6b 58%,#17539b);padding:30px 0 26px}
-header *{color:#fff}
-.eyebrow{font-size:12px;letter-spacing:1.4px;text-transform:uppercase;color:#8ec5ff;font-weight:700}
+header.hd{background:linear-gradient(145deg,#0a1f3d,#123a6b 58%,#17539b);padding:30px 0 26px}
+header.hd *{color:#fff}
+.eyebrow{font-size:12px;letter-spacing:1.4px;text-transform:uppercase;color:#8ec5ff !important;font-weight:700}
 h1{font-size:30px;line-height:1.22;margin:8px 0 10px;letter-spacing:-.4px}
-.sub{color:#cfe0f5;font-size:14.5px}
+.sub{color:#cfe0f5 !important;font-size:14.5px}
 nav.hb{background:#0b1016;position:sticky;top:0;z-index:9;overflow-x:auto}
 nav.hb .wrap{display:flex;gap:4px;padding:0 16px}
-nav.hb a{color:#b7c6d8;text-decoration:none;font-size:13.5px;font-weight:600;
-padding:12px 13px;white-space:nowrap;border-bottom:3px solid transparent}
-nav.hb a:hover{color:#fff}
-nav.hb a.on{color:#fff;border-bottom-color:#2f81f7}
+nav.hb a{color:#b7c6d8;text-decoration:none;font-size:13.5px;font-weight:600;padding:12px 13px;white-space:nowrap;border-bottom:3px solid transparent}
+nav.hb a:hover{color:#fff}nav.hb a.on{color:#fff;border-bottom-color:#2f81f7}
+nav.hb a.demo{color:#5fd4ff;margin-left:auto}
 section{padding:26px 0}
-.h{font-size:12px;letter-spacing:1.3px;text-transform:uppercase;color:#53627a;
-font-weight:800;margin-bottom:12px}
+.h{font-size:12px;letter-spacing:1.3px;text-transform:uppercase;color:#53627a;font-weight:800;margin:6px 0 12px}
 h2{font-size:21px;margin:0 0 12px;letter-spacing:-.2px}
-.card{background:#fff;border:1px solid var(--line);border-radius:11px;padding:19px 21px;
-margin-bottom:11px}
+.card{background:#fff;border:1px solid var(--line);border-radius:11px;padding:19px 21px;margin-bottom:11px}
 .card.bad{border-left:5px solid #b02a20}.card.warn{border-left:5px solid #c7971a}
 .card.good{border-left:5px solid #157a52}.card.note{background:#eff5ff;border-left:5px solid #1f6feb}
 .lab{font-weight:800;font-size:16px;display:block;margin-bottom:7px}
 p{margin:0 0 9px}p:last-child{margin-bottom:0}
-b{color:#000}
-a{color:#1458c4}
-ul{margin:0 0 4px;padding-left:20px}li{margin-bottom:6px}
-.tile{display:block;background:#fff;border:1px solid var(--line);border-radius:11px;
-padding:18px 20px;margin-bottom:11px;text-decoration:none;color:inherit}
+b{color:#000}a{color:#1458c4}code{background:#f0f3f7;padding:1px 5px;border-radius:4px;font-size:.9em}
+ul,ol{margin:0 0 4px;padding-left:20px}li{margin-bottom:6px}
+.tile{display:block;background:#fff;border:1px solid var(--line);border-radius:11px;padding:18px 20px;margin-bottom:11px;text-decoration:none;color:inherit}
 .tile:hover{border-color:#1f6feb;box-shadow:0 2px 14px rgba(31,111,235,.10)}
 .tile .t{font-weight:800;font-size:17px;color:#0b1016;margin-bottom:5px}
 .tile .d{color:#3b4a5e;font-size:14.5px}
 .tile .m{color:#1458c4;font-size:13px;font-weight:700;margin-top:8px}
-footer{border-top:1px solid var(--line);margin-top:24px;padding:18px 0 34px}
-footer b,footer{color:#6b7b8f;font-size:11.5px;line-height:1.62}
-footer b{display:block;margin-top:7px}
-@media(max-width:620px){h1{font-size:24px}}
+.tiles{display:grid;grid-template-columns:1fr 1fr;gap:11px}.tiles>*{min-width:0;margin-bottom:0}
+@media(max-width:700px){.tiles{grid-template-columns:1fr}}
+.demohero{display:block;text-decoration:none;color:#fff;border-radius:14px;padding:26px 26px;margin-bottom:14px;
+background:radial-gradient(700px 260px at 90% 0%,rgba(0,180,239,.35),transparent 60%),linear-gradient(135deg,#08121c,#132a3c);border:1px solid #213649}
+.demohero .k{font-size:12px;letter-spacing:1.4px;text-transform:uppercase;color:#5fd4ff;font-weight:800}
+.demohero .t{font-size:24px;font-weight:800;margin:6px 0 6px;color:#fff}
+.demohero .d{color:#c2d0de;font-size:15px;max-width:720px}
+.demohero .b{display:inline-block;margin-top:14px;background:#00b4ef;color:#04202d;font-weight:800;padding:10px 18px;border-radius:7px}
+.plan{counter-reset:p;list-style:none;padding:0}
+.plan li{counter-increment:p;position:relative;padding:10px 0 10px 44px;border-bottom:1px solid #e3eaf2;margin:0}
+.plan li:last-child{border-bottom:0}
+.plan li:before{content:counter(p);position:absolute;left:0;top:10px;width:30px;height:30px;border-radius:50%;background:#123a6b;color:#fff;font-weight:800;display:grid;place-items:center;font-size:14px}
+.qs li{margin-bottom:9px}
+.tw{overflow-x:auto;border:1px solid var(--line);border-radius:11px;background:#fff;margin-bottom:11px}
+table.t{width:100%;border-collapse:collapse;min-width:640px}
+table.t th{background:#0b1016;color:#fff;font-size:11.5px;letter-spacing:.9px;text-transform:uppercase;font-weight:700;padding:10px 12px;text-align:left}
+table.t td{border-top:1px solid #e3eaf2;padding:11px 12px;vertical-align:top;font-size:14.5px;line-height:1.5}
+table.t tr:nth-child(even) td{background:#fafcfe}
+.pill{display:inline-block;font-size:12px;font-weight:800;border-radius:5px;padding:2px 8px;color:#fff;white-space:nowrap}
+.pill.no{background:#b02a20}.pill.yes{background:#157a52}
+footer.ft{border-top:1px solid var(--line);margin-top:24px;padding:18px 0 34px}
+footer.ft,footer.ft b{color:#6b7b8f;font-size:11.5px;line-height:1.62}
+footer.ft b{display:block;margin-top:7px}
+.sc{background:#fff;border:1px solid #d7e0ea;border-radius:12px;margin:14px 0 6px;overflow:hidden}
+.sc-hero{background:linear-gradient(145deg,#0a1f3d,#123a6b 58%,#17539b);padding:26px 24px;display:flex;align-items:center;gap:26px;flex-wrap:wrap}
+.sc-g{font-size:62px;font-weight:800;line-height:1;color:#fff;letter-spacing:-2px}
+.sc-s{font-size:15px;color:#cfe0f5;margin-top:4px}.sc-s b{color:#fff}
+.sc-v{flex:1;min-width:230px;color:#e8f1fc;font-size:15px;line-height:1.55}.sc-v b{color:#fff}
+.scw{overflow-x:auto}
+table.scd{width:100%;border-collapse:collapse}
+table.scd th{background:#0b1016;color:#fff;font-size:11.5px;letter-spacing:.9px;text-transform:uppercase;font-weight:700;padding:10px 12px;text-align:left}
+table.scd td{border-top:1px solid #e3eaf2;padding:11px 12px;vertical-align:top;color:#1f2a38;font-size:14.5px;line-height:1.5}
+table.scd tr:nth-child(even) td{background:#fafcfe}
+.gb{display:inline-block;min-width:30px;text-align:center;font-weight:800;color:#fff;border-radius:6px;padding:3px 7px;font-size:14px}
+.sc-cat{font-weight:700;color:#0b1016;min-width:170px}
+.bar{height:6px;background:#e9eff6;border-radius:4px;margin-top:7px;overflow:hidden}.bar i{display:block;height:6px;border-radius:4px}
+.mini{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+.mini .g{font-size:46px;font-weight:800;color:#b02a20;line-height:1}
+@media(max-width:620px){h1{font-size:24px}.sc-g{font-size:48px}.sc-cat{min-width:120px}}
 </style></head>
 <body>
-<header><div class="wrap"><div class="eyebrow">The plan &middot; in order</div><h1>Unblock Google. Show The Proof. Then Reach The Buyers.</h1>
+<header class="hd"><div class="wrap"><div class="eyebrow">The plan &middot; in order</div><h1>Unblock Google. Show The Proof. Become The Answer.</h1>
 <div class="sub">M2E Ltd &middot; AG1 Consulting</div></div></header>
-<nav class="hb"><div class="wrap"><a href="assets.html">Start here</a><a href="index.html">The audit</a><a href="aeo.html">AI &amp; search audit</a><a href="scorecard.html">Graded scorecard</a><a href="competitors.html">Your competitors</a><a href="proposal.html" class="on">What we would do</a><a class="demo" href="https://andrei170.github.io/m2e-ltd-demo/" target="_blank" rel="noopener">Demo site &nearr;</a></div></nav>
-<section><div class="wrap"><div class="h">In the order we would do it</div><div class="card note"><p><b>The order is the argument.</b> The first fix costs nothing and unblocks everything else.</p></div>
-<div class="card bad"><span class="lab">&#128308; 1. Remove the noindex tag, today</span>
-<p>One setting in your website builder. <b>Until it is gone, Google will not show your homepage.</b></p></div>
+<nav class="hb"><div class="wrap"><a href="assets.html">Start here</a><a href="index.html">The audit</a><a href="scorecard.html">Graded scorecard</a><a href="aeo.html">SEO &amp; AI search</a><a href="competitors.html">Your competitors</a><a href="proposal.html" class="on">What we would do</a><a class="demo" href="https://andrei170.github.io/m2e-ltd-demo/" target="_blank" rel="noopener">Demo site &nearr;</a></div></nav>
+<section><div class="wrap"><div class="card note"><p><b>The order is the argument.</b> The first fix costs nothing and unblocks everything after it. Each step builds on the one before.</p></div>
+<div class="card bad"><span class="lab">&#128308; 1. Unblock Google, this week</span>
+<p>Remove the noindex tag, submit a sitemap that includes the homepage, and settle on one address. <b>Until the homepage is listable, nothing else can work.</b></p></div>
 <div class="card bad"><span class="lab">&#128308; 2. Show the proof</span>
-<p>Three to five projects: the sector, the problem, what you built, the standard. Client names only with permission; &ldquo;a UK airport baggage system&rdquo; works without one.</p></div>
-<div class="card bad"><span class="lab">&#128308; 3. Name your standards, and count your visitors</span>
-<p>The standards you build and test to, on every page. And tracking, so every enquiry is traced to where it came from.</p></div>
-<div class="card"><span class="lab">4. A page for each service and each sector</span>
-<p>Control panels, schematics, functional safety, installation documentation. Conveyors, food and beverage, pharma. <b>Each one is a search an engineer makes.</b></p></div>
-<div class="card"><span class="lab">5. Then reach the buyers directly</span>
-<p>Targeted search ads and LinkedIn aimed at engineering and maintenance managers in the Midlands, sent to the matching page.</p></div>
-<div class="card note"><p>&#9888; Nothing here forecasts a number of jobs. <b>Which sectors and job sizes you want more of</b> is the first thing we need.</p></div></div></section>
-<footer><div class="wrap">Prepared by Andrei Givero &middot; AG1 Consulting &middot; 6 October 2026,
-for discussion with Steven Milton at M2E Ltd.
-<b>&#9888; This is a discussion document, not a proposal or a statement of work, and nothing on it
-is priced.</b>
-<b>&#9888; Everything stated about the website was established by automated read of the live site on
-5-6 October 2026 and describes what was in the page code at that moment. Site speed, review volume
-and social activity were NOT assessed.</b>
-<b>&#9888; Anything attributed to Steven Milton was recorded by AG1's team on a booking call and is
-REPORTED, NOT VERIFIED.</b>
-<b>&#9888; No enquiry volume, cost, ranking, conversion rate, job count or revenue outcome is
-forecast, promised or implied anywhere in this pack.</b>
+<p>Three to five projects: the sector, the problem, what you built, the standard. Client names only with permission; &ldquo;a UK airport baggage system&rdquo; works without one. Name the standards you build and test to.</p></div>
+<div class="card bad"><span class="lab">&#128308; 3. Count everything</span>
+<p>Tracking on the site and the form, so every enquiry is traced to where it came from: Google, an AI assistant, a referral or an ad.</p></div>
+<div class="card"><span class="lab">4. Become the answer: a page for each service, sector and question</span>
+<p>Control panels, electrical design, functional safety, installation. Conveyors, food and pharma, machinery. An FAQ. Business details marked up for Google and AI tools. <b>Each page answers a question a buyer types or asks.</b> The demo site shows the shape of it.</p></div>
+<div class="card"><span class="lab">5. Google Business Profile and LinkedIn</span>
+<p>Set up or tidy the profile, matching the website exactly, and link them both ways.</p></div>
+<div class="card"><span class="lab">6. Then reach buyers directly, locally</span>
+<p>Google search ads on the exact searches engineers make, shown only within the distance you choose around Tamworth, landing on the matching page. Every enquiry counted.</p></div>
+<div class="card note"><p>&#9888; Nothing here forecasts a number of jobs. <b>Which work, which sectors and how far you will travel</b> is the first thing we need from you.</p></div></div></section>
+<footer class="ft"><div class="wrap">Prepared by Andrei Givero &middot; AG1 Consulting &middot; 20 October 2026,
+for our call with Steven Milton at M2E Ltd on Wednesday 21 October 2026 at 11:00am.
+<b>&#9888; A discussion document, not a proposal or a statement of work. Nothing on it is priced.</b>
+<b>&#9888; Website facts come from reading the live m2eltd.com on 15 and 20 October 2026. Company facts come from Companies House.
+AI answers were tested on 15 and 20 October with an AI web-search assistant; answers change from day to day and by wording.</b>
+<b>&#9888; Not assessed: page speed (Google's test tool was unavailable to us), your Google Business Profile (Google blocked our automated check), and Meta ads (Meta's ad library would not load for us). We have not guessed any of them.</b>
+<b>&#9888; Anything attributed to Steven was noted by AG1's team on the booking call: reported, not verified.
+No enquiry volume, ranking, cost or revenue outcome is forecast or promised anywhere in this pack.</b>
 </div></footer></body></html>
