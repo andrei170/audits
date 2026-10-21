@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en-GB"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
+<title>CRM and Automation &middot; KAAP Freight Services</title>
+<style>
+:root{--bg:#f4f5fb;--line:#dde0ee;--ind:#3b3fd9;--navy:#0b1033}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:#10142e;overflow-x:hidden;
+font:16.5px/1.62 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+.wrap{max-width:1000px;margin:0 auto;padding:0 16px}
+header{background:radial-gradient(700px 300px at 90% -20%,rgba(108,112,255,.5),transparent 60%),linear-gradient(150deg,#0b1033,#1d2470);padding:28px 0 24px}
+header *{color:#fff}
+.eyebrow{font-size:12px;letter-spacing:1.4px;text-transform:uppercase;color:#b6b8ff;font-weight:700}
+h1{font-size:30px;line-height:1.2;margin:8px 0 10px;letter-spacing:-.4px}
+.sub{color:#d3d5f3;font-size:14.5px}
+nav.hb{background:#060920;position:sticky;top:0;z-index:9;overflow-x:auto;-webkit-overflow-scrolling:touch}
+nav.hb .wrap{display:flex;gap:2px;padding:0 10px}
+nav.hb a{color:#a9add6;text-decoration:none;font-size:14px;font-weight:600;padding:14px 12px;white-space:nowrap;border-bottom:3px solid transparent}
+nav.hb a:hover{color:#fff}nav.hb a.on{color:#fff;border-bottom-color:#6c70ff}
+section{padding:22px 0}
+.h{font-size:12px;letter-spacing:1.3px;text-transform:uppercase;color:#4c5374;font-weight:800;margin-bottom:12px}
+.card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px 19px;margin-bottom:11px}
+.card.bad{border-left:5px solid #b02a20}.card.warn{border-left:5px solid #c7971a}
+.card.good{border-left:5px solid #157a52}.card.note{background:#eef0ff;border-left:5px solid var(--ind)}
+.lab{font-weight:800;font-size:16.5px;display:block;margin-bottom:7px}
+p{margin:0 0 9px}p:last-child{margin-bottom:0}
+b{color:#000}a{color:#2b2fb3}
+ul,ol{margin:0 0 4px;padding-left:20px}li{margin-bottom:7px}
+.tile{display:block;background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px 19px;margin-bottom:11px;text-decoration:none;color:inherit}
+.tile:hover{border-color:var(--ind);box-shadow:0 2px 14px rgba(59,63,217,.15)}
+.tile .t{font-weight:800;font-size:18px;color:#0b1033;margin-bottom:5px}
+.tile .d{color:#3a4064;font-size:15px}.tile .m{display:inline-block;margin-top:12px;background:var(--ind);color:#fff;font-weight:700;font-size:15px;padding:11px 16px;border-radius:10px}
+.tw{overflow-x:auto;background:#fff;border:1px solid var(--line);border-radius:14px;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;font-size:14px}
+th{background:#0b1033;color:#fff;text-align:left;padding:9px 10px;font-size:12.5px;white-space:nowrap}
+td{border-top:1px solid var(--line);padding:9px 10px;vertical-align:top;min-width:120px}
+.gb{display:inline-block;min-width:34px;text-align:center;color:#fff;font-weight:800;border-radius:6px;padding:3px 6px}
+.bar{height:6px;background:#e7e9f3;border-radius:4px;margin-top:6px}.bar i{display:block;height:6px;border-radius:4px}
+.sc-hero{display:flex;gap:22px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:14px;padding:20px;margin-bottom:12px;flex-wrap:wrap}
+.sc-g{font-size:64px;font-weight:900;line-height:1}
+.sc-s{font-size:15px;color:#4c5374}.sc-s b{font-size:22px}
+.sc-v{flex:1;min-width:220px;font-size:15px}
+.row{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin-bottom:9px}
+.row .top{display:flex;gap:10px;align-items:center}.row .top b{font-size:15.5px}.row .f{font-size:14.5px;color:#2e3456;margin-top:6px}
+.q{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 17px;margin-bottom:9px}
+.q b{display:block;margin-bottom:3px}.q span{color:#4c5374;font-size:14.5px}
+.camp{background:#fff;border:1px solid var(--line);border-radius:14px;margin-bottom:14px;overflow:hidden}
+.camp .hd{background:#0b1033;color:#fff;padding:14px 18px}.camp .hd b{color:#fff;font-size:17px;display:block}.camp .hd span{color:#b6b8ff;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.08em}
+.camp .bd{padding:14px 18px}.camp .k{font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:#4c5374;margin:10px 0 4px}
+.chip{display:inline-block;background:#eef0ff;border:1px solid #cfd2ff;color:#1d2170;border-radius:8px;padding:4px 9px;margin:0 6px 6px 0;font-size:13.5px}
+.chip.neg{background:#fff1f0;border-color:#f3c3be;color:#8c2118}
+.adx{border:1px solid var(--line);border-radius:12px;padding:12px 14px;background:#fafbff;font-size:14px}
+.adx .u{color:#1a7f3c;font-size:12.5px}.adx .hl{color:#1a0dab;font-size:16.5px;line-height:1.3;margin:2px 0 4px}
+.lp{display:inline-block;margin-top:8px;background:var(--ind);color:#fff;text-decoration:none;font-weight:700;padding:11px 15px;border-radius:10px;font-size:14.5px}
+footer{border-top:1px solid var(--line);margin-top:24px;padding:18px 0 34px}
+footer,footer b{color:#646b8c;font-size:11.5px;line-height:1.62}
+footer b{display:block;margin-top:7px}
+@media(max-width:620px){h1{font-size:25px}.sc-g{font-size:50px}html,body{font-size:16px}}
+</style></head>
+<body>
+<header><div class="wrap"><div class="eyebrow">CRM and automation &middot; KAAP Freight Services Ltd &middot; London</div><h1>Every quote answered fast, followed up, and traced to its source.</h1>
+<div class="sub">Done properly and connected end to end</div></div></header>
+<nav class="hb"><div class="wrap"><a href="assets.html">Start here</a><a href="ads.html">&#11088; Ads plan</a><a href="index.html">Audit</a><a href="scorecard.html">Scorecard</a><a href="seo.html">SEO &amp; AI</a><a href="crm.html" class="on">CRM &amp; automation</a><a href="competitors.html">Competitors</a><a href="plan.html">What we would do</a><a href="https://andrei170.github.io/kaap-freight-demo/">&#11088; Sample website</a></div></nav>
+<section><div class="wrap"><div class="h">The idea</div><div class="card note"><p>You have already built some automation yourself, which puts you ahead of most forwarders your size. <b>What we would add is the joining up:</b> every enquiry, from the site, an ad, WhatsApp or a call, landing in one place, followed up automatically, and traced back to where it came from, so the ads plan can be judged on booked shipments, not form fills.</p></div></div></section><section><div class="wrap"><div class="h">One pipeline for every quote</div><div class="card"><span class="chip">1. New enquiry</span><span class="chip">2. Qualified</span><span class="chip">3. Quote sent</span><span class="chip">4. Following up</span><span class="chip">5. Booked</span><span class="chip">6. In transit</span><span class="chip">7. Delivered</span><span class="chip">8. Review requested</span></div><div class="card good"><span class="lab">What happens automatically</span><ul><li><b>Instant reply.</b> Every quote request gets a WhatsApp and an email within a minute: &ldquo;Thanks, we have your shipment details, a quote is coming by [time].&rdquo; Today the site promises 48 hours.</li><li><b>Lead routing.</b> Import, export and relocation enquiries go to the right person or list, tagged with the lane and the ad that sent them.</li><li><b>Missed-call text back.</b> If a call is missed, the caller gets a text or WhatsApp straight away so they do not ring the next forwarder.</li><li><b>Quote follow-up.</b> If a quote is not accepted, polite reminders on day 1, 3 and 7, then a final check-in. Most quotes are lost to silence, not to price.</li><li><b>Shipment updates.</b> Messages at collection, departure, arrival and delivery, so customers stop chasing you.</li><li><b>Review requests.</b> After delivery, a one-tap link to leave a Google review. This is what builds the trust the audit says is missing.</li><li><b>Repeat business.</b> Regular shippers get a check-in before their usual shipping window.</li></ul></div></div></section><section><div class="wrap"><div class="h">Reporting that answers one question</div><div class="card warn"><span class="lab">Which ads produce shipments you win?</span><p>Because every enquiry carries its source, a monthly report shows spend, quote requests, quotes sent, shipments booked and the value booked, by campaign. That is what lets the budget move to what works.</p></div></div></section><section><div class="wrap"><div class="h">Built around what you already use</div><div class="card note"><p>We would start by looking at what you have automated, keep what works, and connect it rather than replace it. Question for the call: <b>what have you built so far, and what never quite worked?</b></p></div></div></section>
+<footer><div class="wrap">Prepared by Andrei Givero &middot; AG1 Consulting &middot; checked 21 October 2026, for our call with
+Adi at KAAP Freight Services Ltd on Thursday 22 October 2026.
+<b>&#9888; This is a discussion document, not a proposal, and nothing in it is priced.</b>
+<b>&#9888; Sources, all read on 21 October 2026: kaapfreightservices.com (all six pages in its sitemap, plus the page code),
+Companies House, the Google Ads Transparency Centre (UK) and the Meta Ad Library (UK), DuckDuckGo and Bing results (UK settings)
+for the searches named, three AI-assistant style questions, and five competitors&rsquo; websites and Google ads. Google&rsquo;s own
+results pages, Google Maps and Google&rsquo;s full speed test could not be read by our tools, so no Google ranking, Google review
+figure or speed score appears in this pack.</b>
+<b>&#9888; No enquiry volume, cost per lead, ranking or revenue outcome is forecast or promised anywhere in this pack.</b>
+</div></footer></body></html>
