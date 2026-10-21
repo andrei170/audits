@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en-GB"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
+<title>Graded Scorecard &middot; KAAP Freight Services</title>
+<style>
+:root{--bg:#f4f5fb;--line:#dde0ee;--ind:#3b3fd9;--navy:#0b1033}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:#10142e;overflow-x:hidden;
+font:16.5px/1.62 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+.wrap{max-width:1000px;margin:0 auto;padding:0 16px}
+header{background:radial-gradient(700px 300px at 90% -20%,rgba(108,112,255,.5),transparent 60%),linear-gradient(150deg,#0b1033,#1d2470);padding:28px 0 24px}
+header *{color:#fff}
+.eyebrow{font-size:12px;letter-spacing:1.4px;text-transform:uppercase;color:#b6b8ff;font-weight:700}
+h1{font-size:30px;line-height:1.2;margin:8px 0 10px;letter-spacing:-.4px}
+.sub{color:#d3d5f3;font-size:14.5px}
+nav.hb{background:#060920;position:sticky;top:0;z-index:9;overflow-x:auto;-webkit-overflow-scrolling:touch}
+nav.hb .wrap{display:flex;gap:2px;padding:0 10px}
+nav.hb a{color:#a9add6;text-decoration:none;font-size:14px;font-weight:600;padding:14px 12px;white-space:nowrap;border-bottom:3px solid transparent}
+nav.hb a:hover{color:#fff}nav.hb a.on{color:#fff;border-bottom-color:#6c70ff}
+section{padding:22px 0}
+.h{font-size:12px;letter-spacing:1.3px;text-transform:uppercase;color:#4c5374;font-weight:800;margin-bottom:12px}
+.card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px 19px;margin-bottom:11px}
+.card.bad{border-left:5px solid #b02a20}.card.warn{border-left:5px solid #c7971a}
+.card.good{border-left:5px solid #157a52}.card.note{background:#eef0ff;border-left:5px solid var(--ind)}
+.lab{font-weight:800;font-size:16.5px;display:block;margin-bottom:7px}
+p{margin:0 0 9px}p:last-child{margin-bottom:0}
+b{color:#000}a{color:#2b2fb3}
+ul,ol{margin:0 0 4px;padding-left:20px}li{margin-bottom:7px}
+.tile{display:block;background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px 19px;margin-bottom:11px;text-decoration:none;color:inherit}
+.tile:hover{border-color:var(--ind);box-shadow:0 2px 14px rgba(59,63,217,.15)}
+.tile .t{font-weight:800;font-size:18px;color:#0b1033;margin-bottom:5px}
+.tile .d{color:#3a4064;font-size:15px}.tile .m{display:inline-block;margin-top:12px;background:var(--ind);color:#fff;font-weight:700;font-size:15px;padding:11px 16px;border-radius:10px}
+.tw{overflow-x:auto;background:#fff;border:1px solid var(--line);border-radius:14px;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;font-size:14px}
+th{background:#0b1033;color:#fff;text-align:left;padding:9px 10px;font-size:12.5px;white-space:nowrap}
+td{border-top:1px solid var(--line);padding:9px 10px;vertical-align:top;min-width:120px}
+.gb{display:inline-block;min-width:34px;text-align:center;color:#fff;font-weight:800;border-radius:6px;padding:3px 6px}
+.bar{height:6px;background:#e7e9f3;border-radius:4px;margin-top:6px}.bar i{display:block;height:6px;border-radius:4px}
+.sc-hero{display:flex;gap:22px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:14px;padding:20px;margin-bottom:12px;flex-wrap:wrap}
+.sc-g{font-size:64px;font-weight:900;line-height:1}
+.sc-s{font-size:15px;color:#4c5374}.sc-s b{font-size:22px}
+.sc-v{flex:1;min-width:220px;font-size:15px}
+.row{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin-bottom:9px}
+.row .top{display:flex;gap:10px;align-items:center}.row .top b{font-size:15.5px}.row .f{font-size:14.5px;color:#2e3456;margin-top:6px}
+.q{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 17px;margin-bottom:9px}
+.q b{display:block;margin-bottom:3px}.q span{color:#4c5374;font-size:14.5px}
+.camp{background:#fff;border:1px solid var(--line);border-radius:14px;margin-bottom:14px;overflow:hidden}
+.camp .hd{background:#0b1033;color:#fff;padding:14px 18px}.camp .hd b{color:#fff;font-size:17px;display:block}.camp .hd span{color:#b6b8ff;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.08em}
+.camp .bd{padding:14px 18px}.camp .k{font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:#4c5374;margin:10px 0 4px}
+.chip{display:inline-block;background:#eef0ff;border:1px solid #cfd2ff;color:#1d2170;border-radius:8px;padding:4px 9px;margin:0 6px 6px 0;font-size:13.5px}
+.chip.neg{background:#fff1f0;border-color:#f3c3be;color:#8c2118}
+.adx{border:1px solid var(--line);border-radius:12px;padding:12px 14px;background:#fafbff;font-size:14px}
+.adx .u{color:#1a7f3c;font-size:12.5px}.adx .hl{color:#1a0dab;font-size:16.5px;line-height:1.3;margin:2px 0 4px}
+.lp{display:inline-block;margin-top:8px;background:var(--ind);color:#fff;text-decoration:none;font-weight:700;padding:11px 15px;border-radius:10px;font-size:14.5px}
+footer{border-top:1px solid var(--line);margin-top:24px;padding:18px 0 34px}
+footer,footer b{color:#646b8c;font-size:11.5px;line-height:1.62}
+footer b{display:block;margin-top:7px}
+@media(max-width:620px){h1{font-size:25px}.sc-g{font-size:50px}html,body{font-size:16px}}
+</style></head>
+<body>
+<header><div class="wrap"><div class="eyebrow">Digital presence audit &middot; KAAP Freight Services Ltd &middot; London</div><h1>Sixteen checks, graded one by one.</h1>
+<div class="sub">Measured 21 October 2026</div></div></header>
+<nav class="hb"><div class="wrap"><a href="assets.html">Start here</a><a href="ads.html">&#11088; Ads plan</a><a href="index.html">Audit</a><a href="scorecard.html" class="on">Scorecard</a><a href="seo.html">SEO &amp; AI</a><a href="crm.html">CRM &amp; automation</a><a href="competitors.html">Competitors</a><a href="plan.html">What we would do</a><a href="https://andrei170.github.io/kaap-freight-demo/">&#11088; Sample website</a></div></nav>
+<section><div class="wrap"><div class="h">Digital presence scorecard</div><div class="sc-hero"><div><div class="sc-g" style="color:#b02a20">F</div><div class="sc-s"><b>26</b> / 100</div></div><div class="sc-v"><b>0 of 16 passed. 15 failed.</b><br>A real, registered London business with a site that looks the part but is not built to win quotes yet: it is hard to contact on a phone, invisible in search, and cannot measure ads.</div></div><div class="row"><div class="top"><span class="gb" style="background:#b02a20">F</span><b>Your email link</b></div><div class="bar"><i style="width:5%;background:#b02a20"></i></div><div class="f">&#128308; <b>The footer shows sales@kaapfreightservices.com, but tapping it opens an email to benjamin@digiswift.nl</b>, a different domain, most likely left over from when the site was built. It is the same on every page we read. Anyone who emails you that way may never reach you.</div></div><div class="row"><div class="top"><span class="gb" style="background:#b02a20">F</span><b>First screen on a phone</b></div><div class="bar"><i style="width:25%;background:#b02a20"></i></div><div class="f">Checked in a 450-pixel-wide browser: the first screen is the big port photo and the logo. <b>No headline saying what you do, no quote button and no phone number</b> until well down the page.</div></div><div class="row"><div class="top"><span class="gb" style="background:#b02a20">F</span><b>Tap-to-call</b></div><div class="bar"><i style="width:40%;background:#b02a20"></i></div><div class="f">&#11088; WhatsApp is linked on every page, which is good. <b>But neither phone number is a tap-to-call link</b> on any of the six pages (0 found), so on a phone they have to be copied by hand.</div></div><div class="row"><div class="top"><span class="gb" style="background:#b02a20">F</span><b>Quote form</b></div><div class="bar"><i style="width:30%;background:#b02a20"></i></div><div class="f">The form asks only <b>name, email, phone and a message</b>, sits on the service and contact pages but <b>not on the homepage</b>, and says &ldquo;Response within 48 hours on business days&rdquo;. It never asks the lane, the cargo, the weight or the dates, so every quote starts with a back-and-forth.</div></div><div class="row"><div class="top"><span class="gb" style="background:#b02a20">F</span><b>Page titles and headings</b></div><div class="bar"><i style="width:30%;background:#b02a20"></i></div><div class="f">Titles read &ldquo;Homepage - KAAP FREIGHT&rdquo;, &ldquo;Import - KAAP FREIGHT&rdquo;. <b>No page has its own description for Google</b>, and <b>4 of the 6 pages have no main heading</b> (homepage, Import, Export, Relocation).</div></div><div class="row"><div class="top"><span class="gb" style="background:#b02a20">F</span><b>Pages to be found on</b></div><div class="bar"><i style="width:30%;background:#b02a20"></i></div><div class="f">Six pages in total: three services plus home, about and contact. <b>No page for customs clearance, air or sea freight, or any lane</b> (China, India, the Middle East), although the reviews on your own site mention all of them.</div></div><div class="row"><div class="top"><span class="gb" style="background:#b02a20">F</span><b>Showing up for freight searches</b></div><div class="bar"><i style="width:10%;background:#b02a20"></i></div><div class="f">&#128308; <b>Not in the first nine or ten results for any of nine freight searches</b> we ran (DuckDuckGo, UK). First for your own name, which shows the site is indexed.</div></div><div class="row"><div class="top"><span class="gb" style="background:#b02a20">F</span><b>Named in AI answers</b></div><div class="bar"><i style="width:10%;background:#b02a20"></i></div><div class="f">&#128308; <b>Not named in any of three AI-assistant style answers</b> about London freight forwarders, customs clearance or moving goods to India. Competitors and directories were named instead.</div></div><div class="row"><div class="top"><span class="gb" style="background:#b02a20">F</span><b>Reviews a buyer can check</b></div><div class="bar"><i style="width:20%;background:#b02a20"></i></div><div class="f">Five testimonials on the site, each a first name and initial. <b>No link to a Google or Trustpilot profile</b>, so a careful buyer cannot check them anywhere.</div></div><div class="row"><div class="top"><span class="gb" style="background:#c0651a">D</span><b>Tracking</b></div><div class="bar"><i style="width:45%;background:#c0651a"></i></div><div class="f">&#11088; <b>Google Analytics 4 is installed</b> (good). &#9888; <b>No Google Ads conversion tag, no Meta pixel and no LinkedIn tag</b>, so no ad can be told which clicks became quote requests.</div></div><div class="row"><div class="top"><span class="gb" style="background:#b02a20">F</span><b>Ads</b></div><div class="bar"><i style="width:25%;background:#b02a20"></i></div><div class="f">One Google search ad found, <b>run from an account named &ldquo;1&amp;1 IONOS SE&rdquo;, not your own</b>. Generic wording with a typo (&ldquo;wheter importing&rdquo;), pointing at the homepage. Nothing on Meta (searched &ldquo;kaap freight&rdquo;, UK).</div></div><div class="row"><div class="top"><span class="gb" style="background:#b02a20">F</span><b>Business details for Google (schema)</b></div><div class="bar"><i style="width:30%;background:#b02a20"></i></div><div class="f">Yoast adds basic website details. <b>No business type, address, phone, opening hours or service list</b> in the code, which is what search engines and AI assistants read.</div></div><div class="row"><div class="top"><span class="gb" style="background:#b02a20">F</span><b>Housekeeping</b></div><div class="bar"><i style="width:40%;background:#b02a20"></i></div><div class="f">A template page called <b>&ldquo;example-posts&rdquo;</b> is still in the sitemap, the Services menu link points to <b>&ldquo;#diensten&rdquo;</b> (Dutch for &ldquo;services&rdquo;), <b>7 of 12 homepage images have no description</b>, and no page has changed since August 2025.</div></div><div class="row"><div class="top"><span class="gb" style="background:#b02a20">F</span><b>Weight on a phone</b></div><div class="bar"><i style="width:30%;background:#b02a20"></i></div><div class="f">The pages themselves come back in <b>0.7 to 1.3 seconds</b>, but the homepage background is a video: <b>14.2 MB on phones and 42.7 MB on desktop</b>. On mobile data that is the first thing a visitor waits for. &#9888; Google&rsquo;s full speed test refused our requests, so this is not a Core Web Vitals score.</div></div><div class="row"><div class="top"><span class="gb" style="background:#b02a20">F</span><b>Google profile and reviews online</b></div><div class="bar"><i style="width:15%;background:#b02a20"></i></div><div class="f">&#128308; Our searches found <b>no Google Business Profile, Trustpilot page or review listing</b> for KAAP (Trustpilot returned nothing for your domain). &#9888; Google Maps itself cannot be read by our tools, so check this together on the call.</div></div><div class="row"><div class="top"><span class="gb" style="background:#b02a20">F</span><b>Form set-up</b></div><div class="bar"><i style="width:35%;background:#b02a20"></i></div><div class="f">The form has <b>reCAPTCHA</b> (good, it stops spam), but it does not send people to your <b>/thank-you/ page</b>, which exists in your sitemap and is never used. That page is the usual way an ad platform counts a quote request.</div></div><div class="card note"><p>&#11088;&#11088; <b>The good news: almost everything here is quick to fix.</b> The business is real and the services are clear. What is missing is the machinery that turns a visitor into a quote request and tells you where it came from.</p><p>&#9888; <b>What this grade is not:</b> Google rankings, Google reviews, your Google Business Profile and a full speed score could not be read today, so they are left out rather than guessed at.</p></div></div></section>
+<footer><div class="wrap">Prepared by Andrei Givero &middot; AG1 Consulting &middot; checked 21 October 2026, for our call with
+Adi at KAAP Freight Services Ltd on Thursday 22 October 2026.
+<b>&#9888; This is a discussion document, not a proposal, and nothing in it is priced.</b>
+<b>&#9888; Sources, all read on 21 October 2026: kaapfreightservices.com (all six pages in its sitemap, plus the page code),
+Companies House, the Google Ads Transparency Centre (UK) and the Meta Ad Library (UK), DuckDuckGo and Bing results (UK settings)
+for the searches named, three AI-assistant style questions, and five competitors&rsquo; websites and Google ads. Google&rsquo;s own
+results pages, Google Maps and Google&rsquo;s full speed test could not be read by our tools, so no Google ranking, Google review
+figure or speed score appears in this pack.</b>
+<b>&#9888; No enquiry volume, cost per lead, ranking or revenue outcome is forecast or promised anywhere in this pack.</b>
+</div></footer></body></html>
