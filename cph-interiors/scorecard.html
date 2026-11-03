@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en-GB"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
+<title>Graded Scorecard &middot; CPH Interiors</title>
+<style>
+:root{--bg:#f3f6f7;--line:#dbe3e6;--ink:#152024;--acc:#0e6e7a;--accd:#0a525b}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink);overflow-x:hidden;
+font:16px/1.62 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+.wrap{max-width:1060px;margin:0 auto;padding:0 16px}
+header.hh{background:linear-gradient(145deg,#0f1a1d,#1b2b30 55%,#0b5560);padding:30px 0 26px}
+header.hh *{color:#fff}
+.eyebrow{font-size:12px;letter-spacing:1.4px;text-transform:uppercase;color:#9fe3ea;font-weight:700}
+h1{font-size:30px;line-height:1.22;margin:8px 0 10px;letter-spacing:-.4px}
+.sub{color:#e1eaec;font-size:14.5px}
+nav.hb{background:#0c1416;position:sticky;top:0;z-index:9;overflow-x:auto}
+nav.hb .wrap{display:flex;gap:2px;padding:0 16px}
+nav.hb a{color:#c0cbce;text-decoration:none;font-size:13.5px;font-weight:600;padding:12px 11px;white-space:nowrap;border-bottom:3px solid transparent}
+nav.hb a:hover{color:#fff}
+nav.hb a.on{color:#fff;border-bottom-color:#9fe3ea}
+section{padding:24px 0}
+.h{font-size:12px;letter-spacing:1.3px;text-transform:uppercase;color:#56676c;font-weight:800;margin-bottom:12px}
+.card{background:#fff;border:1px solid var(--line);border-radius:11px;padding:19px 21px;margin-bottom:11px}
+.card.bad{border-left:5px solid #b02a20}.card.warn{border-left:5px solid #c7971a}
+.card.good{border-left:5px solid #157a52}.card.note{background:#eef8f9;border-left:5px solid var(--acc)}
+.card.priv{background:#fff7e6;border-left:5px solid #b45309}
+.lab{font-weight:800;font-size:16px;display:block;margin-bottom:7px}
+p{margin:0 0 9px}p:last-child{margin-bottom:0}
+b{color:#000}a{color:var(--accd)}
+ul,ol{margin:0 0 4px;padding-left:20px}li{margin-bottom:6px}
+.tile{display:block;background:#fff;border:1px solid var(--line);border-radius:11px;padding:18px 20px;margin-bottom:11px;text-decoration:none;color:inherit}
+.tile:hover{border-color:var(--acc);box-shadow:0 2px 14px rgba(14,110,122,.18)}
+.tile.star{border:2px solid #157a52;background:#f1fbf5}
+.tile .t{font-weight:800;font-size:17px;color:#0c1416;margin-bottom:5px}
+.tile .d{color:#3a474b;font-size:14.5px}
+.tile .m{color:var(--accd);font-size:13px;font-weight:700;margin-top:8px}
+.tiles{display:grid;grid-template-columns:1fr 1fr;gap:0 12px}.tiles>*{min-width:0}
+@media(max-width:700px){.tiles{grid-template-columns:1fr}}
+.tw{overflow-x:auto;background:#fff;border:1px solid var(--line);border-radius:11px;margin-bottom:11px}
+table{border-collapse:collapse;width:100%;font-size:14px}
+th{background:#0f1a1d;color:#fff;text-align:left;padding:9px 10px;font-size:12.5px;white-space:nowrap}
+td{border-top:1px solid var(--line);padding:9px 10px;vertical-align:top}
+.gb{display:inline-block;min-width:34px;text-align:center;color:#fff!important;font-weight:800;border-radius:6px;padding:3px 6px}
+.bar{height:6px;background:#e6ecee;border-radius:4px;margin-top:6px}.bar i{display:block;height:6px;border-radius:4px}
+.sc-hero{display:flex;gap:22px;align-items:center;background:#fff!important;border:1px solid var(--line);border-radius:11px;padding:20px 22px;margin-bottom:12px;flex-wrap:wrap}
+.sc-g{font-size:64px;font-weight:900;line-height:1;color:#c0651a!important}
+.sc-s{font-size:15px;color:#56676c!important}.sc-s b{font-size:22px;color:#000!important}
+.sc-v{flex:1;min-width:240px;font-size:15px;color:#152024!important}
+.q{background:#fff;border:1px solid var(--line);border-radius:11px;padding:14px 18px;margin-bottom:9px}
+.q b{display:block}
+.agenda{list-style:none;padding:0;margin:0}.agenda li{display:flex;gap:12px;padding:9px 0;border-top:1px solid var(--line);margin:0}
+.agenda li:first-child{border-top:0}.agenda .tm{flex:0 0 92px;font-weight:800;color:var(--accd);font-size:14px}
+.big{font-size:17px;line-height:1.5}
+.mock{background:#fff;border:2px dashed #c3cdd0;border-radius:11px;padding:18px 20px;margin-bottom:11px}
+.mock .ftag{display:inline-block;background:#0f1a1d;color:#fff;font-size:11px;font-weight:800;letter-spacing:1px;text-transform:uppercase;border-radius:5px;padding:3px 8px;margin-bottom:10px}
+.flow{list-style:none;padding:0;margin:0;counter-reset:f}.flow li{position:relative;padding:10px 0 10px 40px;border-top:1px solid var(--line);margin:0}
+.flow li:first-child{border-top:0}.flow li:before{counter-increment:f;content:counter(f);position:absolute;left:0;top:10px;width:26px;height:26px;border-radius:50%;background:var(--acc);color:#fff;font-weight:800;font-size:13px;text-align:center;line-height:26px}
+footer{border-top:1px solid var(--line);margin-top:24px;padding:18px 0 34px}
+footer,footer b{color:#65737a;font-size:11.5px;line-height:1.62}
+footer b{display:block;margin-top:7px}
+@media(max-width:620px){h1{font-size:24px}.sc-g{font-size:48px}.agenda .tm{flex-basis:74px}}
+</style></head>
+<body>
+<header class="hh"><div class="wrap"><div class="eyebrow">Digital Presence Audit &middot; CPH Interiors</div><h1>14 checks, graded one by one.</h1>
+<div class="sub">Measured 3 November 2026</div></div></header>
+<nav class="hb"><div class="wrap"><a href="assets.html">Start here</a><a href="index.html">The audit</a><a href="scorecard.html" class="on">Scorecard</a><a href="competitors.html">Competitors</a><a href="proposal.html">&#11088; The plan</a></div></nav>
+<section><div class="wrap"><div class="h">Digital Presence Scorecard</div><div class="sc-hero"><div><div class="sc-g">D</div><div class="sc-s"><b>45</b> / 100</div></div><div class="sc-v"><b>4 of 14 checks passed. 8 failed.</b><br>The site itself was built well and recently: clear titles, a real damp page, tap-to-call. What it does not do is <b>prove you</b> (267 platform reviews hidden, no memberships, no names) or <b>count anything</b>, so the platforms keep the customer and you cannot see what your own site brings in.</div></div><div class="tw"><table><tr><th>Grade</th><th>What we checked</th><th>What we found (3 November 2026)</th></tr><tr><td><span class="gb" style="background:#157a52!important">A-</span></td><td><b>Page titles and search descriptions</b><div class="bar"><i style="width:85%;background:#157a52"></i></div></td><td>&#11088; <b>Every one of your 11 pages has its own title and search description</b>, and the home page title leads with &ldquo;Damp Proofing &amp; Condensation Specialists South Wales&rdquo;. That is done well.</td></tr><tr><td><span class="gb" style="background:#2f7d32!important">B</span></td><td><b>A damp proofing page</b><div class="bar"><i style="width:75%;background:#2f7d32"></i></div></td><td>&#11088; <b>A dedicated damp proofing page</b> (544 words) naming silicone DPC injection and epoxy resin tanking, with a free survey offer. It has no form on it: the button sends people to the contact page.</td></tr><tr><td><span class="gb" style="background:#157a52!important">A-</span></td><td><b>Local business markup</b><div class="bar"><i style="width:80%;background:#157a52"></i></div></td><td>&#11088; Your pages tell search engines you are a local business in Tonyrefail, with your hours, your areas and links to your Facebook, Instagram, Yell and MyBuilder profiles.</td></tr><tr><td><span class="gb" style="background:#157a52!important">A-</span></td><td><b>Tap-to-call</b><div class="bar"><i style="width:85%;background:#157a52"></i></div></td><td>Your mobile is a <b>tap-to-call link on every page</b>, and there is a &ldquo;Call CPH&rdquo; bar at the bottom.</td></tr><tr><td><span class="gb" style="background:#c0651a!important">D</span></td><td><b>Enquiry form</b><div class="bar"><i style="width:55%;background:#c0651a"></i></div></td><td>A good form, asking <b>what the job is, a preferred survey date and the postcode</b>. But it is <b>only on the contact page</b>. Every &ldquo;Request a Free Survey&rdquo; button is a link to it, so a visitor on the damp page has to load a second page to ask.</td></tr><tr><td><span class="gb" style="background:#b02a20!important">F</span></td><td><b>Reply promise</b><div class="bar"><i style="width:30%;background:#b02a20"></i></div></td><td>The form says <b>&ldquo;We&rsquo;ll contact you to arrange a convenient time&rdquo;</b>, with no time given, and your hours are Monday to Friday, 9 to 5. Nothing on the site tells someone who enquires at 8pm when they will hear back.</td></tr><tr><td><span class="gb" style="background:#b02a20!important">F</span></td><td><b>Reviews shown on your site</b><div class="bar"><i style="width:30%;background:#b02a20"></i></div></td><td>Your public profiles hold <b>175 reviews at 5 out of 5 on MyBuilder</b> and <b>92 reviews at 10 out of 10 on Checkatrade</b>. Your home page shows <b>five short quotes</b> (repeated in a slider) and no score or count at all.</td></tr><tr><td><span class="gb" style="background:#b02a20!important">F</span></td><td><b>Trust badges and memberships</b><div class="bar"><i style="width:25%;background:#b02a20"></i></div></td><td>The site lists NVQ, CSCS and yearly DBS checks in text. <b>No Property Care Association (PCA), no CSRT or CSSW surveyor qualification, no TrustMark</b>, and your Checkatrade and TrustATrader profiles are not shown or linked.</td></tr><tr><td><span class="gb" style="background:#b02a20!important">F</span></td><td><b>Who you are</b><div class="bar"><i style="width:35%;background:#b02a20"></i></div></td><td>There is a heading reading <b>&ldquo;Meet the directors&rdquo; with no names under it</b>. Customers in your reviews name you personally, again and again. The site never does.</td></tr><tr><td><span class="gb" style="background:#9c7510!important">C</span></td><td><b>Proof of work</b><div class="bar"><i style="width:60%;background:#9c7510"></i></div></td><td>A gallery and a before-and-after slider of real jobs. &#11088; Your Checkatrade profile holds <b>237 photos</b>. No job write-ups (the problem, the cause found, the fix, the town).</td></tr><tr><td><span class="gb" style="background:#b02a20!important">F</span></td><td><b>Town pages</b><div class="bar"><i style="width:25%;background:#b02a20"></i></div></td><td>You list Tonyrefail, Porth, Pontypridd, Bridgend, Cardiff and further afield, but there are <b>no town pages</b>. Phrases like &ldquo;Damp proofing Bridgend&rdquo; sit in a long list with nothing behind them.</td></tr><tr><td><span class="gb" style="background:#b02a20!important">F</span></td><td><b>Found in search (one Bing search)</b><div class="bar"><i style="width:20%;background:#b02a20"></i></div></td><td>On Bing, <b>&ldquo;damp proofing Tonyrefail&rdquo; showed your Checkatrade profile at number 2 and your own site nowhere in the top 10</b>. So the person who finds you is sent to Checkatrade, not to you.</td></tr><tr><td><span class="gb" style="background:#b02a20!important">F</span></td><td><b>Measurement</b><div class="bar"><i style="width:5%;background:#b02a20"></i></div></td><td><b>No Google tag, no Google Ads tag and no Meta pixel</b> in the page code. Nothing records how many people visit, which page they came to, or which enquiries came from the website.</td></tr><tr><td><span class="gb" style="background:#b02a20!important">F</span></td><td><b>Ready for paid search</b><div class="bar"><i style="width:20%;background:#b02a20"></i></div></td><td>A damp page exists to send a click to, which is a good start. But with <b>no tracking and no form on the page</b>, nobody could tell which clicks became a booked survey.</td></tr></table></div><div class="card note"><p>&#11088; <b>The hard part is already done: forty years of work and 267 top-scored reviews.</b> Almost every low grade above is about showing that, and counting what comes in, not about rebuilding anything.</p><p>&#9888; <b>Not assessed, and left out of the score rather than guessed:</b> page speed, Google Business Profile and Google reviews, Google search positions, your other platform profiles, and anything inside an ads account.</p></div></div></section>
+<footer><div class="wrap">Prepared by Andrei Givero &middot; AG1 Consulting, for discussion with
+Craig Hosken at CPH Interiors.
+<b>&#9888; This is a discussion document, not a proposal or a statement of work, and nothing on it is priced.</b>
+<b>&#9888; Your website was read in full on 3 November 2026 (all 11 pages in its sitemap). Company facts come from the Companies House
+register on that day. Review counts come from your public Checkatrade and MyBuilder profiles on that day. Competitor sites describe what
+was in their page code on that day. The one search result quoted is from Bing, not Google. General points about damp proofing are trade
+knowledge for discussion, not advice.</b>
+<b>&#9888; No enquiry volume, cost, ranking, job count or revenue outcome is forecast, promised or implied anywhere in this pack.</b>
+</div></footer></body></html>
