@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="en-GB"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
+<title>CRM Demo &middot; BSP Air Conditioning &middot; powered by AG1</title>
+<style>
+:root{--bg:#f4f6f8;--line:#dce2e8;--ink:#15191e;--mut:#5b636b;--acc:#1f6fae;--accd:#15507f;--side:#0f151b;
+--ok:#157a52;--warn:#c7971a;--bad:#b02a20;--chip:#eef3f8}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink);overflow-x:hidden;
+font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+a{color:var(--accd)}b{color:#000}
+.demo-banner{background:#fff4d6;color:#6b4a00;border-bottom:1px solid #f0d58a;font-size:13px;font-weight:700;text-align:center;padding:7px 12px}
+.demo-banner span{font-weight:600}
+header.hh{background:linear-gradient(145deg,#0f151b,#1b2733 55%,#174a73);padding:22px 0 20px}
+header.hh *{color:#fff}
+.wrap{max-width:1180px;margin:0 auto;padding:0 16px}
+.eyebrow{font-size:12px;letter-spacing:1.4px;text-transform:uppercase;color:#8cc7f2!important;font-weight:700}
+h1{font-size:26px;line-height:1.22;margin:6px 0 6px;letter-spacing:-.3px}
+.sub{color:#e3e8ee!important;font-size:14px}
+.btn{display:inline-block;border:0;border-radius:8px;background:var(--acc);color:#fff;font-weight:700;font-size:13px;padding:8px 13px;cursor:pointer;text-decoration:none}
+.btn:hover{background:var(--accd)}
+.btn.ghost{background:#fff;color:var(--accd);border:1px solid var(--line)}
+.btn.sm{padding:5px 9px;font-size:12px}
+.pill{display:inline-block;font-size:11.5px;font-weight:700;border-radius:20px;padding:2px 9px;background:var(--chip);color:#23435f;margin:0 4px 4px 0;white-space:nowrap}
+.pill.ok{background:#e2f3ea;color:#0f5e3e}.pill.bad{background:#fbe6e4;color:#8d2118}.pill.warn{background:#fbf1d6;color:#7a5a07}
+.card{background:#fff;border:1px solid var(--line);border-radius:11px;padding:16px 18px;margin-bottom:11px}
+.h{font-size:12px;letter-spacing:1.3px;text-transform:uppercase;color:var(--mut);font-weight:800;margin:0 0 10px}
+.note{font-size:12.5px;color:var(--mut)}
+footer{border-top:1px solid var(--line);margin-top:20px;padding:16px 0 30px}
+footer,footer b{color:#69717a;font-size:11.5px;line-height:1.62}footer b{display:block;margin-top:6px}
+
+.app{display:grid;grid-template-columns:220px 1fr;min-height:calc(100vh - 34px)}
+.side{background:var(--side);color:#c2c9d0;padding:16px 10px;position:sticky;top:0;height:100vh;overflow-y:auto}
+.brand{color:#fff;font-weight:800;font-size:15px;padding:4px 10px 2px}
+.brand small{display:block;color:#8cc7f2;font-weight:600;font-size:11px;letter-spacing:.6px}
+.side button{display:flex;align-items:center;gap:9px;width:100%;text-align:left;background:none;border:0;color:#c2c9d0;
+font:600 13.5px/1.2 inherit;padding:10px 11px;border-radius:8px;cursor:pointer;margin:2px 0}
+.side button:hover{background:#1b2733;color:#fff}
+.side button.on{background:#1f6fae;color:#fff}
+.side .ico{width:18px;text-align:center}
+.side .cnt{margin-left:auto;background:#b02a20;color:#fff;font-size:11px;border-radius:10px;padding:1px 7px}
+.main{padding:18px 20px 10px;min-width:0}
+.top{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:14px}
+.top h1{color:var(--ink);font-size:22px;margin:0}
+.top .who{margin-left:auto;display:flex;align-items:center;gap:8px;font-size:13px;color:var(--mut)}
+.av{width:30px;height:30px;border-radius:50%;background:#1f6fae;color:#fff;display:inline-flex;align-items:center;justify-content:center;font-weight:800;font-size:12px;flex:none}
+.view{display:none}.view.on{display:block;animation:fi .18s ease}
+@keyframes fi{from{opacity:.3;transform:translateY(3px)}to{opacity:1;transform:none}}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:12px}
+.kpi{background:#fff;border:1px solid var(--line);border-radius:11px;padding:12px 14px}
+.kpi .n{font-size:24px;font-weight:900}.kpi .l{font-size:12px;color:var(--mut);font-weight:600}
+/* inbox */
+.inbox{display:grid;grid-template-columns:330px 1fr;gap:12px}
+.list{background:#fff;border:1px solid var(--line);border-radius:11px;overflow:hidden;max-height:640px;overflow-y:auto}
+.li{display:flex;gap:10px;padding:11px 12px;border-bottom:1px solid var(--line);cursor:pointer}
+.li:hover{background:#f6f9fc}.li.on{background:#eaf2fa}
+.li .nm{font-weight:700;font-size:13.5px}.li .pv{font-size:12.5px;color:var(--mut);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:220px}
+.li .tm{margin-left:auto;font-size:11px;color:var(--mut);white-space:nowrap}
+.ch{width:30px;height:30px;border-radius:8px;display:inline-flex;align-items:center;justify-content:center;color:#fff;font-weight:900;font-size:11px;flex:none}
+.ch.tt{background:#111}.ch.ig{background:linear-gradient(135deg,#f58529,#dd2a7b,#8134af)}.ch.fb{background:#1877f2}
+.ch.wa{background:#25d366}.ch.web{background:#1f6fae}.ch.em{background:#6b7280}.ch.call{background:#b45309}
+.thread{background:#fff;border:1px solid var(--line);border-radius:11px;padding:14px 16px;min-height:420px}
+.msg{max-width:82%;padding:9px 12px;border-radius:12px;margin:8px 0;font-size:13.5px}
+.msg.in{background:#eef1f4}.msg.out{background:#1f6fae;color:#fff;margin-left:auto}
+.msg.out b{color:#fff}.msg .meta{display:block;font-size:11px;opacity:.75;margin-top:4px}
+.compose{display:flex;gap:8px;margin-top:12px}.compose input{flex:1;border:1px solid var(--line);border-radius:8px;padding:9px 11px;font:inherit}
+/* triage */
+.ctl{display:flex;gap:16px;align-items:center;flex-wrap:wrap;background:#fff;border:1px solid var(--line);border-radius:11px;padding:12px 16px;margin-bottom:12px}
+.ctl label{font-size:13px;font-weight:700;display:flex;align-items:center;gap:8px}
+.ctl input[type=range]{width:200px}
+.tw{overflow-x:auto;background:#fff;border:1px solid var(--line);border-radius:11px;margin-bottom:11px}
+table{border-collapse:collapse;width:100%;font-size:13.5px}
+th{background:#0f151b;color:#fff;text-align:left;padding:9px 10px;font-size:12px;white-space:nowrap}
+td{border-top:1px solid var(--line);padding:9px 10px;vertical-align:top}
+tr.dec td{background:#fcf7f6;color:#6e6e6e}
+.score{font-weight:900;font-size:15px}
+.decl{font-size:12px;background:#fbe6e4;border-radius:8px;padding:6px 9px;margin-top:6px;color:#5c1a14}
+/* pipeline */
+.board{display:flex;gap:10px;overflow-x:auto;padding-bottom:8px}
+.col{background:#e9eef3;border-radius:11px;min-width:210px;width:210px;flex:none;padding:9px;min-height:300px}
+.col.over{outline:2px dashed var(--acc)}
+.col .ct{font-weight:800;font-size:13px;display:flex;justify-content:space-between}
+.col .cv{font-size:12px;color:var(--mut);margin:2px 0 8px}
+.kc{background:#fff;border:1px solid var(--line);border-radius:9px;padding:9px 10px;margin-bottom:8px;cursor:grab;font-size:13px}
+.kc:active{cursor:grabbing}.kc .nm{font-weight:700}.kc .sm{font-size:12px;color:var(--mut)}
+.kc .mv{margin-top:6px;display:flex;gap:5px}
+/* automations */
+.auto{display:flex;gap:12px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:11px;padding:13px 15px;margin-bottom:9px}
+.auto .w{flex:1}.auto .t{font-weight:800}.auto .d{font-size:13px;color:#3b434a}
+.auto .ex{font-size:12.5px;background:#f2f6fa;border-left:3px solid var(--acc);padding:6px 9px;border-radius:6px;margin-top:6px;color:#23313d}
+.sw{position:relative;width:42px;height:24px;flex:none}.sw input{opacity:0;width:0;height:0}
+.sw span{position:absolute;inset:0;background:#c9d1d9;border-radius:24px;cursor:pointer;transition:.15s}
+.sw span:before{content:"";position:absolute;width:18px;height:18px;left:3px;top:3px;background:#fff;border-radius:50%;transition:.15s}
+.sw input:checked+span{background:var(--ok)}.sw input:checked+span:before{transform:translateX(18px)}
+/* calendar */
+.cal{display:grid;grid-template-columns:70px repeat(5,1fr);gap:4px;background:#fff;border:1px solid var(--line);border-radius:11px;padding:10px;overflow-x:auto;min-width:0}
+.cal .hd{font-weight:800;font-size:12px;text-align:center;padding:4px}
+.cal .tl{font-size:12px;color:var(--mut);padding:8px 4px}
+.slot{border-radius:7px;font-size:11.5px;padding:6px;min-height:34px;border:1px dashed #cfd7df;color:#94a0ab}
+.slot.open{border:1px solid #9cc6e8;background:#eef6fd;color:#1f6fae;font-weight:700;cursor:pointer}
+.slot.bk{border:0;background:#1f6fae;color:#fff;font-weight:700}
+.slot.job{border:0;background:#e2e6ea;color:#4b5560}
+.bookw{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.phone{max-width:340px;margin:0 auto;border:9px solid #111;border-radius:30px;background:#fff;padding:16px 14px;min-height:430px}
+.phone .ttl{font-weight:800;font-size:15px;margin-bottom:4px}
+.phone .opt{display:block;width:100%;text-align:left;border:1px solid var(--line);background:#fff;border-radius:8px;padding:9px 11px;margin:6px 0;cursor:pointer;font:inherit;font-size:13px}
+.phone .opt:hover{border-color:var(--acc)}
+.phone input{width:100%;border:1px solid var(--line);border-radius:8px;padding:8px 10px;font:inherit;margin:4px 0}
+/* week */
+.bars{display:grid;gap:12px}
+.br .l{font-size:13px;font-weight:700;margin-bottom:4px;display:flex;justify-content:space-between}
+.br .tr{height:22px;background:#e8ebef;border-radius:6px;overflow:hidden;display:flex}
+.br .tr i{display:block;height:22px}
+.legend{display:flex;gap:12px;flex-wrap:wrap;font-size:12px;margin-top:10px}
+.legend span:before{content:"";display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:5px;vertical-align:-1px;background:var(--c)}
+/* team */
+.perm input{width:16px;height:16px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.toast{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);background:#0f151b;color:#fff;padding:10px 16px;border-radius:9px;font-size:13.5px;font-weight:600;opacity:0;transition:.2s;pointer-events:none;z-index:50;max-width:92vw}
+.toast.on{opacity:1}
+@media(max-width:900px){.app{grid-template-columns:minmax(0,1fr)}.side{position:sticky;top:0;height:auto;z-index:20;display:flex;overflow-x:auto;padding:8px;gap:4px}
+.brand{display:none}.side button{width:auto;white-space:nowrap;padding:8px 10px}.side .lbl{display:none}
+.inbox,.bookw,.grid2{grid-template-columns:minmax(0,1fr)}.top .who span:first-child{display:none}.kpis{grid-template-columns:1fr 1fr}.main{padding:14px 12px}
+.list{max-height:300px}.li .pv{max-width:160px}}
+
+</style></head><body>
+
+<div class="demo-banner">Demonstration with sample data <span>&middot; every name, postcode and value below is made up</span></div>
+<div class="app">
+<aside class="side">
+ <div class="brand">BSP Air Conditioning<small>POWERED BY AG1</small></div>
+ <button data-v="inbox" class="on"><span class="ico">&#9993;</span><span class="lbl">Inbox</span><span class="cnt" id="unread">0</span></button>
+ <button data-v="triage"><span class="ico">&#9881;</span><span class="lbl">Smart triage</span></button>
+ <button data-v="pipe"><span class="ico">&#9638;</span><span class="lbl">Pipeline</span></button>
+ <button data-v="auto"><span class="ico">&#9889;</span><span class="lbl">Automations</span></button>
+ <button data-v="cal"><span class="ico">&#128197;</span><span class="lbl">Surveys</span></button>
+ <button data-v="week"><span class="ico">&#9201;</span><span class="lbl">Your week</span></button>
+ <button data-v="team"><span class="ico">&#128101;</span><span class="lbl">Team and handover</span></button>
+</aside>
+<main class="main">
+ <div class="top"><h1 id="vt">Inbox</h1>
+  <div class="who"><span>Clyst St Mary base</span><span class="av">BP</span></div></div>
+
+ <!-- INBOX -->
+ <section class="view on" id="v-inbox">
+  <div class="kpis">
+   <div class="kpi"><div class="n" id="k-all">0</div><div class="l">Enquiries in the demo</div></div>
+   <div class="kpi"><div class="n" id="k-rep">0</div><div class="l">Answered instantly</div></div>
+   <div class="kpi"><div class="n" id="k-fit">0</div><div class="l">Fit your rules</div></div>
+   <div class="kpi"><div class="n" id="k-dec">0</div><div class="l">Polite decline sent</div></div>
+  </div>
+  <div class="inbox">
+   <div class="list" id="list"></div>
+   <div class="thread" id="thread"></div>
+  </div>
+  <p class="note">Every channel lands in one list. The first reply goes out in seconds, in your name, asking the two things you sort by: the postcode and the type of system.</p>
+ </section>
+
+ <!-- TRIAGE -->
+ <section class="view" id="v-triage">
+  <div class="ctl">
+   <label>Radius from Clyst St Mary <input type="range" id="rad" min="5" max="60" step="1" value="20"> <span class="pill" id="radv">20 mi</span></label>
+   <label><input type="checkbox" id="wallonly" checked> Wall-mounted only</label>
+   <label><input type="checkbox" id="showdec"> Show declined</label>
+  </div>
+  <div class="tw"><table><thead><tr><th>Score</th><th>Enquiry</th><th>Where</th><th>Miles</th><th>System</th><th>Rooms</th><th>What happened</th></tr></thead><tbody id="tri"></tbody></table></div>
+  <p class="note">Score = closer is better, wall-mounted scores higher, more rooms scores a little higher. You set the rules; move the slider and the list re-sorts and the decline messages change live.</p>
+ </section>
+
+ <!-- PIPELINE -->
+ <section class="view" id="v-pipe">
+  <p class="note" style="margin-top:0">Drag a card to another column, or tap the arrow. Column totals are <b>sample values</b> for the demo, not your figures.</p>
+  <div class="board" id="board"></div>
+ </section>
+
+ <!-- AUTOMATIONS -->
+ <section class="view" id="v-auto">
+  <p class="note" style="margin-top:0">Plain-English rules. Each one can be switched off, and every message is written in your words before it goes live.</p>
+  <div id="autos"></div>
+ </section>
+
+ <!-- CALENDAR -->
+ <section class="view" id="v-cal">
+  <div class="bookw">
+   <div><div class="h">Survey diary &middot; this week (sample)</div><div class="cal" id="cal"></div>
+    <p class="note">Blue outlined = slots you have opened for surveys. Grey = install days. Only the slots you open can be booked.</p></div>
+   <div><div class="h">What the customer sees from the booking link</div>
+    <div class="phone" id="phone"></div></div>
+  </div>
+ </section>
+
+ <!-- WEEK -->
+ <section class="view" id="v-week">
+  <div class="card"><div class="h">Your week &middot; illustrative</div>
+   <p style="margin-top:0">On the left is how you described your evenings. On the right is the shape we would aim for. <b>No number is promised:</b> we measure your actual week first, then build the biggest time sink first.</p>
+   <div class="bars" id="bars"></div>
+   <div class="legend" id="leg"></div>
+   <p class="note">Bar lengths are illustrative only. The &ldquo;around 20 hours&rdquo; is your own estimate, passed to us when the call was booked.</p>
+  </div>
+  <div class="card"><div class="h">What stays with you</div>
+   <p style="margin:0">Pricing, which jobs you take, the survey itself and the install. The system does the typing, chasing and remembering around those.</p></div>
+ </section>
+
+ <!-- TEAM -->
+ <section class="view" id="v-team">
+  <div class="grid2">
+   <div class="card"><div class="h">Users and what they can see</div>
+    <div class="tw" style="margin:0"><table><thead><tr><th>User</th><th>Role</th><th>Inbox</th><th>Quotes</th><th>Money</th><th>Settings</th></tr></thead><tbody id="users"></tbody></table></div>
+    <div style="margin-top:10px"><button class="btn sm" id="adduser">+ Add a user</button></div>
+   </div>
+   <div class="card"><div class="h">Handing the business on, one day</div>
+    <p style="margin-top:0">Everything lives in one account in your name: every customer, every message, every quote, install date, F-gas record and service due date.</p>
+    <p>Whoever runs the business later gets a login with the right permissions and picks up the full history as it is. Nothing lives in a personal WhatsApp or one person&rsquo;s head.</p>
+    <button class="btn ghost sm" id="hand">Preview a handover checklist</button>
+    <ul id="handlist" style="display:none;margin-top:10px">
+     <li>Owner role transferred, old login kept read-only</li><li>All automations listed with who wrote each message</li>
+     <li>Customer list with install dates and next service due</li><li>Open quotes and unpaid invoices on one page</li>
+     <li>Supplier and warranty notes against each install</li></ul>
+   </div>
+  </div>
+ </section>
+</main></div>
+<div class="toast" id="toast"></div>
+<footer><div class="wrap" style="padding:0 20px">Prepared by Andrei Givero &middot; AG1 Consulting &middot; 3 November 2026, for discussion with
+Brett Potter at BSP Air Conditioning.
+<b>&#9888; Demonstration only. Every name, postcode, message and value on this page is sample data made up for the demo.</b>
+<b>&#9888; Nothing here is priced, and no hours saved, job count, applicant count or revenue outcome is forecast or promised.</b>
+</div></footer>
+<script>
+(function(){
+var CH={tt:["TT","TikTok"],ig:["IG","Instagram"],fb:["f","Facebook"],wa:["WA","WhatsApp"],web:["W","Website form"],em:["@","Email"],call:["&#9742;","Missed call"]};
+var L=[
+ {id:1,c:"tt",n:"Sample: J. Smith",pc:"EX2 (sample)",town:"Exeter, St Thomas",mi:4,sys:"wall",rooms:2,t:"2 min ago",m:"Saw your video on the bedroom unit, how much for 2 bedrooms?",v:2850},
+ {id:2,c:"wa",n:"Sample: R. Patel",pc:"EX8 (sample)",town:"Exmouth",mi:7,sys:"wall",rooms:1,t:"14 min ago",m:"Hi, looking for air con in my home office, are you free next month?",v:1650},
+ {id:3,c:"ig",n:"Sample: K. Morgan",pc:"TQ1 (sample)",town:"Torquay",mi:22,sys:"wall",rooms:3,t:"38 min ago",m:"Can you do 3 rooms in a holiday let?",v:4100},
+ {id:4,c:"fb",n:"Sample: D. Hughes",pc:"EX10 (sample)",town:"Sidmouth",mi:11,sys:"ducted",rooms:4,t:"1 hr ago",m:"New build, want ducted through the whole house",v:0},
+ {id:5,c:"web",n:"Sample: A. Clarke",pc:"EX4 (sample)",town:"Exeter, Pennsylvania",mi:5,sys:"wall",rooms:1,t:"1 hr ago",m:"Living room unit please, wall mounted",v:1550},
+ {id:6,c:"em",n:"Sample: Lakeside Dental (sample)",pc:"EX1 (sample)",town:"Exeter centre",mi:4,sys:"wall",rooms:3,t:"2 hrs ago",m:"Quote for 3 surgery rooms, small practice",v:3900},
+ {id:7,c:"tt",n:"Sample: M. Evans",pc:"PL4 (sample)",town:"Plymouth",mi:42,sys:"wall",rooms:2,t:"2 hrs ago",m:"Do you come to Plymouth?",v:0},
+ {id:8,c:"call",n:"Sample: unknown caller",pc:"asked by text",town:"Crediton",mi:11,sys:"wall",rooms:1,t:"3 hrs ago",m:"Missed call while you were on a job",v:1500},
+ {id:9,c:"ig",n:"Sample: S. Wright",pc:"EX14 (sample)",town:"Honiton",mi:13,sys:"loft",rooms:2,t:"4 hrs ago",m:"Unit in the loft feeding two bedrooms?",v:0},
+ {id:10,c:"wa",n:"Sample: P. Bennett",pc:"TQ12 (sample)",town:"Newton Abbot",mi:17,sys:"wall",rooms:2,t:"5 hrs ago",m:"Two bedrooms, wall units, sent photos",v:2700},
+ {id:11,c:"tt",n:"Sample: L. Turner",pc:"BS3 (sample)",town:"Bristol",mi:75,sys:"wall",rooms:3,t:"Yesterday",m:"Love the content, do you cover Bristol?",v:0},
+ {id:12,c:"fb",n:"Sample: G. Ward",pc:"EX3 (sample)",town:"Topsham",mi:3,sys:"wall",rooms:2,t:"Yesterday",m:"Hall and bedroom, when can you survey?",v:2650},
+ {id:13,c:"web",n:"Sample: H. Price",pc:"EX16 (sample)",town:"Tiverton",mi:15,sys:"wall",rooms:1,t:"Yesterday",m:"Conservatory unit, it gets so hot",v:1700},
+ {id:14,c:"em",n:"Sample: B. Collins",pc:"EX7 (sample)",town:"Dawlish",mi:11,sys:"ducted",rooms:5,t:"2 days ago",m:"Ducted system for a barn conversion",v:0}
+];
+var SYS={wall:"Wall-mounted",ducted:"Ducted",loft:"Loft"};
+var st={rad:20,wall:true,showdec:false,sel:1};
+function $(s){return document.querySelector(s)}
+function $$(s){return Array.prototype.slice.call(document.querySelectorAll(s))}
+function esc(s){return String(s).replace(/[&<>]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;"}[c]})}
+function toast(t){var e=$("#toast");e.textContent=t;e.classList.add("on");clearTimeout(e._t);e._t=setTimeout(function(){e.classList.remove("on")},2200)}
+function first(n){var p=n.replace("Sample: ","").split(" ");return p.length>1&&p[0].length<=2?"there":p[0]}
+function fits(l){return l.mi<=st.rad&&(!st.wall||l.sys==="wall")}
+function why(l){if(l.mi>st.rad)return"area";if(st.wall&&l.sys!=="wall")return"type";return""}
+function score(l){var s=100-l.mi*1.4+(l.sys==="wall"?15:-20)+Math.min(l.rooms,4)*3;return Math.max(1,Math.min(99,Math.round(s)))}
+function autoReply(l){return l.c==="call"?"Sorry I missed your call, I am on a job. Tap here to tell me what you need and your postcode, and I will come back to you: [form link]. Brett, BSP Air Conditioning":
+ "Hi "+first(l.n)+", thanks for getting in touch with BSP Air Conditioning. So I can come back to you properly: what is your postcode, and is it a wall-mounted unit you are after? How many rooms? Photos help too. Brett"}
+function declineText(l){var w=why(l);
+ if(w==="area")return"Thanks so much for thinking of us. We keep our installs close to Exeter so we can look after every customer properly, and "+l.town+" is outside the area we cover. Sorry we cannot help this time. Brett, BSP Air Conditioning";
+ if(w==="type")return"Thanks for asking. We focus on wall-mounted systems, so a "+SYS[l.sys].toLowerCase()+" install is not something we take on. Sorry we cannot help this time, and good luck with the project. Brett, BSP Air Conditioning";
+ return""}
+/* nav */
+var TITLES={inbox:"Inbox",triage:"Smart triage",pipe:"Pipeline",auto:"Automations",cal:"Survey bookings",week:"Your week",team:"Team and handover"};
+$$(".side button").forEach(function(b){b.addEventListener("click",function(){
+ $$(".side button").forEach(function(x){x.classList.remove("on")});b.classList.add("on");
+ $$(".view").forEach(function(v){v.classList.remove("on")});$("#v-"+b.dataset.v).classList.add("on");$("#vt").textContent=TITLES[b.dataset.v];})});
+/* inbox */
+function kpis(){var f=L.filter(fits).length;$("#k-all").textContent=L.length;$("#k-rep").textContent=L.length;$("#k-fit").textContent=f;$("#k-dec").textContent=L.length-f;$("#unread").textContent=f}
+function renderList(){$("#list").innerHTML=L.map(function(l){var ok=fits(l);return'<div class="li'+(l.id===st.sel?" on":"")+'" data-id="'+l.id+'"><span class="ch '+l.c+'">'+CH[l.c][0]+'</span><div style="min-width:0"><div class="nm">'+esc(l.n)+'</div><div class="pv">'+esc(l.m)+'</div><div>'+(ok?'<span class="pill ok">Fits: '+l.mi+' mi</span>':'<span class="pill bad">Declined politely</span>')+'<span class="pill">'+SYS[l.sys]+'</span></div></div><span class="tm">'+l.t+'</span></div>'}).join("");
+ $$(".li").forEach(function(e){e.addEventListener("click",function(){st.sel=+e.dataset.id;renderList();renderThread()})})}
+function renderThread(){var l=L.filter(function(x){return x.id===st.sel})[0];var h='<div style="display:flex;align-items:center;gap:10px;margin-bottom:6px"><span class="ch '+l.c+'">'+CH[l.c][0]+'</span><div><b>'+esc(l.n)+'</b><div class="note">'+CH[l.c][1]+' &middot; '+esc(l.town)+' &middot; '+l.mi+' miles from Clyst St Mary</div></div></div>';
+ h+='<div class="msg in">'+esc(l.m)+'<span class="meta">'+CH[l.c][1]+' &middot; '+l.t+'</span></div>';
+ h+='<div class="msg out"><b>Instant reply</b><br>'+esc(autoReply(l))+'<span class="meta">Sent automatically in 8 seconds &middot; from your name</span></div>';
+ if(l.c!=="call")h+='<div class="msg in">'+esc(l.pc.indexOf("sample")>-1?l.pc.replace(" (sample)","")+" area, "+(l.sys==="wall"?"wall mounted":SYS[l.sys].toLowerCase())+", "+l.rooms+" room"+(l.rooms>1?"s":""):"Crediton, one bedroom")+'<span class="meta">Customer reply (sample)</span></div>';
+ if(fits(l))h+='<div class="msg out"><b>Survey link sent</b><br>Great, that is in our area. Pick a survey time that suits you here: [booking link]. Brett<span class="meta">Sent automatically &middot; tagged '+l.mi+' mi, '+SYS[l.sys]+'</span></div>';
+ else h+='<div class="msg out" style="background:#8d2118"><b>Polite decline sent</b><br>'+esc(declineText(l))+'<span class="meta">Sent automatically &middot; you can switch this off</span></div>';
+ h+='<div class="compose"><input id="cmp" placeholder="Type a reply from your phone (demo)"><button class="btn" id="send">Send</button></div>';
+ $("#thread").innerHTML=h;$("#send").addEventListener("click",function(){var v=$("#cmp").value.trim();if(!v)return;var d=document.createElement("div");d.className="msg out";d.innerHTML=esc(v)+'<span class="meta">Sent by you just now (demo)</span>';$(".compose").before(d);$("#cmp").value="";toast("Reply sent (demo, nothing actually sent)")})}
+/* triage */
+function renderTri(){var rows=L.slice().sort(function(a,b){return(fits(b)-fits(a))||score(b)-score(a)});
+ $("#tri").innerHTML=rows.filter(function(l){return st.showdec||fits(l)}).map(function(l){var ok=fits(l),s=score(l);
+ return'<tr class="'+(ok?"":"dec")+'"><td><span class="score" style="color:'+(ok?(s>=80?"#157a52":"#9c7510"):"#9aa3ab")+'">'+(ok?s:"-")+'</span></td><td><span class="ch '+l.c+'" style="width:22px;height:22px;font-size:9px;vertical-align:middle">'+CH[l.c][0]+'</span> <b>'+esc(l.n)+'</b><div class="note">'+esc(l.m)+'</div></td><td>'+esc(l.town)+'<div class="note">'+esc(l.pc)+'</div></td><td><b>'+l.mi+'</b></td><td><span class="pill '+(l.sys==="wall"?"ok":"warn")+'">'+SYS[l.sys]+'</span></td><td>'+l.rooms+'</td><td>'+(ok?'<span class="pill ok">Survey link sent</span>':'<span class="pill bad">Polite decline sent</span><div class="decl">'+esc(declineText(l))+'</div>')+'</td></tr>'}).join("")||'<tr><td colspan="7">Nothing fits those rules yet. Widen the radius.</td></tr>';}
+$("#rad").addEventListener("input",function(e){st.rad=+e.target.value;$("#radv").textContent=st.rad+" mi";refresh()});
+$("#wallonly").addEventListener("change",function(e){st.wall=e.target.checked;refresh()});
+$("#showdec").addEventListener("change",function(e){st.showdec=e.target.checked;renderTri()});
+function refresh(){kpis();renderList();renderThread();renderTri()}
+/* pipeline */
+var COLS=["New","Survey booked","Quote sent","Quote chased","Won","Installed","Invoiced / Paid"];
+var P=[{n:"Sample: J. Smith",s:"Exeter &middot; 2 rooms wall",v:2850,c:0},{n:"Sample: R. Patel",s:"Exmouth &middot; office",v:1650,c:0},
+ {n:"Sample: G. Ward",s:"Topsham &middot; 2 rooms",v:2650,c:1},{n:"Sample: A. Clarke",s:"Exeter &middot; living room",v:1550,c:1},
+ {n:"Sample: Lakeside Dental",s:"Exeter &middot; 3 rooms",v:3900,c:2},{n:"Sample: H. Price",s:"Tiverton &middot; conservatory",v:1700,c:3},
+ {n:"Sample: P. Bennett",s:"Newton Abbot &middot; 2 rooms",v:2700,c:4},{n:"Sample: T. Fox",s:"Cullompton &middot; 1 room",v:1450,c:5},
+ {n:"Sample: E. Shaw",s:"Exmouth &middot; 2 rooms",v:2550,c:6},{n:"Sample: N. Reid",s:"Exeter &middot; 3 rooms",v:3750,c:6}];
+var NEXT={1:"Survey reminder sent the day before",2:"Quote sent from template",3:"Day 2 follow-up queued",4:"Deposit request sent",5:"Job sheet and F-gas record saved",6:"Invoice sent, reminder set, review request in 3 days"};
+function gbp(n){return"£"+n.toLocaleString("en-GB")}
+function renderBoard(){$("#board").innerHTML=COLS.map(function(c,i){var cards=P.filter(function(p){return p.c===i});var tot=cards.reduce(function(a,p){return a+p.v},0);
+ return'<div class="col" data-c="'+i+'"><div class="ct"><span>'+c+'</span><span>'+cards.length+'</span></div><div class="cv">'+gbp(tot)+' <span class="pill warn" style="font-size:10px">sample</span></div>'+cards.map(function(p){var k=P.indexOf(p);
+ return'<div class="kc" draggable="true" data-k="'+k+'"><div class="nm">'+p.n+'</div><div class="sm">'+p.s+'</div><div class="sm">'+gbp(p.v)+' (sample)</div><div class="mv">'+(i>0?'<button class="btn ghost sm" data-k="'+k+'" data-d="-1">&#8592;</button>':'')+(i<COLS.length-1?'<button class="btn sm" data-k="'+k+'" data-d="1">&#8594;</button>':'')+'</div></div>'}).join("")+'</div>'}).join("");
+ $$(".kc").forEach(function(e){e.addEventListener("dragstart",function(ev){ev.dataTransfer.setData("text/plain",e.dataset.k)})});
+ $$(".col").forEach(function(col){col.addEventListener("dragover",function(ev){ev.preventDefault();col.classList.add("over")});col.addEventListener("dragleave",function(){col.classList.remove("over")});
+  col.addEventListener("drop",function(ev){ev.preventDefault();col.classList.remove("over");var k=+ev.dataTransfer.getData("text/plain");move(k,+col.dataset.c)})});
+ $$(".kc .mv button").forEach(function(b){b.addEventListener("click",function(){var k=+b.dataset.k;move(k,P[k].c+(+b.dataset.d))})})}
+function move(k,c){if(isNaN(k)||c<0||c>=COLS.length)return;P[k].c=c;renderBoard();toast(P[k].n.replace("Sample: ","")+" moved to "+COLS[c]+(NEXT[c]?". "+NEXT[c]+" (demo).":"."))}
+/* automations */
+var A=[
+ ["Instant reply on every channel","When any enquiry arrives on TikTok, Instagram, Facebook, WhatsApp, the website or email","Hi, thanks for getting in touch with BSP Air Conditioning. What is your postcode, and is it a wall-mounted unit you are after?"],
+ ["Missed-call text back","When you miss a call because you are on a job","Sorry I missed your call, I am on a job. Tell me what you need here and I will come back to you: [form link]"],
+ ["Sort by distance and job type","When the customer replies with a postcode and system type","Tag the miles from Clyst St Mary and the system. Inside your radius and wall-mounted: send the survey link. Outside: send the polite decline."],
+ ["Survey reminder","The day before a booked survey, and 2 hours before","Just a reminder, Brett is coming to look at your air conditioning tomorrow at 10am. Reply here if you need to move it."],
+ ["Quote follow-up, day 2","2 days after a quote is sent with no reply","Hi, just checking the quote came through OK. Any questions, reply here."],
+ ["Quote follow-up, day 5","5 days after, still no reply","Happy to talk through options or timings if that helps."],
+ ["Quote follow-up, day 10","10 days after, still no reply, then it stops","Last nudge from me. If now is not the right time, no problem at all."],
+ ["Stop chasing when they reply","As soon as the customer replies or accepts","All follow-ups for that customer stop, and the card moves on the pipeline."],
+ ["Invoice reminder","When an invoice is unpaid after the due date","Friendly reminder that invoice 1043 (sample) is now due. Pay here: [link]"],
+ ["Review request after install","3 days after a job is marked installed","Thanks again for choosing BSP. If you are happy with the install, a quick Google review helps a lot: [link]"],
+ ["Annual service and F-gas check","11 months after each install date","Your air conditioning is due its yearly service and F-gas check next month. Pick a time here: [booking link]"]];
+$("#autos").innerHTML=A.map(function(a,i){return'<div class="auto"><label class="sw"><input type="checkbox" checked data-i="'+i+'"><span></span></label><div class="w"><div class="t">'+a[0]+'</div><div class="d"><b>When:</b> '+a[1]+'</div><div class="ex">'+esc(a[2])+'</div></div></div>'}).join("");
+$$("#autos input").forEach(function(x){x.addEventListener("change",function(){toast(A[+x.dataset.i][0]+(x.checked?" switched on":" switched off")+" (demo)")})});
+/* calendar */
+var DAYS=["Mon","Tue","Wed","Thu","Fri"],TIMES=["8:00","10:00","12:00","16:00","18:00"];
+var C={};DAYS.forEach(function(d,di){TIMES.forEach(function(t,ti){var k=d+" "+t;C[k]=(di===1||di===3)&&ti<4?"job":(ti===0||ti===4?"open":"none")})});
+C["Mon 8:00"]="bk";C["Mon 8:00n"]="G. Ward (sample)";C["Fri 18:00"]="bk";C["Fri 18:00n"]="A. Clarke (sample)";
+function renderCal(){var h='<div></div>'+DAYS.map(function(d){return'<div class="hd">'+d+'</div>'}).join("");
+ TIMES.forEach(function(t){h+='<div class="tl">'+t+'</div>';DAYS.forEach(function(d){var k=d+" "+t,s=C[k];
+ h+='<div class="slot '+(s==="none"?"":s)+'">'+(s==="open"?"Open for survey":s==="bk"?"Survey: "+C[k+"n"]:s==="job"?"Install day":"")+'</div>'})});
+ $("#cal").innerHTML=h}
+function phoneStart(){var open=Object.keys(C).filter(function(k){return C[k]==="open"});
+ $("#phone").innerHTML='<div class="ttl">Book your free survey</div><div class="note">BSP Air Conditioning &middot; Exeter and nearby</div><p style="font-size:13px">Pick a time that suits you:</p>'+open.map(function(k){return'<button class="opt" data-k="'+k+'">'+k.replace(" "," at ")+'</button>'}).join("")+'<p class="note">Only the slots Brett opens are shown.</p>';
+ $$("#phone .opt").forEach(function(b){b.addEventListener("click",function(){phoneForm(b.dataset.k)})})}
+function phoneForm(k){$("#phone").innerHTML='<div class="ttl">'+k.replace(" "," at ")+'</div><input id="pn" placeholder="Your name" value="Sample: New customer"><input id="pp" placeholder="Postcode" value="EX2 (sample)"><input placeholder="Rooms" value="2"><button class="btn" id="pbk" style="width:100%;margin-top:8px">Confirm survey</button><button class="btn ghost" id="pbx" style="width:100%;margin-top:6px">Back</button>';
+ $("#pbx").addEventListener("click",phoneStart);
+ $("#pbk").addEventListener("click",function(){C[k]="bk";C[k+"n"]=($("#pn").value||"Customer").replace("Sample: ","")+" (sample)";renderCal();
+  $("#phone").innerHTML='<div class="ttl">&#10004; Booked</div><p style="font-size:13px">You are booked in for '+k.replace(" "," at ")+'. You will get a reminder the day before. Brett, BSP Air Conditioning</p><button class="btn ghost" id="pagain" style="width:100%">Book another (demo)</button>';
+  $("#pagain").addEventListener("click",phoneStart);toast("Survey added to the diary, reminder scheduled (demo)")})}
+/* week */
+var W=[["Reading and replying to enquiries","#1f6fae",30,6],["Call backs for postcode and job details","#2f9fd8",18,3],["Arranging surveys","#8cc7f2",12,2],["Writing and chasing quotes","#c7971a",20,7],["Invoices and chasing payment","#b45309",12,3],["Service reminders and reviews","#157a52",8,1]];
+function bar(lbl,idx,note){return'<div class="br"><div class="l"><span>'+lbl+'</span><span class="note">'+note+'</span></div><div class="tr">'+W.map(function(w){return'<i title="'+w[0]+'" style="width:'+w[idx]+'%;background:'+w[1]+'"></i>'}).join("")+'</div></div>'}
+$("#bars").innerHTML=bar("Today, as you described it","2","around 20 hours, your estimate")+bar("The aim, after the build","3","illustrative, measured in week 1");
+$("#leg").innerHTML=W.map(function(w){return'<span style="--c:'+w[1]+'">'+w[0]+'</span>'}).join("");
+/* team */
+var U=[["Brett Potter","Owner",[1,1,1,1]],["Office help (example)","Office",[1,1,0,0]],["Engineer (example)","Engineer",[0,0,0,0]],["Future manager (example)","Manager",[1,1,1,0]]];
+function renderUsers(){$("#users").innerHTML=U.map(function(u,i){return'<tr><td><span class="av" style="width:24px;height:24px;font-size:10px;vertical-align:middle">'+u[0].split(" ").map(function(x){return x[0]}).join("").slice(0,2)+'</span> '+esc(u[0])+'</td><td>'+u[1]+'</td>'+u[2].map(function(p,j){return'<td class="perm"><input type="checkbox" data-u="'+i+'" data-p="'+j+'"'+(p?" checked":"")+(i===0?" disabled":"")+'></td>'}).join("")+'</tr>'}).join("");
+ $$(".perm input").forEach(function(x){x.addEventListener("change",function(){U[+x.dataset.u][2][+x.dataset.p]=x.checked?1:0;toast("Permission updated for "+U[+x.dataset.u][0]+" (demo)")})})}
+$("#adduser").addEventListener("click",function(){U.push(["New user (example)","Office",[1,0,0,0]]);renderUsers();toast("User invited (demo, nobody was emailed)")});
+$("#hand").addEventListener("click",function(){var e=$("#handlist");e.style.display=e.style.display==="none"?"block":"none"});
+refresh();renderBoard();renderCal();phoneStart();renderUsers();
+window.__demoReady=true;
+})();
+</script></body></html>
