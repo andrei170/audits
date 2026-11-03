@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="en-GB"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
+<title>CRM Demo &middot; CPH Interiors &middot; powered by AG1</title>
+<style>
+:root{--bg:#f4f6f9;--line:#dce2ea;--ink:#15191e;--mut:#5b636e;--acc:#1f4fa3;--accd:#173d80;--side:#0d1a33;
+--ok:#157a52;--warn:#c7971a;--bad:#b02a20;--chip:#eef2f9}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink);overflow-x:hidden;
+font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+a{color:var(--accd)}b{color:#000}
+.demo-banner{background:#fff4d6;color:#6b4a00;border-bottom:1px solid #f0d58a;font-size:13px;font-weight:700;text-align:center;padding:7px 12px}
+.demo-banner span{font-weight:600}
+.wrap{max-width:1180px;margin:0 auto;padding:0 16px}
+.btn{display:inline-block;border:0;border-radius:8px;background:var(--acc);color:#fff;font-weight:700;font-size:13px;padding:8px 13px;cursor:pointer;text-decoration:none;font-family:inherit}
+.btn:hover{background:var(--accd)}
+.btn.ghost{background:#fff;color:var(--accd);border:1px solid var(--line)}
+.btn.sm{padding:5px 9px;font-size:12px}
+.tg{border:1px solid var(--line);background:#fff;color:#23435f;border-radius:20px;padding:6px 12px;font:700 13px inherit;cursor:pointer}
+.tg.on{background:var(--acc);color:#fff;border-color:var(--acc)}
+.pill{display:inline-block;font-size:11.5px;font-weight:700;border-radius:20px;padding:2px 9px;background:var(--chip);color:#23435f;margin:0 4px 4px 0;white-space:nowrap}
+.pill.ok{background:#e2f3ea;color:#0f5e3e}.pill.bad{background:#fbe6e4;color:#8d2118}.pill.warn{background:#fbf1d6;color:#7a5a07}
+.card{background:#fff;border:1px solid var(--line);border-radius:11px;padding:16px 18px;margin-bottom:11px}
+.h{font-size:12px;letter-spacing:1.3px;text-transform:uppercase;color:var(--mut);font-weight:800;margin:0 0 10px}
+.note{font-size:12.5px;color:var(--mut)}
+footer{border-top:1px solid var(--line);margin-top:20px;padding:16px 0 30px}
+footer,footer b{color:#69717a;font-size:11.5px;line-height:1.62}footer b{display:block;margin-top:6px}
+.app{display:grid;grid-template-columns:220px 1fr;min-height:calc(100vh - 34px)}
+.side{background:var(--side);color:#c2c9d6;padding:16px 10px;position:sticky;top:0;height:100vh;overflow-y:auto}
+.brand{color:#fff;font-weight:800;font-size:15px;padding:4px 10px 10px}
+.brand small{display:block;color:#9fbef0;font-weight:600;font-size:11px;letter-spacing:.6px}
+.side button{display:flex;align-items:center;gap:9px;width:100%;text-align:left;background:none;border:0;color:#c2c9d6;
+font:600 13.5px/1.2 inherit;padding:10px 11px;border-radius:8px;cursor:pointer;margin:2px 0;font-family:inherit}
+.side button:hover{background:#1a2a4a;color:#fff}.side button.on{background:var(--acc);color:#fff}
+.side .ico{width:18px;text-align:center}
+.side .cnt{margin-left:auto;background:#b02a20;color:#fff;font-size:11px;border-radius:10px;padding:1px 7px}
+.main{padding:18px 20px 10px;min-width:0}
+.top{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:14px}
+.top h1{color:var(--ink);font-size:22px;margin:0}
+.top .who{margin-left:auto;display:flex;align-items:center;gap:8px;font-size:13px;color:var(--mut)}
+.av{width:30px;height:30px;border-radius:50%;background:var(--acc);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-weight:800;font-size:12px;flex:none}
+.view{display:none}.view.on{display:block;animation:fi .18s ease}
+@keyframes fi{from{opacity:.3;transform:translateY(3px)}to{opacity:1;transform:none}}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:12px}
+.kpi{background:#fff;border:1px solid var(--line);border-radius:11px;padding:12px 14px}
+.kpi .n{font-size:24px;font-weight:900}.kpi .l{font-size:12px;color:var(--mut);font-weight:600}
+.inbox{display:grid;grid-template-columns:340px 1fr;gap:12px}
+.list{background:#fff;border:1px solid var(--line);border-radius:11px;overflow:hidden;max-height:660px;overflow-y:auto}
+.li{display:flex;gap:10px;padding:11px 12px;border-bottom:1px solid var(--line);cursor:pointer}
+.li:hover{background:#f6f9fd}.li.on{background:#e8effa}
+.li .nm{font-weight:700;font-size:13.5px}.li .pv{font-size:12.5px;color:var(--mut);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:220px}
+.li .tm{margin-left:auto;font-size:11px;color:var(--mut);white-space:nowrap}
+.ch{width:30px;height:30px;border-radius:8px;display:inline-flex;align-items:center;justify-content:center;color:#fff;font-weight:900;font-size:10.5px;flex:none}
+.ch.mb{background:#e8590c}.ch.ct{background:#c0392b}.ch.ta{background:#2b8a3e}.ch.bk{background:#5f3dc4}.ch.wab{background:#0b7285}
+.ch.fb{background:#1877f2}.ch.gg{background:#5c6670}.ch.web{background:#1f4fa3}
+.chips{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px}
+.thread{background:#fff;border:1px solid var(--line);border-radius:11px;padding:14px 16px;min-height:420px;min-width:0}
+.msg{max-width:84%;padding:9px 12px;border-radius:12px;margin:8px 0;font-size:13.5px}
+.msg.in{background:#eef1f5}.msg.out{background:var(--acc);color:#fff;margin-left:auto}
+.msg.out b{color:#fff}.msg .meta{display:block;font-size:11px;opacity:.75;margin-top:4px}
+.compose{display:flex;gap:8px;margin-top:12px}.compose input{flex:1;min-width:0;border:1px solid var(--line);border-radius:8px;padding:9px 11px;font:inherit}
+.ctl{display:flex;gap:14px;align-items:center;flex-wrap:wrap;background:#fff;border:1px solid var(--line);border-radius:11px;padding:12px 16px;margin-bottom:12px}
+.ctl label{font-size:13px;font-weight:700;display:flex;align-items:center;gap:8px}
+.ctl input[type=range]{width:180px}
+.ctl input[type=number]{width:80px;border:1px solid var(--line);border-radius:7px;padding:5px 7px;font:inherit}
+.tw{overflow-x:auto;background:#fff;border:1px solid var(--line);border-radius:11px;margin-bottom:11px}
+table{border-collapse:collapse;width:100%;font-size:13.5px}
+th{background:#0d1a33;color:#fff;text-align:left;padding:9px 10px;font-size:12px;white-space:nowrap}
+td{border-top:1px solid var(--line);padding:9px 10px;vertical-align:top}
+tr.dec td{background:#fcf7f6;color:#6e6e6e}
+tr.tot td{background:#f2f5fa;font-weight:800}
+.score{font-weight:900;font-size:15px}
+.decl{font-size:12px;background:#fbe6e4;border-radius:8px;padding:6px 9px;margin-top:6px;color:#5c1a14}
+.sb input{width:86px;border:1px solid #c9d3e2;border-radius:7px;padding:6px 7px;font:inherit;font-size:14px;background:#fffdf4}
+.sb td{vertical-align:middle;white-space:nowrap}
+.calc{font-weight:800}
+.board{display:flex;gap:10px;overflow-x:auto;padding-bottom:8px}
+.col{background:#e8edf5;border-radius:11px;min-width:200px;width:200px;flex:none;padding:9px;min-height:300px}
+.col.over{outline:2px dashed var(--acc)}
+.col .ct{font-weight:800;font-size:13px;display:flex;justify-content:space-between}
+.col .cv{font-size:12px;color:var(--mut);margin:2px 0 8px}
+.kc{background:#fff;border:1px solid var(--line);border-radius:9px;padding:9px 10px;margin-bottom:8px;cursor:grab;font-size:13px}
+.kc .nm{font-weight:700}.kc .sm{font-size:12px;color:var(--mut)}
+.kc .mv{margin-top:6px;display:flex;gap:5px}
+.auto{display:flex;gap:12px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:11px;padding:13px 15px;margin-bottom:9px}
+.auto .w{flex:1;min-width:0}.auto .t{font-weight:800}.auto .d{font-size:13px;color:#3b434a}
+.auto .ex{font-size:12.5px;background:#f2f5fb;border-left:3px solid var(--acc);padding:6px 9px;border-radius:6px;margin-top:6px;color:#23313d}
+.sw{position:relative;width:42px;height:24px;flex:none}.sw input{opacity:0;width:0;height:0}
+.sw span{position:absolute;inset:0;background:#c9d1d9;border-radius:24px;cursor:pointer;transition:.15s}
+.sw span:before{content:"";position:absolute;width:18px;height:18px;left:3px;top:3px;background:#fff;border-radius:50%;transition:.15s}
+.sw input:checked+span{background:var(--ok)}.sw input:checked+span:before{transform:translateX(18px)}
+.cal{display:grid;grid-template-columns:62px repeat(5,minmax(70px,1fr));gap:4px;background:#fff;border:1px solid var(--line);border-radius:11px;padding:10px;overflow-x:auto}
+.cal .hd{font-weight:800;font-size:12px;text-align:center;padding:4px}
+.cal .tl{font-size:12px;color:var(--mut);padding:8px 4px}
+.slot{border-radius:7px;font-size:11.5px;padding:6px;min-height:34px;border:1px dashed #cfd7e2;color:#94a0ab}
+.slot.open{border:1px solid #9cb8e8;background:#eef3fd;color:var(--acc);font-weight:700}
+.slot.bk{border:0;background:var(--acc);color:#fff;font-weight:700}
+.slot.job{border:0;background:#e2e6ec;color:#4b5560}
+.bookw{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.phone{max-width:340px;margin:0 auto;border:9px solid #111;border-radius:30px;background:#fff;padding:16px 14px;min-height:430px}
+.phone .ttl{font-weight:800;font-size:15px;margin-bottom:4px}
+.phone .opt{display:block;width:100%;text-align:left;border:1px solid var(--line);background:#fff;border-radius:8px;padding:9px 11px;margin:6px 0;cursor:pointer;font:inherit;font-size:13px}
+.phone .opt:hover{border-color:var(--acc)}
+.phone input,.phone select{width:100%;border:1px solid var(--line);border-radius:8px;padding:8px 10px;font:inherit;margin:4px 0}
+.perm input{width:16px;height:16px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.toast{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);background:#0d1a33;color:#fff;padding:10px 16px;border-radius:9px;font-size:13.5px;font-weight:600;opacity:0;transition:.2s;pointer-events:none;z-index:50;max-width:92vw}
+.toast.on{opacity:1}
+@media(max-width:900px){.app{grid-template-columns:minmax(0,1fr)}.side{position:sticky;top:0;height:auto;z-index:20;display:flex;overflow-x:auto;padding:8px;gap:4px}
+.brand{display:none}.side button{width:auto;white-space:nowrap;padding:8px 10px}.side .lbl{display:none}
+.inbox,.bookw,.grid2{grid-template-columns:minmax(0,1fr)}.top .who span:first-child{display:none}.kpis{grid-template-columns:1fr 1fr}.main{padding:14px 12px}
+.list{max-height:320px}.li .pv{max-width:170px}.ctl input[type=range]{width:140px}}
+</style></head><body>
+
+<div class="demo-banner">Demonstration with sample data <span>&middot; every name, message and value below is made up for the demo</span></div>
+<div class="app">
+<aside class="side">
+ <div class="brand">CPH Interiors<small>POWERED BY AG1</small></div>
+ <button data-v="inbox" class="on"><span class="ico">&#9993;</span><span class="lbl">Inbox</span><span class="cnt" id="unread">0</span></button>
+ <button data-v="triage"><span class="ico">&#9881;</span><span class="lbl">Smart triage</span></button>
+ <button data-v="score"><span class="ico">&#9878;</span><span class="lbl">Platform scoreboard</span></button>
+ <button data-v="pipe"><span class="ico">&#9638;</span><span class="lbl">Pipeline</span></button>
+ <button data-v="auto"><span class="ico">&#9889;</span><span class="lbl">Automations</span></button>
+ <button data-v="cal"><span class="ico">&#128197;</span><span class="lbl">Surveys</span></button>
+ <button data-v="team"><span class="ico">&#128101;</span><span class="lbl">Team</span></button>
+</aside>
+<main class="main">
+ <div class="top"><h1 id="vt">Inbox</h1>
+  <div class="who"><span>Tonyrefail base</span><span class="av">CH</span></div></div>
+
+ <section class="view on" id="v-inbox">
+  <div class="kpis">
+   <div class="kpi"><div class="n" id="k-all">0</div><div class="l">Enquiries in the demo</div></div>
+   <div class="kpi"><div class="n" id="k-rep">0</div><div class="l">Answered within a minute</div></div>
+   <div class="kpi"><div class="n" id="k-damp">0</div><div class="l">Damp jobs to look at</div></div>
+   <div class="kpi"><div class="n" id="k-dec">0</div><div class="l">Polite decline sent</div></div>
+  </div>
+  <div class="chips" id="chips"></div>
+  <div class="inbox"><div class="list" id="list"></div><div class="thread" id="thread"></div></div>
+  <p class="note">MyBuilder, Checkatrade, TrustATrader, Bark, WhatABuilder, Facebook, Google and the website all land in one list, and each gets a reply in your name straight away. How each platform connects (notification email, forwarding or its own messages) is confirmed platform by platform in the build.</p>
+ </section>
+
+ <section class="view" id="v-triage">
+  <div class="ctl">
+   <button class="tg" id="damponly" type="button">Damp only</button>
+   <button class="tg" id="over2k" type="button">Over &pound;2k</button>
+   <label>Radius from Tonyrefail <input type="range" id="rad" min="5" max="80" step="1" value="30"> <span class="pill" id="radv">30 mi</span></label>
+   <label>Auto-decline under &pound;<input type="number" id="minv" value="500" min="0" step="50"></label>
+   <label><input type="checkbox" id="showdec"> Show declined</label>
+  </div>
+  <div class="tw"><table><thead><tr><th>Score</th><th>Enquiry</th><th>Job</th><th>Value band</th><th>Where</th><th>Miles</th><th>Lead quality</th><th>What happened</th></tr></thead><tbody id="tri"></tbody></table></div>
+  <p class="note">Score: damp proofing scores highest, then bigger jobs, closer jobs and enquiries with photos and a clear description. You set the rules. Move the slider or tap a filter and the list re-sorts, and the decline messages change live.</p>
+ </section>
+
+ <section class="view" id="v-score">
+  <div class="card" style="border-left:5px solid var(--warn)"><b>Sample numbers.</b> Type the real figures in any white box and the table works it out. <button class="btn sm ghost" id="sbclear" type="button">Clear sample numbers</button> <button class="btn sm ghost" id="sbreset" type="button">Put sample numbers back</button></div>
+  <div class="tw sb"><table><thead><tr><th>Platform</th><th>Cost a month (&pound;)</th><th>Enquiries a month</th><th>Booked jobs a month</th><th>Cost per enquiry</th><th>Booked rate</th><th>Cost per booked job</th></tr></thead><tbody id="sb"></tbody></table></div>
+  <p class="note">Cost a month = subscription plus any pay-per-lead charges. It predicts nothing: it only does the arithmetic on the numbers typed in. The CRM fills enquiries and booked jobs in automatically once every platform lands in the inbox.</p>
+ </section>
+
+ <section class="view" id="v-pipe">
+  <p class="note" style="margin-top:0">Drag a card to another column, or tap the arrow. Values are <b>sample values</b> for the demo, not your figures.</p>
+  <div class="board" id="board"></div>
+ </section>
+
+ <section class="view" id="v-auto">
+  <p class="note" style="margin-top:0">Plain-English rules. Each one can be switched off, and every message is written in your words before it goes live.</p>
+  <div id="autos"></div>
+ </section>
+
+ <section class="view" id="v-cal">
+  <div class="bookw">
+   <div><div class="h">Survey diary &middot; this week (sample)</div><div class="cal" id="cal"></div>
+    <p class="note">Blue outlined = survey slots you have opened. Grey = days on a job. Only the slots you open can be booked.</p></div>
+   <div><div class="h">What the customer sees from the booking link</div><div class="phone" id="phone"></div></div>
+  </div>
+ </section>
+
+ <section class="view" id="v-team">
+  <div class="grid2">
+   <div class="card"><div class="h">Users and what they can see</div>
+    <div class="tw" style="margin:0"><table><thead><tr><th>User</th><th>Role</th><th>Inbox</th><th>Quotes</th><th>Money</th><th>Settings</th></tr></thead><tbody id="users"></tbody></table></div>
+    <div style="margin-top:10px"><button class="btn sm" id="adduser" type="button">+ Add a user later</button></div>
+   </div>
+   <div class="card"><div class="h">One account in the business name</div>
+    <p style="margin-top:0">Every customer, platform message, survey note, quote, photo and aftercare date lives in one account in the business name, not in a personal phone or inbox.</p>
+    <p>Anyone you add later gets a login with the right permissions and picks up the full history as it is.</p>
+    <button class="btn ghost sm" id="hand" type="button">Show what a new user picks up</button>
+    <ul id="handlist" style="display:none;margin-top:10px">
+     <li>Every customer with job type, photos and survey notes</li><li>Open quotes and unpaid invoices on one page</li>
+     <li>All automations, with the wording of each message</li><li>12-month aftercare dates for every damp job</li>
+     <li>Platform logins and costs on the scoreboard</li></ul>
+   </div>
+  </div>
+ </section>
+</main></div>
+<div class="toast" id="toast"></div>
+<footer><div class="wrap" style="padding:0 20px">Prepared by Andrei Givero &middot; AG1 Consulting &middot; 3 November 2026, for discussion with
+Craig Hosken at CPH Interiors.
+<b>&#9888; Demonstration only. Every name, town, message and value on this page is sample data made up for the demo, including the platform costs.</b>
+<b>&#9888; Nothing here prices our work, and no enquiry count, booking count or revenue outcome is forecast or promised.</b>
+</div></footer>
+<script>
+(function(){
+var CH={mb:["MB","MyBuilder"],ct:["CT","Checkatrade"],ta:["TaT","TrustATrader"],bk:["Bk","Bark"],wab:["WaB","WhatABuilder"],fb:["f","Facebook"],gg:["G","Google"],web:["W","Website form"]};
+var JOB={rising:["Rising damp",1,45],penetrating:["Penetrating damp",1,45],tanking:["Tanking",1,48],timber:["Woodworm / dry rot",1,40],
+ condensation:["Condensation and mould",1,36],cork:["Cork plaster",0,32],plaster:["Plastering",0,20],gutter:["Guttering",0,12],small:["Small patch / quick fix",0,4]};
+var L=[
+ {id:1,c:"mb",n:"Sample: J. Davies",town:"Porth",mi:3,job:"rising",v:3600,q:3,t:"2 min ago",m:"Tide marks along the back wall of a terraced house, plaster coming away. Photos attached."},
+ {id:2,c:"mb",n:"Sample: S. Price",town:"Pontypridd",mi:6,job:"penetrating",v:2400,q:2,t:"9 min ago",m:"Damp patch on gable end every time it rains, bedroom wall."},
+ {id:3,c:"ct",n:"Sample: R. Evans",town:"Llantrisant",mi:4,job:"tanking",v:4800,q:3,t:"21 min ago",m:"Below-ground room in an older house, walls wet, want it usable. Photos attached."},
+ {id:4,c:"mb",n:"Sample: K. Lewis",town:"Tonypandy",mi:4,job:"small",v:150,q:1,t:"35 min ago",m:"Bit of mould on the bathroom ceiling, can someone have a look?"},
+ {id:5,c:"bk",n:"Sample: M. Hughes",town:"Cardiff, Canton",mi:15,job:"condensation",v:2200,q:2,t:"48 min ago",m:"Black mould in two bedrooms, windows streaming every morning."},
+ {id:6,c:"ta",n:"Sample: D. Morgan",town:"Bridgend",mi:12,job:"rising",v:3900,q:3,t:"1 hr ago",m:"Survey needed before we sell, mortgage survey flagged rising damp."},
+ {id:7,c:"mb",n:"Sample: A. Thomas",town:"Treorchy",mi:9,job:"timber",v:2900,q:2,t:"1 hr ago",m:"Found small holes and dust under the floorboards in the front room."},
+ {id:8,c:"fb",n:"Sample: L. Jenkins",town:"Talbot Green",mi:5,job:"plaster",v:900,q:1,t:"2 hrs ago",m:"Do you do skimming? One room."},
+ {id:9,c:"wab",n:"Sample: P. Rees",town:"Swansea",mi:38,job:"rising",v:4200,q:3,t:"2 hrs ago",m:"Whole ground floor, older stone cottage, photos attached."},
+ {id:10,c:"gg",n:"Sample: G. Williams",town:"Tonyrefail",mi:1,job:"penetrating",v:2600,q:2,t:"3 hrs ago",m:"Found you on Google, damp coming through the chimney breast."},
+ {id:11,c:"mb",n:"Sample: H. Owen",town:"Aberdare",mi:14,job:"condensation",v:1800,q:2,t:"3 hrs ago",m:"Landlord, tenant reporting mould in the back bedroom."},
+ {id:12,c:"bk",n:"Sample: T. Bowen",town:"Newport",mi:28,job:"gutter",v:300,q:1,t:"4 hrs ago",m:"Gutter leaking over the porch."},
+ {id:13,c:"web",n:"Sample: C. Phillips",town:"Pontyclun",mi:4,job:"cork",v:3400,q:3,t:"5 hrs ago",m:"Solid walls, cold rooms, interested in cork plaster. Photos attached."},
+ {id:14,c:"mb",n:"Sample: E. Griffiths",town:"London",mi:150,job:"rising",v:4000,q:2,t:"Yesterday",m:"Rising damp in a London flat, do you travel?"},
+ {id:15,c:"ct",n:"Sample: N. Roberts",town:"Caerphilly",mi:13,job:"rising",v:3100,q:2,t:"Yesterday",m:"Peeling wallpaper low on the walls, two rooms."},
+ {id:16,c:"mb",n:"Sample: B. Jones",town:"Ferndale",mi:10,job:"small",v:100,q:1,t:"Yesterday",m:"Just need advice on a damp smell in a cupboard."}
+];
+var st={rad:30,minv:500,damp:false,over:false,showdec:false,sel:1,chan:"all"};
+function $(s){return document.querySelector(s)}
+function $$(s){return Array.prototype.slice.call(document.querySelectorAll(s))}
+function esc(s){return String(s).replace(/[&<>]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;"}[c]})}
+function gbp(n){return"£"+Math.round(n).toLocaleString("en-GB")}
+function toast(t){var e=$("#toast");e.textContent=t;e.classList.add("on");clearTimeout(e._t);e._t=setTimeout(function(){e.classList.remove("on")},2400)}
+function first(n){return n.replace("Sample: ","").split(" ").pop()}
+function band(v){return v<500?"Under £500":v<2000?"£500 to £2k":v<5000?"£2k to £5k":"£5k+"}
+function why(l){if(l.job==="small")return"small";if(l.mi>st.rad)return"area";if(l.v<st.minv)return"value";return""}
+function fits(l){return !why(l)}
+function shown(l){return (!st.damp||JOB[l.job][1])&&(!st.over||l.v>=2000)}
+function score(l){var s=JOB[l.job][2]+Math.min(l.v/120,35)-l.mi*0.35+l.q*6;return Math.max(1,Math.min(99,Math.round(s)))}
+function qual(l){return l.q===3?'<span class="pill ok">Photos + detail</span>':l.q===2?'<span class="pill">Clear description</span>':'<span class="pill warn">Thin</span>'}
+function autoReply(l){return"Hi, thanks for your enquiry on "+CH[l.c][1]+". This is Craig at CPH Interiors. Could you send your postcode and a couple of photos of the damp? Surveys are free, and you can pick a time here: [survey link]. Craig"}
+function declineText(l){var w=why(l);
+ if(w==="small")return"Thanks for getting in touch. For a small one-off like this we are not the best fit, as we are booked on full damp treatments. A few free tips: open the trickle vents, use the extractor and keep furniture slightly off cold walls. If it turns out bigger, send a photo and I will take another look. Craig, CPH Interiors";
+ if(w==="area")return"Thanks so much for thinking of us. We are based in Tonyrefail and "+l.town+" is outside the area we cover, so we are sorry we cannot help this time. Craig, CPH Interiors";
+ if(w==="value")return"Thanks for asking. This one is a bit smaller than the jobs we are booked on at the moment, so we will have to pass this time. Sorry, and good luck with it. Craig, CPH Interiors";
+ return""}
+var TITLES={inbox:"Inbox",triage:"Smart triage",score:"Platform scoreboard",pipe:"Pipeline",auto:"Automations",cal:"Survey bookings",team:"Team"};
+function go(v){$$(".side button").forEach(function(x){x.classList.toggle("on",x.dataset.v===v)});$$(".view").forEach(function(x){x.classList.remove("on")});$("#v-"+v).classList.add("on");$("#vt").textContent=TITLES[v];}
+$$(".side button").forEach(function(b){b.addEventListener("click",function(){go(b.dataset.v)})});
+/* inbox */
+function kpis(){var f=L.filter(fits);$("#k-all").textContent=L.length;$("#k-rep").textContent=L.length;$("#k-damp").textContent=f.filter(function(l){return JOB[l.job][1]}).length;$("#k-dec").textContent=L.length-f.length;$("#unread").textContent=f.length}
+function chips(){var cnt={all:L.length};L.forEach(function(l){cnt[l.c]=(cnt[l.c]||0)+1});
+ var ks=["all"].concat(Object.keys(CH).sort(function(a,b){return(cnt[b]||0)-(cnt[a]||0)}));
+ $("#chips").innerHTML=ks.map(function(k){return'<button type="button" class="tg'+(st.chan===k?" on":"")+'" data-k="'+k+'">'+(k==="all"?"All":CH[k][1])+" "+(cnt[k]||0)+'</button>'}).join("");
+ $$("#chips .tg").forEach(function(b){b.addEventListener("click",function(){st.chan=b.dataset.k;var vis=L.filter(inChan);if(vis.length&&!vis.some(function(x){return x.id===st.sel}))st.sel=vis[0].id;chips();renderList();renderThread()})})}
+function inChan(l){return st.chan==="all"||l.c===st.chan}
+function renderList(){$("#list").innerHTML=L.filter(inChan).map(function(l){var ok=fits(l);return'<div class="li'+(l.id===st.sel?" on":"")+'" data-id="'+l.id+'"><span class="ch '+l.c+'">'+CH[l.c][0]+'</span><div style="min-width:0"><div class="nm">'+esc(l.n)+'</div><div class="pv">'+esc(l.m)+'</div><div>'+(ok?'<span class="pill ok">'+(JOB[l.job][1]?"Damp: ":"")+JOB[l.job][0]+'</span>':'<span class="pill bad">Declined politely</span>')+'<span class="pill">'+CH[l.c][1]+'</span></div></div><span class="tm">'+l.t+'</span></div>'}).join("");
+ $$(".li").forEach(function(e){e.addEventListener("click",function(){st.sel=+e.dataset.id;renderList();renderThread()})})}
+function renderThread(){var l=L.filter(function(x){return x.id===st.sel})[0];if(!l){$("#thread").innerHTML="";return}
+ var h='<div style="display:flex;align-items:center;gap:10px;margin-bottom:6px"><span class="ch '+l.c+'">'+CH[l.c][0]+'</span><div><b>'+esc(l.n)+'</b><div class="note">'+CH[l.c][1]+' &middot; '+esc(l.town)+' &middot; '+l.mi+' miles from Tonyrefail &middot; '+band(l.v)+' (sample)</div></div></div>';
+ h+='<div class="msg in">'+esc(l.m)+'<span class="meta">'+CH[l.c][1]+' &middot; '+l.t+'</span></div>';
+ h+='<div class="msg out"><b>Instant reply</b><br>'+esc(autoReply(l))+'<span class="meta">Sent automatically in 40 seconds &middot; in your name</span></div>';
+ if(fits(l))h+='<div class="msg in">Booked Tuesday 10am. Photos sent.<span class="meta">Customer reply (sample)</span></div><div class="msg out"><b>Survey confirmed</b><br>Lovely, see you Tuesday at 10am. You will get a reminder the day before. Craig<span class="meta">Sent automatically &middot; card moved to Survey booked</span></div>';
+ else h+='<div class="msg out" style="background:#8d2118"><b>Polite decline sent</b><br>'+esc(declineText(l))+'<span class="meta">Sent automatically &middot; you can switch this off</span></div>';
+ h+='<div class="compose"><input id="cmp" placeholder="Type a reply from your phone (demo)"><button class="btn" id="send" type="button">Send</button></div>';
+ $("#thread").innerHTML=h;$("#send").addEventListener("click",function(){var v=$("#cmp").value.trim();if(!v)return;var d=document.createElement("div");d.className="msg out";d.innerHTML=esc(v)+'<span class="meta">Sent by you just now (demo)</span>';$(".compose").parentNode.insertBefore(d,$(".compose"));$("#cmp").value="";toast("Reply sent (demo, nothing actually sent)")})}
+/* triage */
+function triRows(){return L.filter(shown).filter(function(l){return st.showdec||fits(l)}).sort(function(a,b){return(fits(b)-fits(a))||score(b)-score(a)})}
+function renderTri(){var rows=triRows();
+ $("#tri").innerHTML=rows.map(function(l){var ok=fits(l),s=score(l);
+ return'<tr class="'+(ok?"":"dec")+'"><td><span class="score" style="color:'+(ok?(s>=70?"#157a52":"#9c7510"):"#9aa3ab")+'">'+(ok?s:"-")+'</span></td><td><span class="ch '+l.c+'" style="width:24px;height:24px;font-size:9px;vertical-align:middle">'+CH[l.c][0]+'</span> <b>'+esc(l.n)+'</b><div class="note">'+esc(l.m)+'</div></td><td><span class="pill '+(JOB[l.job][1]?"ok":"")+'">'+JOB[l.job][0]+'</span></td><td>'+band(l.v)+'<div class="note">'+gbp(l.v)+' sample</div></td><td>'+esc(l.town)+'</td><td><b>'+l.mi+'</b></td><td>'+qual(l)+'</td><td>'+(ok?'<span class="pill ok">Survey link sent</span>':'<span class="pill bad">Polite decline sent</span><div class="decl">'+esc(declineText(l))+'</div>')+'</td></tr>'}).join("")||'<tr><td colspan="8">Nothing fits those rules. Widen the radius or switch a filter off.</td></tr>';
+ document.documentElement.setAttribute("data-tri",rows.length)}
+$("#rad").addEventListener("input",function(e){st.rad=+e.target.value;$("#radv").textContent=st.rad+" mi";refresh()});
+$("#minv").addEventListener("input",function(e){st.minv=+e.target.value||0;refresh()});
+$("#damponly").addEventListener("click",function(){st.damp=!st.damp;this.classList.toggle("on",st.damp);renderTri();toast(st.damp?"Showing damp jobs only":"Showing all job types")});
+$("#over2k").addEventListener("click",function(){st.over=!st.over;this.classList.toggle("on",st.over);renderTri()});
+$("#showdec").addEventListener("change",function(e){st.showdec=e.target.checked;renderTri()});
+function refresh(){kpis();chips();renderList();renderThread();renderTri()}
+/* scoreboard */
+var SB0=[["mb","MyBuilder",320,140,6],["ct","Checkatrade",150,35,2],["ta","TrustATrader",95,20,1],["bk","Bark",120,30,0],["wab","WhatABuilder",60,15,0],["fb","Facebook",0,12,1],["gg","Google",0,10,1],["web","Website",0,8,1]];
+var SB=SB0.map(function(r){return r.slice()});
+function f2(n){return isFinite(n)?gbp(n):"-"}
+function renderSB(){var tc=0,te=0,tb=0;
+ var rows=SB.map(function(r,i){var c=+r[2]||0,e=+r[3]||0,b=+r[4]||0;tc+=c;te+=e;tb+=b;
+  return'<tr data-i="'+i+'"><td><span class="ch '+r[0]+'" style="width:24px;height:24px;font-size:9px;vertical-align:middle">'+CH[r[0]][0]+'</span> <b>'+r[1]+'</b></td>'+
+  [2,3,4].map(function(k){return'<td><input type="number" min="0" data-i="'+i+'" data-k="'+k+'" value="'+(r[k]===""?"":r[k])+'" placeholder="type"></td>'}).join("")+
+  '<td class="calc" data-c="cpe">'+(e?f2(c/e):"-")+'</td><td class="calc">'+(e?Math.round(b/e*100)+"%":"-")+'</td><td class="calc" data-c="cpb">'+(b?f2(c/b):(c?"no jobs yet":"-"))+'</td></tr>'});
+ rows.push('<tr class="tot"><td>All platforms</td><td>'+gbp(tc)+'</td><td>'+te+'</td><td>'+tb+'</td><td>'+(te?f2(tc/te):"-")+'</td><td>'+(te?Math.round(tb/te*100)+"%":"-")+'</td><td id="sbtot">'+(tb?f2(tc/tb):"-")+'</td></tr>');
+ $("#sb").innerHTML=rows.join("");
+ $$("#sb input").forEach(function(x){x.addEventListener("change",upd);x.addEventListener("keyup",function(ev){if(ev.key==="Enter")upd.call(x)})})}
+function upd(){var i=+this.dataset.i,k=+this.dataset.k;SB[i][k]=this.value===""?"":+this.value;var a=document.activeElement,ai=a&&a.dataset?a.dataset.i:null,ak=a&&a.dataset?a.dataset.k:null;renderSB();
+ if(ai!==null&&ak!==null){var n=document.querySelector('#sb input[data-i="'+ai+'"][data-k="'+ak+'"]');if(n){n.focus()}}}
+$("#sbclear").addEventListener("click",function(){SB=SB0.map(function(r){return[r[0],r[1],"","",""]});renderSB();toast("Sample numbers cleared: type the real ones in")});
+$("#sbreset").addEventListener("click",function(){SB=SB0.map(function(r){return r.slice()});renderSB()});
+/* pipeline */
+var COLS=["New","Survey booked","Quote sent","Chased","Won","In progress","Invoiced / Paid"];
+var P=[{n:"Sample: J. Davies",s:"Porth &middot; rising damp",v:3600,c:0},{n:"Sample: R. Evans",s:"Llantrisant &middot; tanking",v:4800,c:0},
+ {n:"Sample: D. Morgan",s:"Bridgend &middot; rising damp",v:3900,c:1},{n:"Sample: C. Phillips",s:"Pontyclun &middot; cork plaster",v:3400,c:1},
+ {n:"Sample: A. Thomas",s:"Treorchy &middot; woodworm",v:2900,c:2},{n:"Sample: M. Hughes",s:"Cardiff &middot; condensation",v:2200,c:3},
+ {n:"Sample: N. Roberts",s:"Caerphilly &middot; rising damp",v:3100,c:4},{n:"Sample: F. Watkins",s:"Pontypridd &middot; tanking",v:4100,c:5},
+ {n:"Sample: O. Harris",s:"Porth &middot; penetrating damp",v:2700,c:6},{n:"Sample: W. Lloyd",s:"Tonyrefail &middot; rising damp",v:3500,c:6}];
+var NEXT={1:"Survey reminder set for the day before",2:"Quote sent, chase queued for day 2",3:"Day 5 chase sent",4:"Deposit request and start date sent",5:"Customer updates sent at the start and end of each week",6:"Invoice sent, review request in 3 days, 12-month aftercare check booked"};
+function renderBoard(){$("#board").innerHTML=COLS.map(function(c,i){var cards=P.filter(function(p){return p.c===i});var tot=cards.reduce(function(a,p){return a+p.v},0);
+ return'<div class="col" data-c="'+i+'"><div class="ct"><span>'+c+'</span><span>'+cards.length+'</span></div><div class="cv">'+gbp(tot)+' <span class="pill warn" style="font-size:10px">sample</span></div>'+cards.map(function(p){var k=P.indexOf(p);
+ return'<div class="kc" draggable="true" data-k="'+k+'"><div class="nm">'+p.n+'</div><div class="sm">'+p.s+'</div><div class="sm">'+gbp(p.v)+' (sample)</div><div class="mv">'+(i>0?'<button type="button" class="btn ghost sm" data-k="'+k+'" data-d="-1">&#8592;</button>':'')+(i<COLS.length-1?'<button type="button" class="btn sm" data-k="'+k+'" data-d="1">&#8594;</button>':'')+'</div></div>'}).join("")+'</div>'}).join("");
+ $$(".kc").forEach(function(e){e.addEventListener("dragstart",function(ev){ev.dataTransfer.setData("text/plain",e.dataset.k)})});
+ $$(".col").forEach(function(col){col.addEventListener("dragover",function(ev){ev.preventDefault();col.classList.add("over")});col.addEventListener("dragleave",function(){col.classList.remove("over")});
+  col.addEventListener("drop",function(ev){ev.preventDefault();col.classList.remove("over");move(+ev.dataTransfer.getData("text/plain"),+col.dataset.c)})});
+ $$(".kc .mv button").forEach(function(b){b.addEventListener("click",function(){var k=+b.dataset.k;move(k,P[k].c+(+b.dataset.d))})})}
+function move(k,c){if(isNaN(k)||c<0||c>=COLS.length)return;P[k].c=c;renderBoard();toast(P[k].n.replace("Sample: ","")+" moved to "+COLS[c]+(NEXT[c]?". "+NEXT[c]+" (demo).":"."))}
+/* automations */
+var A=[
+ ["Instant reply on every platform","When an enquiry lands from MyBuilder, Checkatrade, TrustATrader, Bark, WhatABuilder, Facebook, Google or the website","Hi, thanks for your enquiry. This is Craig at CPH Interiors. Could you send your postcode and a couple of photos? Surveys are free: [survey link]"],
+ ["Follow-up, day 1","1 day after the first reply, if the customer has not booked","Just checking you saw my message. If it helps, pick a free survey time here: [survey link]. Craig"],
+ ["Follow-up, day 3","3 days after, still not booked","Damp is easier to sort early. Happy to take a look whenever suits: [survey link]"],
+ ["Follow-up, day 7","7 days after, then it stops","Last message from me. If now is not the right time, no problem at all."],
+ ["Survey reminder","The day before a booked survey, and the morning of it","Reminder: Craig from CPH Interiors is coming to look at the damp tomorrow at 10am. Reply here to move it."],
+ ["Quote chase","2, 5 and 10 days after a quote is sent with no reply","Hi, just checking the quote came through OK. Any questions about the work, reply here."],
+ ["Stop chasing when they reply","As soon as the customer replies, books or accepts","All follow-ups for that customer stop, and the card moves on the pipeline."],
+ ["Small-job and out-of-area decline","When a job is a quick fix, under your minimum, or outside your radius","A polite reply with free tips, sent straight away, so nobody is left waiting."],
+ ["Review request","3 days after a job is marked paid, on the platform the job came from","Thanks again for choosing CPH Interiors. If you are happy with the work, a review on [MyBuilder / Checkatrade / Google] helps a lot: [link]"],
+ ["12-month aftercare check (damp jobs)","12 months after every damp job","It is a year since we treated the damp at your property. Is everything still dry? Reply with a photo if anything has changed, and we will pop round."]];
+$("#autos").innerHTML=A.map(function(a,i){return'<div class="auto"><label class="sw"><input type="checkbox" checked data-i="'+i+'"><span></span></label><div class="w"><div class="t">'+a[0]+'</div><div class="d"><b>When:</b> '+a[1]+'</div><div class="ex">'+esc(a[2])+'</div></div></div>'}).join("");
+$$("#autos input").forEach(function(x){x.addEventListener("change",function(){toast(A[+x.dataset.i][0]+(x.checked?" switched on":" switched off")+" (demo)")})});
+/* calendar */
+var DAYS=["Mon","Tue","Wed","Thu","Fri"],TIMES=["9:00","11:00","13:00","15:00","16:30"];
+var C={};DAYS.forEach(function(d,di){TIMES.forEach(function(t,ti){C[d+" "+t]=(di>=1&&di<=3&&ti<4)?"job":(ti===0||ti===4?"open":"none")})});
+C["Mon 9:00"]="bk";C["Mon 9:00n"]="J. Davies (sample)";C["Fri 16:30"]="bk";C["Fri 16:30n"]="R. Evans (sample)";
+function renderCal(){var h='<div></div>'+DAYS.map(function(d){return'<div class="hd">'+d+'</div>'}).join("");
+ TIMES.forEach(function(t){h+='<div class="tl">'+t+'</div>';DAYS.forEach(function(d){var k=d+" "+t,s=C[k];
+ h+='<div class="slot '+(s==="none"?"":s)+'">'+(s==="open"?"Open for survey":s==="bk"?"Survey: "+C[k+"n"]:s==="job"?"On a job":"")+'</div>'})});
+ $("#cal").innerHTML=h}
+function phoneStart(){var open=Object.keys(C).filter(function(k){return C[k]==="open"});
+ $("#phone").innerHTML='<div class="ttl">Book your free damp survey</div><div class="note">CPH Interiors &middot; Tonyrefail and South Wales</div><p style="font-size:13px">Pick a time that suits you:</p>'+open.map(function(k){return'<button type="button" class="opt" data-k="'+k+'">'+k.replace(" "," at ")+'</button>'}).join("")+'<p class="note">Only the slots Craig opens are shown.</p>';
+ $$("#phone .opt").forEach(function(b){b.addEventListener("click",function(){phoneForm(b.dataset.k)})})}
+function phoneForm(k){$("#phone").innerHTML='<div class="ttl">'+k.replace(" "," at ")+'</div><input id="pn" placeholder="Your name" value="Sample: New customer"><input id="pp" placeholder="Postcode" value="CF39 (sample)"><select><option>Rising damp</option><option>Penetrating damp</option><option>Condensation and mould</option><option>Not sure</option></select><button type="button" class="btn" id="pbk" style="width:100%;margin-top:8px">Confirm survey</button><button type="button" class="btn ghost" id="pbx" style="width:100%;margin-top:6px">Back</button>';
+ $("#pbx").addEventListener("click",phoneStart);
+ $("#pbk").addEventListener("click",function(){C[k]="bk";C[k+"n"]=($("#pn").value||"Customer").replace("Sample: ","")+" (sample)";renderCal();
+  $("#phone").innerHTML='<div class="ttl">&#10004; Booked</div><p style="font-size:13px">You are booked in for '+k.replace(" "," at ")+'. You will get a reminder the day before. Craig, CPH Interiors</p><button type="button" class="btn ghost" id="pagain" style="width:100%">Book another (demo)</button>';
+  $("#pagain").addEventListener("click",phoneStart);toast("Survey added to the diary, reminder scheduled (demo)")})}
+/* team */
+var U=[["Craig Hosken","Owner",[1,1,1,1]],["Team member 2 (name)","Surveys and jobs",[1,1,0,0]]];
+function renderUsers(){$("#users").innerHTML=U.map(function(u,i){return'<tr><td><span class="av" style="width:24px;height:24px;font-size:10px;vertical-align:middle">'+u[0].split(" ").map(function(x){return x[0]}).join("").slice(0,2)+'</span> '+esc(u[0])+'</td><td>'+u[1]+'</td>'+u[2].map(function(p,j){return'<td class="perm"><input type="checkbox" data-u="'+i+'" data-p="'+j+'"'+(p?" checked":"")+(i===0?" disabled":"")+'></td>'}).join("")+'</tr>'}).join("");
+ $$(".perm input").forEach(function(x){x.addEventListener("change",function(){U[+x.dataset.u][2][+x.dataset.p]=x.checked?1:0;toast("Permission updated for "+U[+x.dataset.u][0]+" (demo)")})})}
+$("#adduser").addEventListener("click",function(){U.push(["New user (example)","Office",[1,0,0,0]]);renderUsers();toast("User added (demo, nobody was emailed)")});
+$("#hand").addEventListener("click",function(){var e=$("#handlist");e.style.display=e.style.display==="none"?"block":"none"});
+refresh();renderSB();renderBoard();renderCal();phoneStart();renderUsers();
+var hv=(location.hash.match(/v=(\w+)/)||[])[1];if(hv&&TITLES[hv])go(hv);
+/* self-test: open with #selftest */
+if(location.hash==="#selftest"){var r=[],n0=triRows().length;
+ $("#damponly").click();var n1=triRows().length;r.push(n1<n0&&triRows().every(function(l){return JOB[l.job][1]}));$("#damponly").click();
+ $("#over2k").click();r.push(triRows().every(function(l){return l.v>=2000}));$("#over2k").click();
+ var rr=$("#rad");rr.value=10;rr.dispatchEvent(new Event("input"));r.push(triRows().every(function(l){return l.mi<=10}));rr.value=30;rr.dispatchEvent(new Event("input"));
+ var inp=document.querySelector('#sb input[data-i="0"][data-k="2"]');inp.value="700";inp.dispatchEvent(new Event("change"));
+ r.push(document.querySelector('#sb tr[data-i="0"] td[data-c="cpb"]').textContent==="£117");
+ $("#sbclear").click();r.push($("#sbtot").textContent==="-");$("#sbreset").click();
+ move(0,1);r.push(P[0].c===1);
+ document.documentElement.setAttribute("data-selftest",r.every(Boolean)?"pass":"fail:"+r.join(","));}
+window.__demoReady=true;document.documentElement.setAttribute("data-ready","1");
+})();
+</script></body></html>
