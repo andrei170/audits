@@ -192,11 +192,11 @@ tr.dec td{background:#fcf7f6;color:#6e6e6e}
 
  <!-- WEEK -->
  <section class="view" id="v-week">
-  <div class="card"><div class="h">Your week &middot; illustrative</div>
-   <p style="margin-top:0">Top bar: your week as you described it. Bottom bar: the shape we would aim for. <b>No number is promised:</b> we measure your actual week first, then build the biggest time sink first.</p>
+  <div class="card"><div class="h">Your week</div>
+   <p style="margin-top:0">Top bar: your week as you described it. Bottom bar: left empty until week 1, when we log where the time actually goes from your own diary. Then we build the biggest time sink first.</p>
    <div class="bars" id="bars"></div>
    <div class="legend" id="leg"></div>
-   <p class="note">Bar lengths are illustrative only. The &ldquo;around 20 hours&rdquo; is your own estimate, passed to us when the call was booked.</p>
+   <p class="note">The split of the top bar is a typical installer&rsquo;s week, not yours. The &ldquo;about 20 hours&rdquo; is your own estimate, passed to us when the call was booked.</p>
   </div>
   <div class="card"><div class="h">What stays with you</div>
    <p style="margin:0">Pricing, which jobs you take, the survey itself and the install. The system does the typing, chasing and remembering around those.</p></div>
@@ -338,7 +338,7 @@ function phoneForm(k){$("#phone").innerHTML='<div class="ttl">'+k.replace(" "," 
 /* week */
 var W=[["Reading and replying to enquiries","#1f6fae",30,6],["Call backs for postcode and job details","#2f9fd8",18,3],["Arranging surveys","#8cc7f2",12,2],["Writing and chasing quotes","#c7971a",20,7],["Invoices and chasing payment","#b45309",12,3],["Service reminders and reviews","#157a52",8,1]];
 function bar(lbl,idx,note){return'<div class="br"><div class="l"><span>'+lbl+'</span><span class="note">'+note+'</span></div><div class="tr">'+W.map(function(w){return'<i title="'+w[0]+'" style="width:'+w[idx]+'%;background:'+w[1]+'"></i>'}).join("")+'</div></div>'}
-$("#bars").innerHTML=bar("Today, as you described it","2","around 20 hours, your estimate")+bar("The aim, after the build","3","illustrative, measured in week 1");
+$("#bars").innerHTML=bar("Today","2","about 20 hours a week, your words")+'<div class="br"><div class="l"><span>Measured in week 1, from your own diary</span><span class="note">not measured yet</span></div><div class="tr" style="background:transparent;border:2px dashed #b8c2cc;box-sizing:border-box"></div></div>';
 $("#leg").innerHTML=W.map(function(w){return'<span style="--c:'+w[1]+'">'+w[0]+'</span>'}).join("");
 /* team */
 var U=[["Brett Potter","Owner",[1,1,1,1]],["Office help (example)","Office",[1,1,0,0]],["Engineer (example)","Engineer",[0,0,0,0]],["Future manager (example)","Manager",[1,1,1,0]]];
