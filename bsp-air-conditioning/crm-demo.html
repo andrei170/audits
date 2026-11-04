@@ -12,6 +12,8 @@ font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Aria
 a{color:var(--accd)}b{color:#000}
 .demo-banner{background:#fff4d6;color:#6b4a00;border-bottom:1px solid #f0d58a;font-size:13px;font-weight:700;text-align:center;padding:7px 12px}
 .demo-banner span{font-weight:600}
+.demo-banner a{color:#6b4a00;text-decoration:underline}
+.tip{background:#fff8e1;border:1px solid #f0d58a;border-radius:9px;padding:9px 12px;font-size:13.5px;margin-bottom:12px;color:#4a3a08}
 header.hh{background:linear-gradient(145deg,#0f151b,#1b2733 55%,#174a73);padding:22px 0 20px}
 header.hh *{color:#fff}
 .wrap{max-width:1180px;margin:0 auto;padding:0 16px}
@@ -120,13 +122,13 @@ tr.dec td{background:#fcf7f6;color:#6e6e6e}
 .toast{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);background:#0f151b;color:#fff;padding:10px 16px;border-radius:9px;font-size:13.5px;font-weight:600;opacity:0;transition:.2s;pointer-events:none;z-index:50;max-width:92vw}
 .toast.on{opacity:1}
 @media(max-width:900px){.app{grid-template-columns:minmax(0,1fr)}.side{position:sticky;top:0;height:auto;z-index:20;display:flex;overflow-x:auto;padding:8px;gap:4px}
-.brand{display:none}.side button{width:auto;white-space:nowrap;padding:8px 10px}.side .lbl{display:none}
+.brand{display:none}.side button{width:auto;white-space:nowrap;padding:8px 10px;font-size:12.5px}
 .inbox,.bookw,.grid2{grid-template-columns:minmax(0,1fr)}.top .who span:first-child{display:none}.kpis{grid-template-columns:1fr 1fr}.main{padding:14px 12px}
 .list{max-height:300px}.li .pv{max-width:160px}}
 
 </style></head><body>
 
-<div class="demo-banner">Demonstration with sample data <span>&middot; every name, postcode and value below is made up</span></div>
+<div class="demo-banner">DEMO WITH SAMPLE DATA <span>&middot; every name, postcode, message and &pound; value below is made up &middot; nothing is sent &middot; <a href="assets.html">Back to your pack</a></span></div>
 <div class="app">
 <aside class="side">
  <div class="brand">BSP Air Conditioning<small>POWERED BY AG1</small></div>
@@ -144,6 +146,7 @@ tr.dec td{background:#fcf7f6;color:#6e6e6e}
 
  <!-- INBOX -->
  <section class="view on" id="v-inbox">
+  <div class="tip"><b>Try this:</b> click any enquiry on the left. You will see the customer&rsquo;s message, the instant reply sent in your name, and what happened next (survey link or polite no).</div>
   <div class="kpis">
    <div class="kpi"><div class="n" id="k-all">0</div><div class="l">Enquiries in the demo</div></div>
    <div class="kpi"><div class="n" id="k-rep">0</div><div class="l">Answered instantly</div></div>
@@ -159,6 +162,7 @@ tr.dec td{background:#fcf7f6;color:#6e6e6e}
 
  <!-- TRIAGE -->
  <section class="view" id="v-triage">
+  <div class="tip"><b>Try this:</b> drag the radius slider, or untick wall-mounted only. The list re-sorts and the polite decline messages change as you go.</div>
   <div class="ctl">
    <label>Radius from Clyst St Mary <input type="range" id="rad" min="5" max="60" step="1" value="20"> <span class="pill" id="radv">20 mi</span></label>
    <label><input type="checkbox" id="wallonly" checked> Wall-mounted only</label>
@@ -170,18 +174,21 @@ tr.dec td{background:#fcf7f6;color:#6e6e6e}
 
  <!-- PIPELINE -->
  <section class="view" id="v-pipe">
+  <div class="tip"><b>Try this:</b> move a card one column to the right. A message pops up showing what the system would do at that stage.</div>
   <p class="note" style="margin-top:0">Drag a card to another column, or tap the arrow. Column totals are <b>sample values</b> for the demo, not your figures.</p>
   <div class="board" id="board"></div>
  </section>
 
  <!-- AUTOMATIONS -->
  <section class="view" id="v-auto">
+  <div class="tip"><b>Try this:</b> read the example messages, then flick any switch off. You decide which ones run.</div>
   <p class="note" style="margin-top:0">Plain-English rules. Each one can be switched off, and every message is written in your words before it goes live.</p>
   <div id="autos"></div>
  </section>
 
  <!-- CALENDAR -->
  <section class="view" id="v-cal">
+  <div class="tip"><b>Try this:</b> on the phone on the right, pick a slot and press Confirm. It appears in the diary on the left.</div>
   <div class="bookw">
    <div><div class="h">Survey diary &middot; this week (sample)</div><div class="cal" id="cal"></div>
     <p class="note">Blue outlined = slots you have opened for surveys. Grey = install days. Only the slots you open can be booked.</p></div>
@@ -192,6 +199,7 @@ tr.dec td{background:#fcf7f6;color:#6e6e6e}
 
  <!-- WEEK -->
  <section class="view" id="v-week">
+  <div class="tip"><b>How to read this:</b> the top bar is your rough estimate, the bottom bar stays empty until your real week is measured.</div>
   <div class="card"><div class="h">Your week</div>
    <p style="margin-top:0">Top bar: your week as you described it. Bottom bar: left empty until week 1, when we log where the time actually goes from your own diary. Then we build the biggest time sink first.</p>
    <div class="bars" id="bars"></div>
@@ -204,6 +212,7 @@ tr.dec td{background:#fcf7f6;color:#6e6e6e}
 
  <!-- TEAM -->
  <section class="view" id="v-team">
+  <div class="tip"><b>Try this:</b> tick or untick what each person can see, or preview the handover checklist.</div>
   <div class="grid2">
    <div class="card"><div class="h">Users and what they can see</div>
     <div class="tw" style="margin:0"><table><thead><tr><th>User</th><th>Role</th><th>Inbox</th><th>Quotes</th><th>Money</th><th>Settings</th></tr></thead><tbody id="users"></tbody></table></div>
@@ -222,8 +231,8 @@ tr.dec td{background:#fcf7f6;color:#6e6e6e}
  </section>
 </main></div>
 <div class="toast" id="toast"></div>
-<footer><div class="wrap" style="padding:0 20px">Prepared by Andrei Givero &middot; AG1 Consulting &middot; 3 November 2026, for discussion with
-Brett Potter at BSP Air Conditioning.
+<footer><div class="wrap" style="padding:0 20px">Prepared by Andrei Givero &middot; AG1 Consulting &middot; 3 November 2026, for our call with
+Brett Potter at BSP Air Conditioning on Wednesday 4 November 2026, 8:15pm UK.
 <b>&#9888; Demonstration only. Every name, postcode, message and value on this page is sample data made up for the demo.</b>
 <b>&#9888; Nothing here is priced, and no hours saved, job count, applicant count or revenue outcome is forecast or promised.</b>
 </div></footer>
@@ -273,7 +282,7 @@ function renderList(){$("#list").innerHTML=L.map(function(l){var ok=fits(l);retu
  $$(".li").forEach(function(e){e.addEventListener("click",function(){st.sel=+e.dataset.id;renderList();renderThread()})})}
 function renderThread(){var l=L.filter(function(x){return x.id===st.sel})[0];var h='<div style="display:flex;align-items:center;gap:10px;margin-bottom:6px"><span class="ch '+l.c+'">'+CH[l.c][0]+'</span><div><b>'+esc(l.n)+'</b><div class="note">'+CH[l.c][1]+' &middot; '+esc(l.town)+' &middot; '+l.mi+' miles from Clyst St Mary</div></div></div>';
  h+='<div class="msg in">'+esc(l.m)+'<span class="meta">'+CH[l.c][1]+' &middot; '+l.t+'</span></div>';
- h+='<div class="msg out"><b>Instant reply</b><br>'+esc(autoReply(l))+'<span class="meta">Sent automatically in 8 seconds &middot; from your name</span></div>';
+ h+='<div class="msg out"><b>Instant reply</b><br>'+esc(autoReply(l))+'<span class="meta">Sent automatically within seconds &middot; from your name</span></div>';
  if(l.c!=="call")h+='<div class="msg in">'+esc(l.pc.indexOf("sample")>-1?l.pc.replace(" (sample)","")+" area, "+(l.sys==="wall"?"wall mounted":SYS[l.sys].toLowerCase())+", "+l.rooms+" room"+(l.rooms>1?"s":""):"Crediton, one bedroom")+'<span class="meta">Customer reply (sample)</span></div>';
  if(fits(l))h+='<div class="msg out"><b>Survey link sent</b><br>Great, that is in our area. Pick a survey time that suits you here: [booking link]. Brett<span class="meta">Sent automatically &middot; tagged '+l.mi+' mi, '+SYS[l.sys]+'</span></div>';
  else h+='<div class="msg out" style="background:#8d2118"><b>Polite decline sent</b><br>'+esc(declineText(l))+'<span class="meta">Sent automatically &middot; you can switch this off</span></div>';
