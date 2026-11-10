@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en-GB"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
+<title>The Audit &middot; A-Z Scaffolding</title>
+<style>
+:root{--bg:#f4f5f7;--line:#dfe3e8;--ink:#16191d;--acc:#1f6f8b;--accd:#15536a}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink);overflow-x:hidden;
+font:16px/1.62 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+.wrap{max-width:1060px;margin:0 auto;padding:0 16px}
+header.hh{background:linear-gradient(145deg,#10161b,#1d2a33 55%,#1f5a70);padding:30px 0 26px}
+header.hh *{color:#fff}
+.eyebrow{font-size:12px;letter-spacing:1.4px;text-transform:uppercase;color:#9fd6ea;font-weight:700}
+h1{font-size:30px;line-height:1.22;margin:8px 0 10px;letter-spacing:-.4px}
+.sub{color:#e3e6ea;font-size:14.5px}
+nav.hb{background:#0e1115;position:sticky;top:0;z-index:9;overflow-x:auto}
+nav.hb .wrap{display:flex;gap:2px;padding:0 16px}
+nav.hb a{color:#c2c8ce;text-decoration:none;font-size:13.5px;font-weight:600;padding:12px 11px;white-space:nowrap;border-bottom:3px solid transparent}
+nav.hb a:hover{color:#fff}
+nav.hb a.on{color:#fff;border-bottom-color:#9fd6ea}
+section{padding:24px 0}
+.h{font-size:12px;letter-spacing:1.3px;text-transform:uppercase;color:#5b636b;font-weight:800;margin-bottom:12px}
+.card{background:#fff;border:1px solid var(--line);border-radius:11px;padding:19px 21px;margin-bottom:11px}
+.card.bad{border-left:5px solid #b02a20}.card.warn{border-left:5px solid #c7971a}
+.card.good{border-left:5px solid #157a52}.card.note{background:#eef7fa;border-left:5px solid var(--acc)}
+.card.priv{background:#fff7e6;border-left:5px solid #b45309}
+.lab{font-weight:800;font-size:16px;display:block;margin-bottom:7px}
+p{margin:0 0 9px}p:last-child{margin-bottom:0}
+b{color:#000}a{color:var(--accd)}
+ul,ol{margin:0 0 4px;padding-left:20px}li{margin-bottom:6px}
+.tile{display:block;background:#fff;border:1px solid var(--line);border-radius:11px;padding:18px 20px;margin-bottom:11px;text-decoration:none;color:inherit}
+.tile:hover{border-color:var(--acc);box-shadow:0 2px 14px rgba(31,111,139,.16)}
+.tile .t{font-weight:800;font-size:17px;color:#0e1115;margin-bottom:5px}
+.tile .d{color:#3b434a;font-size:14.5px}
+.tile .m{color:var(--accd);font-size:13px;font-weight:700;margin-top:8px}
+.tiles{display:grid;grid-template-columns:1fr 1fr;gap:0 12px}.tiles>*{min-width:0}
+@media(max-width:700px){.tiles{grid-template-columns:1fr}}
+.tw{overflow-x:auto;-webkit-overflow-scrolling:touch;background:#fff;border:1px solid var(--line);border-radius:11px;margin-bottom:11px}
+table{border-collapse:collapse;width:100%;font-size:14px;min-width:640px}
+th{background:#12161b;color:#fff;text-align:left;padding:9px 10px;font-size:12.5px}
+td{border-top:1px solid var(--line);padding:9px 10px;vertical-align:top}
+tr.me td{background:#eef7fa}tr.me td:first-child{border-left:5px solid var(--acc)}
+.item{background:#fff;border:1px solid var(--line);border-radius:11px;padding:18px 21px;margin-bottom:12px}
+.item .said{font-size:17px;font-weight:800;margin-bottom:10px}
+.item .k{font-size:11.5px;letter-spacing:1.2px;text-transform:uppercase;color:#5b636b;font-weight:800;margin:10px 0 3px}
+.q{background:#fff;border:1px solid var(--line);border-radius:11px;padding:14px 18px;margin-bottom:9px}
+.q b{display:block}
+.gb{display:inline-block;min-width:38px;text-align:center;color:#fff!important;font-weight:800;border-radius:6px;padding:3px 6px}
+.bar{height:6px;background:#e8ebef!important;border-radius:4px;margin-top:6px}.bar i{display:block;height:6px;border-radius:4px}
+.sc-hero{display:flex;gap:24px;align-items:center;background:#fff!important;border:1px solid var(--line);border-radius:11px;padding:20px 22px;margin-bottom:12px;flex-wrap:wrap}
+.sc-hero>*{min-width:0}
+.sc-g{font-size:66px;font-weight:900;line-height:1;color:#c0651a!important}
+.sc-g.after{color:#157a52!important}
+.sc-s{font-size:15px;color:#5b636b!important}.sc-s b{font-size:22px;color:#000!important}
+.sc-v{flex:1;min-width:240px;font-size:15px;color:#16191d!important}
+.sc-arrow{font-size:30px;color:#5b636b!important}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:11px}.kpis>*{min-width:0}
+.kpi{background:#fff;border:1px solid var(--line);border-radius:11px;padding:14px 16px}
+.kpi b{display:block;font-size:24px;color:#0e1115}.kpi span{font-size:13px;color:#5b636b}
+@media(max-width:700px){.kpis{grid-template-columns:1fr 1fr}}
+footer{border-top:1px solid var(--line);margin-top:24px;padding:18px 0 34px}
+footer,footer b{color:#69717a;font-size:11.5px;line-height:1.62}
+footer b{display:block;margin-top:7px}
+@media(max-width:620px){h1{font-size:24px}table{font-size:13px}td,th{padding:7px 8px}.card,.item{padding:16px 15px}.sc-g{font-size:50px}}
+</style></head>
+<body>
+<header class="hh"><div class="wrap"><div class="eyebrow">Digital presence audit &middot; checked 10 November 2026</div><h1>Your new website, read page by page.</h1>
+<div class="sub">a-zscaffoldingltd.co.uk &middot; all 17 pages &middot; plus Google Maps</div></div></header>
+<nav class="hb"><div class="wrap"><a href="index.html">Start here</a><a href="recap.html">Call recap</a><a href="audit.html" class="on">The audit</a><a href="scorecard.html">Scorecard</a><a href="audit-pt2.html">Audit Pt.2</a><a href="competitors.html">Competitors</a><a href="competitors-pt2.html">Competitors Pt.2</a><a href="https://andrei170.github.io/az-scaffolding-demo/">Demo site</a><a href="https://andrei170.github.io/az-scaffolding-audit/">August audit</a><a href="https://andrei170.github.io/az-scaffolding-competitors/">August competitors</a></div></nav>
+<section><div class="wrap"><div class="h">In short</div><div class="card note"><p>Your rebuilt site is <b>a good base</b>: tap-to-call everywhere, eight town pages, six proper case studies, your reviews on show, and clean titles and headings. You are <b>first in Google Maps for &ldquo;scaffolding Pontefract&rdquo;</b>.</p><p>What holds it back is narrower: <b>nothing counts enquiries</b>, the quote form lives on one page only, the services share a single page, and the commercial credentials stop at CISRS and &ldquo;fully insured&rdquo;. Graded on 13 checks it scores <b>D, 56 out of 100</b>. <a href="scorecard.html">See the scorecard</a>.</p></div></div></section><section><div class="wrap"><div class="h">Key figures, read 10 November 2026</div><div class="kpis"><div class="kpi"><b>17</b><span>pages in your sitemap</span></div><div class="kpi"><b>1 of 17</b><span>pages with a quote form</span></div><div class="kpi"><b>0 of 17</b><span>pages with tracking</span></div><div class="kpi"><b>6</b><span>written case studies</span></div></div></div></section><section><div class="wrap"><div class="h">What is strong</div><div class="card good"><ul><li><b>Tap-to-call on every page.</b> Both numbers are tappable links on all 17 pages, in the header and footer.</li><li><b>Six written case studies.</b> An apartment block with a lattice-beam bridge over a vehicle archway (Pontefract), edge protection on live generator units (Knottingley), and four more. Each says the challenge, what you did and the result.</li><li><b>Reviews in the right place.</b> A Google reviews widget on the site, and 4.7 stars from 50 reviews on Google itself.</li><li><b>Clean page basics.</b> Every page has its own title, its own search description and exactly one main heading.</li><li><b>Eight town pages</b> for Pontefract, Knottingley, Castleford, Wakefield, Leeds, Doncaster, South Kirkby and Featherstone.</li><li><b>You lead Google Maps at home.</b> First for &ldquo;scaffolding Pontefract&rdquo;, &ldquo;scaffolders Pontefract&rdquo; and &ldquo;scaffolding Knottingley&rdquo; when we searched on 10 November.</li></ul></div></div></section><section><div class="wrap"><div class="h">What to fix, in order</div><div class="card bad"><span class="lab">1. Nothing on the site counts anything</span><p>None of the 17 pages carries Google Analytics, Google Tag Manager, a Google Ads tag or a Meta pixel. Neither of us can tell how many people visit, which pages they read, how many tap to call or how many send the form. That also means ads could not be judged on anything except gut feel.</p><p><b>Fix:</b> Install a tag manager with call-tap, form and page tracking, and a simple call log. A few weeks later there is a real starting number.</p></div><div class="card bad"><span class="lab">2. The quote form is one click away from every page but one</span><p>The only enquiry form is on the contact page. The other 16 pages have a search box and &ldquo;Get a Quote&rdquo; buttons that send people to /contact/. Someone reading your Castleford page on a phone has to go somewhere else to ask for a price.</p><p><b>Fix:</b> Put the quote form at the top of every page, as in the <a href="https://andrei170.github.io/az-scaffolding-demo/">demo site</a>.</p></div><div class="card warn"><span class="lab">3. The form cannot price a scaffold</span><p>It asks name, phone, email, job type and location. It does not ask the height, how long the scaffold is needed, or for a photo.</p><p><b>Fix:</b> Add height, duration and an optional photo upload, so most jobs can be scoped before you ring back.</p></div><div class="card warn"><span class="lab">4. Seven services, one page</span><p>Domestic, commercial, industrial, new build, temporary roofs, edge protection and specialist access all sit on one Services page of about 950 words. The &ldquo;More about this service&rdquo; links on the town pages all go back to it.</p><p><b>Fix:</b> A page per service, each with the matching case study and photos. The demo has six.</p></div><div class="card warn"><span class="lab">5. Town pages that read the same</span><p>Each town page is about 1,660 words, but with the town name hidden the Castleford and Doncaster pages are 94% the same words, and none shows a job done in that town. You are not in the 10 Google Maps results for &ldquo;scaffolding Wakefield&rdquo; despite having a Wakefield page.</p><p><b>Fix:</b> Add one or two real local jobs and photos to each town page. Your Horbury case study belongs on the Wakefield page, Otley on Leeds.</p></div><div class="card warn"><span class="lab">6. The commercial side shows the least</span><p>&ldquo;CISRS-carded scaffolders&rdquo; and &ldquo;fully insured&rdquo; are the only credentials on any page. No NASC, CHAS or other SSIP scheme, Constructionline, TG20 or insurance figures, and no compliance sheet for a main contractor to download.</p><p><b>Fix:</b> If you hold them, a Health and Safety page and a one-page compliance pack. Only what you actually hold.</p></div><div class="card warn"><span class="lab">7. Small technical points</span><p>Your site tells Google you are open every day, round the clock (a plugin default), and lists no areas served. The reviews widget says 47 while Google shows 50. There is no jobs page, though you were hiring.</p><p><b>Fix:</b> Correct the opening hours, add the eight towns as areas served, and add a short &ldquo;work with us&rdquo; page.</p></div></div></section><section><div class="wrap"><div class="h">Page by page</div><div class="tw"><table><tr><th>Page</th><th>Words</th><th>Form on the page</th></tr><tr><td>Home</td><td>1,692</td><td>Search box only</td></tr><tr><td>Services</td><td>950</td><td>Search box only</td></tr><tr><td>Areas covered</td><td>597</td><td>Search box only</td></tr><tr><td>8 town pages</td><td>1,657 to 1,699 each</td><td>Search box only</td></tr><tr><td>Projects &amp; Reviews</td><td>1,580</td><td>Search box only</td></tr><tr><td>Blog + 3 posts</td><td>276 to 669</td><td>Search box only</td></tr><tr><td>Contact</td><td>486</td><td>&#11088; Quote form (5 fields)</td></tr></table></div><p style="font-size:13px;color:#5b636b">Word counts include the header and footer text that repeats on every page.</p></div></section><section><div class="wrap"><div class="h">How we checked</div><div class="card "><ul><li>Read on 10 November 2026: all 17 URLs in your sitemap, fetched as a normal browser would. We searched each page&rsquo;s code for tracking tags, phone links, forms, structured data and accreditation terms.</li><li>Google Maps positions and the 4.7 / 50 rating come from Google Maps searches on 10 November 2026, centred on each town. Results differ by device, location and day.</li><li>The 94% figure compares the words on the Castleford and Doncaster pages with the town names hidden.</li><li>Page speed was not tested and is not scored.</li></ul></div></div></section>
+<footer><div class="wrap">Prepared by Andrei Givero &middot; AG1 Consulting &middot; 10 November 2026, for our second call with
+Adrian Clegg at A-Z Scaffolding Services Ltd on Wednesday 11 November 2026, 10:00am UK.
+<b>&#9888; This is a discussion document, not a proposal, and nothing on it is priced.</b>
+<b>&#9888; Anything in quotation marks is what Adrian told us on our call of 25 August 2026 (from the call recording). His
+figures have not been checked by us.</b>
+<b>&#9888; Websites and Google Maps were read on 10 November 2026 and describe what was on those pages, in their page code and in
+the Maps results that day. Sites and rankings change, and Maps results differ by device and location. A term missing from a
+site means it was not published there, not that a firm does not hold it. We contacted nobody.</b>
+<b>&#9888; The demo site is a demonstration only. Nothing in this pack promises an enquiry volume, cost, ranking, job count or revenue.</b>
+</div></footer></body></html>
