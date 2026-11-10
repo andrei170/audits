@@ -1,224 +1,76 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
-<title>Pre-Call Diagnostic &middot; Pro Seasons Roofing LLC &middot; AG1 Consulting</title><style>
-:root{--bg:#0d1117;--panel:#161b22;--ink:#e6edf3;--mut:#9aa7b4;--line:#2a3340;--accent:#2f81f7;
-  --good:#3fb950;--bad:#f85149;--gradF:#f85149;--gradD:#e8702a;--gradC:#d29922;--gradB:#3fb950;--gradA:#2ea043;}
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.5;-webkit-font-smoothing:antialiased}
-.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
-.eyebrow{letter-spacing:.18em;text-transform:uppercase;font-size:12px;color:var(--mut);font-weight:600}
-header{padding:46px 0 28px;border-bottom:1px solid var(--line);background:radial-gradient(1200px 400px at 70% -10%,rgba(47,129,247,.18),transparent)}
-h1{font-size:30px;font-weight:800;margin:10px 0 6px;letter-spacing:-.01em}
-.sub{color:var(--mut);font-size:15px}
-.hero{display:grid;grid-template-columns:300px 1fr;gap:26px;align-items:center;margin:34px 0 8px}
-@media(max-width:760px){.hero{grid-template-columns:1fr}}
-.gradecard{border:1px solid var(--line);border-radius:18px;padding:26px;text-align:center;position:relative;overflow:hidden}
-.gc-F{background:linear-gradient(160deg,#2a1410,#1c2330)}.gc-D{background:linear-gradient(160deg,#2a1c10,#1c2330)}
-.gc-C{background:linear-gradient(160deg,#2a2410,#1c2330)}.gc-B{background:linear-gradient(160deg,#102a1a,#1c2330)}
-.bigletter{font-size:96px;font-weight:900;line-height:1;position:relative}
-.bl-F{color:var(--gradF);text-shadow:0 0 40px rgba(248,81,73,.45)}
-.bl-D{color:var(--gradD);text-shadow:0 0 40px rgba(232,112,42,.45)}
-.bl-C{color:var(--gradC);text-shadow:0 0 40px rgba(210,153,34,.45)}
-.score100{font-size:18px;color:var(--mut);margin-top:6px;position:relative}
-.heroread h2{font-size:21px;font-weight:800;margin-bottom:10px}
-.heroread p{color:var(--mut);font-size:15.5px}
-.heroread .tag{display:inline-block;margin-top:14px;padding:6px 12px;border:1px solid var(--line);border-radius:999px;font-size:13px;color:var(--ink);background:var(--panel)}
-section{padding:34px 0;border-bottom:1px solid var(--line)}
-.h{font-size:13px;color:var(--mut);text-transform:uppercase;letter-spacing:.14em;font-weight:700;margin-bottom:18px}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-@media(max-width:760px){.grid{grid-template-columns:1fr}}
-.row{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px;display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center}
-.rname{font-weight:600;font-size:15px}
-.bar{height:7px;background:#0b0f15;border-radius:99px;margin-top:9px;overflow:hidden}
-.fill{height:100%;border-radius:99px}
-.badge{font-weight:800;font-size:15px;min-width:46px;height:46px;border-radius:10px;display:flex;align-items:center;justify-content:center;color:#0d1117}
-.gF{background:var(--gradF)}.gD{background:var(--gradD)}.gC{background:var(--gradC)}.gB{background:var(--gradB);color:#06210f}.gA{background:var(--gradA);color:#06210f}
-.sc{font-size:12px;color:var(--mut);margin-top:3px}
-.flag{background:linear-gradient(160deg,#2a1410,#161b22);border:1px solid #6f2a1f;border-radius:14px;padding:20px 22px;margin-bottom:14px}
-.flag .lab{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--bad);font-weight:700;margin-bottom:8px}
-.win{background:linear-gradient(160deg,#0f2417,#161b22);border:1px solid #1f6f3a;border-radius:14px;padding:20px 22px;margin-bottom:14px}
-.win .lab{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--good);font-weight:700;margin-bottom:8px}
-.warn{background:linear-gradient(160deg,#2a2410,#161b22);border:1px solid #6f5a1f;border-radius:14px;padding:20px 22px;margin-bottom:14px}
-.warn .lab{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--gradC);font-weight:700;margin-bottom:8px}
-.flag p,.win p,.warn p{color:var(--mut);font-size:14.5px;margin-bottom:9px}
-.flag p:last-child,.win p:last-child,.warn p:last-child{margin-bottom:0}
-.flag b,.win b,.warn b{color:var(--ink)}
-.flag ul,.win ul,.warn ul{margin:0 0 9px 20px;color:var(--mut);font-size:14.5px}
-.flag li,.win li,.warn li{margin-bottom:6px}
-.code{background:#0b0f15;border:1px solid var(--line);border-radius:8px;padding:14px 16px;margin:12px 0;font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:12.5px;line-height:1.85;color:var(--mut);overflow-x:auto}
-.code .ph{color:#ff9d94;font-weight:700}.code .ok{color:#84e0a8;font-weight:700}.code .c{color:#5b6672}
-.cmp{width:100%;border-collapse:collapse;font-size:14px;background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden}
-.cmp th{text-align:left;padding:11px 14px;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--mut);border-bottom:1px solid var(--line);font-weight:700}
-.cmp td{padding:11px 14px;border-bottom:1px solid var(--line);color:var(--mut);vertical-align:top}
-.cmp tr:last-child td{border-bottom:none}.cmp td b{color:var(--ink)}.cmp tr.you td{background:#241a12}
-.cmp .yes{color:var(--good);font-weight:700}.cmp .no{color:var(--bad);font-weight:700}
-.opp{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-@media(max-width:760px){.opp{grid-template-columns:1fr}}
-.ocard{background:linear-gradient(160deg,#0f2417,#161b22);border:1px solid #1f6f3a;border-radius:14px;padding:20px;text-align:center}
-.ocard .lab{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--mut)}
-.ocard .big{font-size:30px;font-weight:900;color:var(--good);margin:8px 0 2px}
-.ocard .small{font-size:13px;color:var(--mut)}
-.oppnote{color:var(--mut);font-size:14px;margin-top:14px}.oppnote b{color:var(--ink)}
-.arrow{display:flex;align-items:center;justify-content:center;gap:18px;margin:6px 0 2px;flex-wrap:wrap}
-.pill{font-size:60px;font-weight:900;line-height:1}
-.pill.from-F{color:var(--gradF)}.pill.from-D{color:var(--gradD)}.pill.from-C{color:var(--gradC)}
-.pill.to{color:var(--gradA)}
-.pilllab{font-size:12px;color:var(--mut);text-align:center;text-transform:uppercase;letter-spacing:.1em}
-.ar{font-size:34px;color:var(--mut)}
-ul.road{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:10px}
-@media(max-width:760px){ul.road{grid-template-columns:1fr}}
-ul.road li{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:8px;padding:11px 14px;font-size:14.5px}
-.road2 li{border-left-color:var(--good)}
-.cta{text-align:center;padding:40px 0 56px}
-.cta h2{font-size:22px;font-weight:800;margin-bottom:8px}
-.cta p{color:var(--mut);font-size:15px}
-footer{color:var(--mut);font-size:12.5px;text-align:center;padding:22px 0 40px;line-height:1.7}
-.gscale{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:26px 26px 20px;margin-top:16px}
-.gscale .gtitle{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--mut);font-weight:700;margin-bottom:26px;text-align:center}
-.gtrack{position:relative;height:14px;border-radius:8px;background:linear-gradient(90deg,#f85149 0%,#f85149 18%,#e3833c 34%,#d4a72c 52%,#7ec46a 74%,#3fb950 100%);margin:0 4px}
-.gmark{position:absolute;top:-46px;transform:translateX(-50%);text-align:center;white-space:nowrap}
-.gmark .gm-lab{font-size:10.5px;text-transform:uppercase;letter-spacing:.1em;color:var(--mut);font-weight:700}
-.gmark .gm-val{font-size:19px;font-weight:900;line-height:1.15}
-.gmark:after{content:"";position:absolute;left:50%;top:100%;width:2px;height:22px;transform:translateX(-50%);background:currentColor;opacity:.75}
-.gmark.now{color:var(--bad)}.gmark.now .gm-val{color:var(--bad)}
-.gmark.proj{color:var(--good)}.gmark.proj .gm-val{color:var(--good)}
-.gmark.proj{top:auto;bottom:-52px}
-.gmark.proj:after{top:auto;bottom:100%}
-.gdot{position:absolute;top:50%;width:16px;height:16px;border-radius:50%;transform:translate(-50%,-50%);border:3px solid #0d1117}
-.gdot.now{background:var(--bad)}.gdot.proj{background:var(--good)}
-.gticks{display:flex;justify-content:space-between;margin:66px 4px 0;font-size:11px;letter-spacing:.08em;color:var(--mut);font-weight:700}
-@media(max-width:620px){.gmark .gm-lab{font-size:9px}.gmark .gm-val{font-size:16px}}
-
-/* ---------- injected asset nav ---------- */
-/* display/padding/margin are declared explicitly so a page carrying its own bare
-   nav{} element rule (concept mockups do) cannot restyle the AG1 bar. */
-.agnav{display:block;padding:0;margin:0;position:sticky;top:0;z-index:80;background:rgba(13,17,23,.92);backdrop-filter:saturate(1.5) blur(10px);border-bottom:1px solid var(--line)}
-.agnav .inner{max-width:1080px;margin:0 auto;padding:0 22px;display:flex;flex-wrap:wrap;align-items:center;gap:6px}
-.agnav a{display:inline-block;padding:12px 14px;font-size:14px;font-weight:600;color:var(--mut);text-decoration:none;border-bottom:2px solid transparent;transition:color .15s,border-color .15s}
-.agnav a:hover{color:var(--ink);border-bottom-color:var(--accent)}
-.agnav a.on{color:var(--ink);border-bottom-color:var(--accent)}
-.agnav a.ext{color:var(--accent)}
-.agnav a.ext:hover{color:#fff}
-@media(max-width:560px){.agnav .inner{padding:0 14px}.agnav a{padding:10px 9px;font-size:13px}}
-
-nav.hb{background:#0b1016;position:sticky;top:0;z-index:9;overflow-x:auto}
-nav.hb .wrap{display:flex;gap:4px;padding:0 16px;max-width:1040px;margin:0 auto;
-overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
-nav.hb .wrap::-webkit-scrollbar{display:none}
-nav.hb a{color:#b7c6d8;text-decoration:none;font-size:13.5px;font-weight:600;
-padding:12px 13px;white-space:nowrap;border-bottom:3px solid transparent}
+<title>Online Presence Audit &middot; Pro Seasons Roofing LLC</title>
+<style>
+:root{--bg:#f3f5f8;--line:#dde3ea;--ink:#141a21;--acc:#1f6fb2;--accd:#15558a}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink);overflow-x:hidden;
+font:16px/1.62 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+.wrap{max-width:1080px;margin:0 auto;padding:0 16px}
+header.hh{background:linear-gradient(145deg,#0d1620,#16283a 55%,#1f5f94);padding:30px 0 26px}
+header.hh *{color:#fff}
+.eyebrow{font-size:12px;letter-spacing:1.4px;text-transform:uppercase;color:#9fd0ff!important;font-weight:700}
+h1{font-size:30px;line-height:1.22;margin:8px 0 10px;letter-spacing:-.4px}
+.sub{color:#dfe8f1!important;font-size:14.5px}
+nav.hb{background:#0a1118;position:sticky;top:0;z-index:9;overflow-x:auto}
+nav.hb .wrap{display:flex;gap:2px;padding:0 16px}
+nav.hb a{color:#c2cbd4;text-decoration:none;font-size:13.5px;font-weight:600;padding:12px 11px;white-space:nowrap;border-bottom:3px solid transparent}
 nav.hb a:hover{color:#fff}
-nav.hb a.on{color:#fff;border-bottom-color:#2f81f7}
-nav.hb a.demo{color:#7ee2b8;margin-left:auto}
-nav.hb a.demo:hover{color:#b8f5da}
-@media(max-width:760px){nav.hb .wrap{padding:0 12px}nav.hb a{font-size:13px;padding:11px 11px}
-nav.hb a.demo{margin-left:4px}}
-</style></head><body>
-<nav class="agnav"><div class="inner"><a href="./" class="on">Pre-Call Diagnostic</a></div></nav>
-<style>
-:root{--bg:#f6f8fb !important;--panel:#fff !important;--ink:#10131a !important;--mut:#53627a !important;
---line:#d7e0ea !important;--accent:#1f6feb !important;--soft:#eef3f9 !important;--slate:#33475b !important;
---amber:#c7971a !important;--amber-d:#9c7510 !important;}
-html,body{background:#f6f8fb !important;color:#10131a !important}
-p,li,td,th,span,div,small{color:#1f2a38 !important}
-h1,h2,h3,h4,.h,.sec,.lab{color:#0b1016 !important}
-b,strong{color:#000 !important}a{color:#1458c4 !important}
-.wrap{max-width:1050px}
-header{background:linear-gradient(145deg,#0a1f3d,#123a6b 58%,#17539b) !important}
-header *{color:#fff !important}header .eyebrow{color:#8ec5ff !important;letter-spacing:1.4px}
-header .sub{color:#cfe0f5 !important}
-.warn,.flag,.win,.oppnote,.card{background:#fff !important;border:1px solid #d7e0ea !important;
-border-radius:10px;padding:18px 20px;margin-bottom:8px}
-.warn{border-left:5px solid #c7971a !important}.flag{border-left:5px solid #c0392b !important}
-.win{border-left:5px solid #157a52 !important}
-.oppnote{background:#eff5ff !important;border-left:5px solid #1f6feb !important}
-.warn *,.flag *,.win *,.oppnote *,.card *{color:#1f2a38 !important}
-.warn b,.flag b,.win b,.oppnote b,.card b{color:#000 !important}
-.lab{font-weight:800;font-size:16px;margin-bottom:8px;display:block}
-table{width:100%;border-collapse:collapse;background:#fff !important;
-border:1px solid #cfdae6 !important;margin-top:6px}
-table th,table td{border:1px solid #d7e0ea !important;padding:11px 13px;text-align:left;
-vertical-align:top;background:#fff !important;color:#1f2a38 !important}
-table th{background:#0b1016 !important;color:#fff !important;font-size:12px;letter-spacing:.9px;
-text-transform:uppercase;font-weight:700}
-table tr:nth-child(even) td{background:#f4f8fc !important}
-tr.you td{background:#fff6d9 !important}td.o{text-align:right;font-weight:800;color:#000 !important}
-.money{background:linear-gradient(135deg,#0a1f3d,#123a6b) !important;border:0 !important;
-border-radius:12px;padding:24px 26px}
-.money *{color:#e8f1fc !important}
-.money .fig{font-size:40px;font-weight:800;color:#8ec5ff !important;line-height:1.1}
-.money b{color:#fff !important}
-.cta{background:#0a1f3d !important;border-radius:12px;padding:34px 24px;margin-top:10px}
-.cta *{color:#fff !important}.cta p{color:#b7cfe8 !important}
-footer{border-top:1px solid #d7e0ea !important;margin-top:26px}
-footer *{color:#6b7b8f !important;background:transparent !important;font-size:11.5px;line-height:1.6}
-ul.road,ul.road2{list-style:none;padding-left:0}
-ul.road li,ul.road2 li{background:#fff !important;border:1px solid #d7e0ea !important;
-border-left:4px solid #1f6feb !important;border-radius:8px;padding:13px 16px;margin-bottom:9px}
+nav.hb a.on{color:#fff;border-bottom-color:#9fd0ff}
 section{padding:24px 0}
-</style>
-<header><div class="wrap"><div class="eyebrow">Pre-Call Diagnostic &middot; Pro Seasons Roofing LLC</div>
-<h1>Your Winter Offer Is Already Written On Your Own Homepage. Nobody Can Find It.</h1><div class="sub">Prepared for Emmanuel Duran &middot; Tuesday 6 October, 7am PST &middot; AG1 Consulting</div></div></header><nav class="hb"><div class="wrap"><a href="assets.html">Start here</a><a href="index.html" class="on">The audit</a><a href="scorecard.html">Graded scorecard</a><a href="proposal.html">What we would do</a><a class="demo" href="https://andrei170.github.io/pro-seasons-demo/" target="_blank" rel="noopener">Demo site &nearr;</a></div></nav>
-<style>
-.sc{background:#fff !important;border:1px solid #d7e0ea !important;border-radius:12px;
-padding:0 !important;margin:14px 0 6px;overflow:hidden}
-.sc *{box-sizing:border-box}
-.sc-hero{background:linear-gradient(145deg,#0a1f3d,#123a6b 58%,#17539b) !important;
-padding:26px 24px !important;display:flex;align-items:center;gap:26px;flex-wrap:wrap}
-.sc-g{font-size:62px !important;font-weight:800;line-height:1;color:#fff !important;letter-spacing:-2px}
-.sc-s{font-size:15px !important;color:#cfe0f5 !important;margin-top:4px}
-.sc-s b{color:#fff !important}
-.sc-v{flex:1;min-width:230px;color:#e8f1fc !important;font-size:15px !important;line-height:1.55}
-.sc-v b{color:#fff !important}
-table.scd{width:100%;border-collapse:collapse;background:#fff !important;margin:0;border:0 !important}
-table.scd th{background:#0b1016 !important;color:#fff !important;font-size:11.5px !important;
-letter-spacing:.9px;text-transform:uppercase;font-weight:700;padding:10px 12px !important;
-text-align:left;border:0 !important}
-table.scd td{border:0 !important;border-top:1px solid #e3eaf2 !important;padding:11px 12px !important;
-vertical-align:top;color:#1f2a38 !important;font-size:14.5px !important;line-height:1.5;
-background:#fff !important}
-table.scd tr:nth-child(even) td{background:#fafcfe !important}
-table.scd td b{color:#000 !important}
-table.scd td p{color:#1f2a38 !important;margin:0 0 7px}
-.gb{display:inline-block;min-width:30px;text-align:center;font-weight:800;color:#fff !important;
-border-radius:6px;padding:3px 7px;font-size:14px}
-.sc-cat{white-space:nowrap;font-weight:700;color:#0b1016 !important}
-.bar{height:6px;background:#e9eff6 !important;border-radius:4px;margin-top:7px;overflow:hidden}
-.bar i{display:block;height:6px;border-radius:4px}
-@media(max-width:620px){.sc-cat{white-space:normal}.sc-g{font-size:48px !important}}
-</style><section><div class="wrap"><div class="h">Digital Presence Audit</div><div class="sc"><div class="sc-hero"><div><div class="sc-g" style="color:#fff">F</div><div class="sc-s"><b style="color:#fff">22</b> / 100</div></div><div class="sc-v">Failing the cheap, mechanical things. &#11088; <b>Which is the good news</b> - nothing on this list needs a bigger company, a better reputation or more years in the trade. It is all installable.<br><br><b>1 of 14 passed, 12 outright failed.</b></div></div><table class="scd"><tr><th>Grade</th><th>What we checked</th><th>What we found</th></tr><tr><td><span class="gb" style="background:#c0651a">D</span></td><td class="sc-cat">Enquiry forms<div class="bar"><i style="width:50%;background:#c0651a"></i></div></td><td>One form. Workable, but one route in is one point of failure.</td></tr><tr><td><span class="gb" style="background:#b02a20">F</span></td><td class="sc-cat">Tap-to-call<div class="bar"><i style="width:40%;background:#b02a20"></i></div></td><td>&#9888; <b>2 tap-to-call links</b> across 2 pages. Most people read a trade site on a phone.</td></tr><tr><td><span class="gb" style="background:#b02a20">F</span></td><td class="sc-cat">Analytics installed<div class="bar"><i style="width:3%;background:#b02a20"></i></div></td><td>&#128308;&#128308; <b>No analytics of any kind.</b> Nothing records how many people reach the site or what they do on it.</td></tr><tr><td><span class="gb" style="background:#b02a20">F</span></td><td class="sc-cat">Ads readiness<div class="bar"><i style="width:3%;background:#b02a20"></i></div></td><td>&#128308; <b>No advertising tag of any kind.</b> Spend could not be measured today even if it started tomorrow.</td></tr><tr><td><span class="gb" style="background:#b02a20">F</span></td><td class="sc-cat">Local business markup<div class="bar"><i style="width:3%;background:#b02a20"></i></div></td><td>&#128308; <b>None.</b> Nothing in the code tells a search engine where this business is or when it is open.</td></tr><tr><td><span class="gb" style="background:#b02a20">F</span></td><td class="sc-cat">Content depth<div class="bar"><i style="width:35%;background:#b02a20"></i></div></td><td>&#9888; <b>706 words, 2 pages.</b> Thin.</td></tr><tr><td><span class="gb" style="background:#b02a20">F</span></td><td class="sc-cat">Code structure<div class="bar"><i style="width:30%;background:#b02a20"></i></div></td><td>&#9888; <b>2 main headings on one page.</b> Search engines are told the page is about 2 different things.</td></tr><tr><td><span class="gb" style="background:#b02a20">F</span></td><td class="sc-cat">Accreditation shown<div class="bar"><i style="width:15%;background:#b02a20"></i></div></td><td>&#9888; <b>No accreditation named anywhere.</b> If any is held, it is being paid for and not shown.</td></tr><tr><td><span class="gb" style="background:#b02a20">F</span></td><td class="sc-cat">Reviews on site<div class="bar"><i style="width:10%;background:#b02a20"></i></div></td><td>&#128308; <b>No reviews or testimonials on the site.</b></td></tr><tr><td><span class="gb" style="background:#b02a20">F</span></td><td class="sc-cat">Proof of work<div class="bar"><i style="width:10%;background:#b02a20"></i></div></td><td>&#128308; <b>No gallery or past-work section.</b> Nothing shows the standard of the work.</td></tr><tr><td><span class="gb" style="background:#2f7d32">B</span></td><td class="sc-cat">Who you are<div class="bar"><i style="width:75%;background:#2f7d32"></i></div></td><td>An about or team section is present.</td></tr><tr><td><span class="gb" style="background:#b02a20">F</span></td><td class="sc-cat">Careers page<div class="bar"><i style="width:10%;background:#b02a20"></i></div></td><td>&#128308; <b>None.</b> Nothing aimed at somebody who might want to work there.</td></tr><tr><td><span class="gb" style="background:#b02a20">F</span></td><td class="sc-cat">Blog or news<div class="bar"><i style="width:20%;background:#b02a20"></i></div></td><td>&#9888; <b>None.</b> Nothing that earns search traffic over time.</td></tr><tr><td><span class="gb" style="background:#b02a20">F</span></td><td class="sc-cat">Professional email<div class="bar"><i style="width:20%;background:#b02a20"></i></div></td><td>&#9888; <b>A free email address is published</b> on a site with its own domain.</td></tr></table></div><div class="oppnote" style="margin-top:12px">&#11088;&#11088; <b>Every one of the failures above is mechanical.</b> None of them is about your workmanship, your prices or your reputation. &#11088; <b>Fixing the whole list would move this from F (22/100) to roughly A-</b> - and the work is measured in days, not months.<br><br>&#9888; <b>What this grade is not:</b> it scores what a visitor and a search engine can see on your website today. <b>It is not a judgement of your business</b>, and it predicts no enquiry volume, ranking or revenue. Site speed, review volume and social activity were <b>not assessed</b> and are excluded from the score rather than guessed at.</div></div></section>
-
-
-<section><div class="wrap"><div class="h">What You Told Our Team</div>
-<table><tr><th>&nbsp;</th><th>What you said</th></tr><tr class="you"><td><b>Winter</b></td><td>You want <b>consistent work through the winter</b>. Things have <b>slowed way down</b></td></tr><tr class="you"><td><b>How you get work</b></td><td><b>Word of mouth and door-to-door only.</b> Nothing else, ever</td></tr><tr class="you"><td><b>Advertising</b></td><td>You have <b>thought about ads</b> but have not done anything with it yet</td></tr><tr><td><b>The call</b></td><td>Booked for 7am, before you head out to work</td></tr></table>
-<div class="oppnote">&#11088; <b>The booking note contains the answer to its own question.</b> Word of mouth and door-to-door are both <b>fair-weather channels</b>. Knocking doors in a Willamette Valley winter is physically hard, and word of mouth runs on a back catalogue of finished jobs. <b>Those are the two channels that weaken most in exactly the season you are asking about</b>, so a slow winter is not a surprise, it is the predictable shape of having only those two.</div></div></section>
-
-<section><div class="wrap"><div class="h">What We Found Before Speaking To You</div><div class="flag" style="margin-top:12px"><div class="lab">&#11088;&#11088; You already sell the right winter service. It is invisible.</div><p>Your homepage says, in capitals, <b>&ldquo;24/7 EMERGENCY LEAK RESPONSE&rdquo;</b>. It says <b>&ldquo;Roofing for Every Season&rdquo;</b>. Your business is literally named <b>Pro Seasons</b>.</p><p>&#11088;&#11088; <b>You have already worked out what the winter answer is.</b> Winter does not remove roofing demand, it changes its shape: replacement work stops because nobody re-roofs in the rain, and <b>leaks, storm damage and emergency call-outs go up</b>. You sell that. It is on your site.</p><p>&#128308; <b>But an emergency leak is the one job that never arrives by word of mouth or a knocked door.</b> It is 9pm, water is coming through a ceiling, and somebody reaches for their phone and searches. <b>That is the entire winter market and it is a search market.</b> You are not in it.</p></div><div class="flag" style="margin-top:12px"><div class="lab">&#128308;&#128308; A firm that registered three months AFTER you is already running ads, under a name almost identical to yours</div><p>On the Oregon CCB active register, in Salem, there is <b>4 SEASONS ROOFING &amp; CONSTRUCTION LLC</b>, registered <b>9 June 2026</b>. You registered <b>18 March 2026</b>. They are <b>three months younger than you</b>.</p><p>We checked their website. They are running a <b>Google Ads conversion tag</b>, they have <b>Google Analytics</b>, and they have complete <b>local business markup - postal address, geographic coordinates and opening hours</b> in the code where search engines read it. <b>You have none of those three things.</b></p><p>&#128308;&#128308; <b>And then there is the name.</b> Pro Seasons Roofing and 4 Seasons Roofing, same city, same register, registered twelve weeks apart. <b>Word of mouth almost always ends in a search.</b> Somebody is told your name at a barbecue, types something like it into Google a week later, and <b>the firm paying for that search result is the one that gets the call</b>. That is a live risk to the one channel you say is working.</p></div><div class="flag" style="margin-top:12px"><div class="lab">&#128308;&#128308; You have no tracking at all, so &ldquo;slowed way down&rdquo; cannot be checked</div><p>No Google Analytics. No Tag Manager. No advertising tag. No pixel. <b>Nothing.</b></p><p>&#11088;&#11088; <b>And this matters more for you than for almost anyone we audit, because of your age.</b> Your CCB licence was registered <b>18 March 2026</b>. That makes the business about <b>six and a half months old</b>, which means <b>this is your first autumn</b>. You have <b>no previous winter to compare this one to.</b></p><p>&#9888; So when you say things have slowed way down, there are three different things that could be true and <b>nothing currently installed can tell them apart</b>: normal seasonality, fewer people finding you, or the same number finding you and fewer calling. <b>Those three have completely different fixes.</b></p><p>&#11088; <b>This is the cheapest item on this page and every other decision depends on it.</b></p></div><div class="flag" style="margin-top:12px"><div class="lab">&#128308; The website is two pages, and the second one is a copy of the first</div><p>Your sitemap lists exactly <b>two</b> addresses: your homepage, and a store page at <code>/ols/products</code>. We fetched both. <b>They return the same 706 words.</b> It is the same page twice.</p><p>Also on the homepage itself:</p><ul><li><b>&ldquo;Salem&rdquo; appears once.</b> <b>&ldquo;Oregon&rdquo; does not appear at all.</b> Neither does Marion County, Polk County or Keizer.</li><li><b>No service-area content of any kind</b> - nothing saying which towns you cover.</li><li><b>No local business markup</b> - no address, coordinates or hours in the code. For &ldquo;roof leak repair near me&rdquo; that is the single biggest gap.</li><li><b>Two identical page headings</b>, both reading &ldquo;Roofing for Every Season&rdquo;. &ldquo;Roofing for Every Season&rdquo; is repeated <b>eight times</b> in the first few lines of the page.</li></ul><p>&#9888; <b>That repetition is the website builder&rsquo;s template duplicating a block, not a choice you made.</b> We are not telling you your site is bad taste. We are telling you it was never finished.</p></div><div class="flag" style="margin-top:12px"><div class="lab">&#9888; A Gmail address on a domain you already own</div><p>Your published email is <b>Proseasonsroofing@gmail.com</b>. You own <b>proseasonsroofing.com</b>.</p><p>&#9888; For a homeowner this changes nothing. &#11088; <b>For insurance work and for any commercial or property-manager job it reads smaller than you are</b>, and your own site already offers commercial roofing.</p></div></div></section>
-
-<section><div class="wrap"><div class="h">Why Word Of Mouth Alone Gets Harder, Not Easier</div><div class="money"><p style="margin-bottom:6px;opacity:.85">Roofing firms on the Oregon CCB active register, in Salem, that have been trading longer than you</p><div class="fig">79</div><p style="margin-top:12px">There are <b>86 roofing firms on the active CCB register in Salem alone</b>. <b>79 of them registered before you did</b>, with a <b>median of 5.4 years</b> trading; 41 have five years or more and 13 have ten or more. The longest, Cascade Roofing of Salem, has been registered since <b>1994</b>. &#11088;&#11088; <b>Word of mouth is the one channel where seniority compounds</b>, because it runs on finished jobs and years of neighbours. <b>So the only channel you are using is the exact channel where you are 79th in the queue</b>, and no amount of effort shortens that queue.</p></div><div class="oppnote" style="margin-top:14px">&#11088;&#11088; <b>But the opposite is true of search, and that is the opening.</b> We looked at the long-established firms. <b>Cascade, registered 1994, has a 337-word website.</b> <b>Roof Enhancer, registered 2007, has 172 words and no tracking whatsoever.</b> <b>Seniority in this market has not translated into web presence</b>, with one exception: Pfeifer Roofing, registered 1996, runs <b>105 pages</b> with analytics, a Meta pixel, a heat-map tool and live chat. &#128308; <b>So the market is one firm doing it properly, a long tail of old firms coasting, and the newest entrant buying ads. Age is not what is beating you.</b></div></div></section>
-
-<section><div class="wrap"><div class="h">What Is Genuinely Strong, And We Checked It</div><div class="win"><p><b>Your licence and your paperwork are clean, and we verified this independently on the Oregon CCB register rather than taking it from your site:</b></p><ul><li>CCB licence <b>260826</b>, <b>Residential General Contractor</b>, active, expires <b>18 March 2028</b>.</li><li><b>$25,000 bond</b> with RLI Insurance Company, current to <b>18 March 2028</b>.</li><li><b>$1,000,000 liability insurance</b> with SiriusPoint Specialty, current to <b>18 March 2027</b>.</li><li>Registered to <b>Salem, Marion County, OR 97304</b>, responsible party <b>Emmanuel Oviedo Duran</b>.</li></ul><p>&#11088;&#11088; <b>Everything on that list is a trust signal a homeowner wants before they let someone on their roof in the rain, and your website mentions CCB exactly once and your bond and insurance not at all.</b> You are carrying the cost of being properly bonded and insured and getting none of the marketing benefit.</p><p>&#11088; <b>And one more thing in your favour: you got the offer right on your own, with no help.</b> &ldquo;24/7 emergency leak response&rdquo; on a business called Pro Seasons is the correct strategy for a wet Oregon winter. <b>The thinking is already done. It is the plumbing underneath it that is missing.</b></p></div></div></section>
-
-<section><div class="wrap"><div class="h">What We Would Want To Ask</div>
-<ul class="road road2"><li><b>What does a typical job pay you?</b> Split it for us if it varies - an emergency leak call-out, a repair, and a full re-roof. &#11088; <b>We deliberately have not put a revenue number anywhere on this page, because we do not know this one and we are not going to guess at it.</b> It is the first thing we need.</li><li><b>How many jobs a month were you doing in the summer, and what is it now?</b> Even roughly. &#9888; Without tracking this is the only version of that number that exists.</li><li><b>Who actually does the work - you, employees, or subcontractors?</b> The CCB register lists you as <b>Exempt</b>, which normally means no employees on the books. We want to know what your real capacity is before suggesting anything that creates demand.</li><li><b>How many emergency leak calls did you get last winter?</b> &#9888; Trick question, and we know it - you were not trading last winter. <b>So nobody knows what that number should be, including us.</b> That is worth saying out loud on the call.</li><li><b>Do you have a Google Business Profile, and is it verified?</b> For &ldquo;near me&rdquo; and emergency searches that profile usually matters more than the website does, and it is free.</li><li><b>Are you aware of 4 Seasons Roofing &amp; Construction?</b> We would like to know whether the name overlap has already cost you a call, or whether you have never heard of them.</li><li><b>Do you want winter work, or do you want year-round evenness?</b> Those are different briefs. Chasing emergency leaks is high-urgency and low-planning; booking re-roofs ahead for spring is the opposite. <b>They can both be done, but not first.</b></li></ul><div class="oppnote" style="margin-top:12px">&#9888;&#9888; <b>What we are not going to tell you on this call.</b> We will not tell you how many enquiries anything would produce, what they would cost, or where you would rank. <b>Anybody who gives you those numbers for a six-month-old business in a market they measured yesterday is making them up.</b> &#11088; The honest first step for you is small and it is measurement, because you are the one business we have looked at this week that <b>cannot yet tell a bad season from a bad website</b>.</div></div></section>
-
-<section class="cta"><div class="wrap"><h2>Tuesday, 7am your time.</h2><p>Bring the job values and your rough monthly job count. Those two numbers turn everything on this page from an observation into a decision.</p></div></section>
-
-<footer><div class="wrap">
-Prepared by Andrei Givero &middot; AG1 Consulting &middot; 6 October 2026, for discussion with Emmanuel Duran at Pro Seasons Roofing LLC.
-<b>This is a discussion document, not a proposal or a statement of work, and nothing on it is
-priced.</b>
-<b>&#9888; AG1 HAS NOT SPOKEN TO THIS BUSINESS. Everything under "What You Told Our Team" is as
-recorded by AG1's team from a booking call and is REPORTED, NOT VERIFIED. AG1 has seen no financial,
-accounting or employment record.</b>
-<b>&#9888; Licence, bond, insurance, registration date, address and responsible-party details were read from the Oregon Construction Contractors Board public register of active licences on 5 October 2026, and the Salem market counts were computed from that same register. A public register records what was filed with it; it is not a statement by AG1 about this business&rsquo;s finances, capacity or conduct, and AG1 has seen no accounting or employment record. Competitor observations are from publicly available web pages read on the same date and describe only what was in the page code at that moment.</b>
-<b>&#9888; Any arithmetic shown is a multiplication of figures the prospect supplied, presented to
-show scale for discussion. It is NOT a forecast, projection or promise. AG1 does not know this
-business's turnover, margin, capacity or costs and predicts no outcome.</b>
-<b>&#9888; No enquiry volume, cost per enquiry, ranking position, conversion rate, number of jobs,
-number of applicants, hire or revenue outcome is forecast, promised or implied anywhere on this
-page.</b>
-<b>&#9888; AG1 IS NOT A RECRUITMENT AGENCY and gives no employment, HR, tax or legal advice.</b>
-</div></footer>
-</body></html>
+.h{font-size:12px;letter-spacing:1.3px;text-transform:uppercase;color:#5b6570;font-weight:800;margin-bottom:12px}
+.card{background:#fff;border:1px solid var(--line);border-radius:11px;padding:19px 21px;margin-bottom:11px}
+.card.bad{border-left:5px solid #b02a20}.card.warn{border-left:5px solid #c7971a}
+.card.good{border-left:5px solid #157a52}.card.note{background:#eef5fc;border-left:5px solid var(--acc)}
+.card.priv{background:#fff7e6;border-left:5px solid #b45309}
+.lab{font-weight:800;font-size:16px;display:block;margin-bottom:7px}
+p{margin:0 0 9px}p:last-child{margin-bottom:0}
+b{color:#000}a{color:var(--accd)}
+ul,ol{margin:0 0 4px;padding-left:20px}li{margin-bottom:6px}
+.tile{display:block;background:#fff;border:1px solid var(--line);border-radius:11px;padding:18px 20px;margin-bottom:11px;text-decoration:none;color:inherit}
+.tile:hover{border-color:var(--acc);box-shadow:0 2px 14px rgba(31,111,178,.16)}
+.tile .t{font-weight:800;font-size:17px;color:#0a1118;margin-bottom:5px}
+.tile .d{color:#3b444d;font-size:14.5px}
+.tile .m{color:var(--accd);font-size:13px;font-weight:700;margin-top:8px}
+.tile.star{border:2px solid var(--acc)}
+.tiles{display:grid;grid-template-columns:1fr 1fr;gap:0 12px}.tiles>*{min-width:0}
+@media(max-width:700px){.tiles{grid-template-columns:1fr}}
+.tw{overflow-x:auto;background:#fff;border:1px solid var(--line);border-radius:11px;margin-bottom:11px}
+table{border-collapse:collapse;width:100%;font-size:14px}
+th{background:#0d1620;color:#fff!important;text-align:left;padding:9px 10px;font-size:12.5px;white-space:nowrap}
+td{border-top:1px solid var(--line);padding:9px 10px;vertical-align:top;color:#141a21!important;background:#fff!important}
+tr.me td{background:#fff3d6!important}
+.gb{display:inline-block;min-width:34px;text-align:center;color:#fff!important;font-weight:800;border-radius:6px;padding:3px 6px}
+.pgb{display:inline-block;min-width:34px;text-align:center;color:#fff!important;font-weight:800;border-radius:6px;padding:3px 6px}
+.na{display:inline-block;text-align:center;color:#5b6570!important;background:#e8ecf0!important;font-weight:800;border-radius:6px;padding:3px 7px;font-size:12px}
+.bar{height:6px;background:#e8ebef!important;border-radius:4px;margin-top:6px}.bar i{display:block;height:6px;border-radius:4px}
+.sc-hero{display:flex;gap:22px;align-items:center;background:#fff!important;border:1px solid var(--line);border-radius:11px;padding:20px 22px;margin-bottom:12px;flex-wrap:wrap}
+.sc-g{font-size:64px;font-weight:900;line-height:1}
+.sc-s{font-size:15px;color:#5b6570!important}.sc-s b{font-size:22px;color:#000!important}
+.sc-v{flex:1;min-width:240px;font-size:15px;color:#141a21!important}
+.q{background:#fff;border:1px solid var(--line);border-radius:11px;padding:14px 18px;margin-bottom:9px}
+.q b{display:block}.q span{color:#5b6570;font-size:14px}
+.fig{display:inline-block;background:#eef5fc;border:1px solid #c9ddf0;border-radius:6px;padding:0 6px;font-weight:700}
+footer{border-top:1px solid var(--line);margin-top:24px;padding:18px 0 34px}
+footer,footer b{color:#69727c;font-size:11.5px;line-height:1.62}
+footer b{display:block;margin-top:7px}
+@media(max-width:620px){h1{font-size:24px}.sc-g{font-size:48px}th{white-space:normal}table{font-size:13px}td,th{padding:7px 8px}
+.card{padding:16px 15px}}
+</style></head>
+<body>
+<header class="hh"><div class="wrap"><div class="eyebrow">The audit &middot; read 10 November 2026</div><h1>Properly licensed, bonded and insured. Almost none of it is visible online.</h1>
+<div class="sub">Pro Seasons Roofing LLC &middot; Salem, Oregon &middot; Graded F, 19 out of 100</div></div></header>
+<nav class="hb"><div class="wrap"><a href="assets.html">Start here</a><a href="recap.html">Where we are</a><a href="index.html" class="on">The audit</a><a href="scorecard.html">Scorecard</a><a href="competitors.html">Competitors</a><a href="audit-pt2.html">Audit Pt.2</a><a href="competitors-pt2.html">Competitors Pt.2</a><a href="proposal.html">What we would do</a><a href="https://andrei170.github.io/pro-seasons-demo/">Demo site &#8599;</a></div></nav>
+<section><div class="wrap"><div class="h">In one paragraph</div><div class="card note"><p>Emmanuel, your business is properly set up: an active Oregon CCB licence, a $25,000 bond and $1,000,000 of insurance, all checked on the public register. <b>Online, almost none of that is visible.</b> We found <b>no Google Business Profile</b>, and every roofer Google shows in Salem and Keizer has one with 150 or more reviews. Your website is one page with no tracking, and your licence number on it dials as a phone number. Re-graded today: <b>F, 19 out of 100</b> (was F, 22 on 6 October).</p></div></div></section><section><div class="wrap"><div class="h">Your licence: checked on the Oregon CCB register, 10 November 2026</div><div class="card good"><span class="lab">&#11088; Clean and current</span><div class="tw"><table><tr><th>Item</th><th>On the register</th></tr><tr><td>Licence</td><td><b>CCB 260826</b>, Residential General Contractor (RGC), active</td></tr><tr><td>Name on the licence</td><td>PRO SEASONS ROOFING LLC; responsible person EMMANUEL OVIEDO DURAN</td></tr><tr><td>First registered</td><td><b>18 March 2026</b>, so the business is about <b>8 months</b> old. Licence runs to 18 March 2028</td></tr><tr><td>Address</td><td>1045 Foxtail Ct NW, Salem OR 97304 (Marion County)</td></tr><tr><td>Bond</td><td>$25,000 with RLI Insurance Company, to 18 March 2028</td></tr><tr><td>Insurance</td><td>$1,000,000 with SiriusPoint Specialty Insurance, to 18 March 2027</td></tr><tr><td>Employees</td><td>Listed as <b>Exempt</b>, which normally means no employees on the books</td></tr><tr><td>Phone on the register</td><td>971-239-6077, the same number as your website</td></tr></table></div></div><div class="card warn"><span class="lab">&#9888; How it shows on your website</span><p><b>CCB# 260826 is on your site</b>, in the contact block at the bottom of the page. (Our 6 October audit said no licence was shown. That was wrong, and this corrects it.) Two problems: it sits under your email address with no explanation, and <b>the website builder has made it a phone link</b>, so a visitor on a phone who taps it dials 260826. The bond and insurance are not mentioned anywhere on the site.</p></div></div></section><section><div class="wrap"><div class="h">Your Google Business Profile</div><div class="card bad"><span class="lab">No profile found</span><p>On 10 November 2026 we searched Google Maps for &ldquo;Pro Seasons Roofing&rdquo;, &ldquo;Pro Seasons Roofing Salem OR&rdquo;, &ldquo;Pro Seasons Roofing LLC&rdquo; and &ldquo;Pro Seasons Roofing Salem Oregon&rdquo;, and Google search for &ldquo;Pro Seasons Roofing Salem&rdquo; and your number 971-239-6077.</p><ul><li>The bare name returned <b>Season Pro Roofs</b>, a roofer in Chicago.</li><li>The other five returned <b>no business panel and no map listing</b> for you.</li><li>So we have <b>no star rating and no review count</b> to report. That is a measurement, not a gap in our checking.</li></ul><p>&#9888; If a profile exists under a different name or address, tell us and we will re-check. If it does not, this is the first thing to fix, ahead of the website: see <a href="competitors.html">who Google shows instead</a>.</p></div></div></section><section><div class="wrap"><div class="h">Your website, read on 10 November 2026</div><div class="tw"><table><tr><th>What we checked</th><th>What we measured</th><th>Why it matters</th></tr><tr><td><b>Platform</b></td><td>GoDaddy website builder</td><td>Fine to start on. It limits page count and markup.</td></tr><tr><td><b>Pages</b></td><td><span class="fig">1</span> real page. The sitemap lists 3 entries: the homepage twice and an online-store stub (/ols/products).</td><td>One page has to rank for every job and every town at once. It cannot.</td></tr><tr><td><b>Words</b></td><td><span class="fig">706</span> on the whole site</td><td>Thin for roofing, repair, replacement, storm, gutters and maintenance together.</td></tr><tr><td><b>Page title</b></td><td>&ldquo;Pro Seasons Roofing&rdquo;</td><td>No trade and no city, so Google is not told what or where.</td></tr><tr><td><b>Search description</b></td><td>None</td><td>Google writes its own snippet.</td></tr><tr><td><b>Main headings</b></td><td><span class="fig">2</span>, both &ldquo;Roofing for Every Season&rdquo;</td><td>One heading per page tells Google what the page is about.</td></tr><tr><td><b>Repeated block</b></td><td>&ldquo;Roofing for Every Season&rdquo; <span class="fig">8</span> times at the top</td><td>A builder template duplicating a block, not your choice.</td></tr><tr><td><b>Analytics and tags</b></td><td>None: no Google Analytics, Tag Manager, Ads tag or Meta pixel</td><td>Nothing counts visits, calls or forms.</td></tr><tr><td><b>Business markup</b></td><td>None</td><td>Google is not told you are a roofer, where, or your hours.</td></tr><tr><td><b>Phone links</b></td><td><span class="fig">2</span>, one of which dials 260826 (your CCB number)</td><td>One working tap-to-call link on a phone.</td></tr><tr><td><b>Form</b></td><td>&ldquo;Send a note&rdquo;: name, email, message</td><td>No phone, job type or zip. Every enquiry starts with questions.</td></tr><tr><td><b>Email</b></td><td>Proseasonsroofing@gmail.com</td><td>You own proseasonsroofing.com; the Gmail address reads smaller on insurance and commercial jobs.</td></tr><tr><td><b>Towns named</b></td><td>Footer: PORTLAND SALEM EUGENE. Salem <span class="fig">1</span> on the page, Keizer <span class="fig">0</span></td><td>Nothing for a Keizer or Silverton search to match.</td></tr><tr><td><b>Services named</b></td><td>Emergency leak response (24/7, <span class="fig">10</span> mentions), gutters (<span class="fig">14</span> mentions), replacement, storm damage, maintenance, new construction, repairs (shakes, tiles, shingles)</td><td>&#11088; The right services. All on one page, none with its own page.</td></tr><tr><td><b>Reviews</b></td><td>None on the site</td><td>A homeowner choosing who goes on their roof sees no one vouching for you.</td></tr><tr><td><b>Photos of your work</b></td><td>None; the images are the builder&rsquo;s</td><td>Nothing shows the standard of the work.</td></tr><tr><td><b>Your story</b></td><td>Family-owned; Ramon, 28 years in roofing, started the company with his son Emmanuel; &ldquo;over 20 years&rdquo;</td><td>&#11088; A strong story. &#9888; It reads as the company&rsquo;s age, while the licence is from March 2026. Stating it as the family&rsquo;s experience avoids the question.</td></tr><tr><td><b>Opening hours shown</b></td><td>&ldquo;Open today 12:00 am to 11:45 pm&rdquo;</td><td>Matches 24/7 leak response; worth stating plainly.</td></tr><tr><td><b>Unchanged since October?</b></td><td>Yes. Same 706 words, same two headings, same three sitemap entries as 6 October</td><td>Nothing has moved in five weeks.</td></tr></table></div></div></section><section><div class="wrap"><div class="h">What is genuinely strong</div><div class="card good"><ul><li><b>The paperwork.</b> Licence, bond and insurance are all current, checked independently on the register.</li><li><b>The offer.</b> 24/7 emergency leak response, from a business called Pro Seasons, is the right winter offer in Oregon. None of the five firms Google shows has an emergency page.</li><li><b>Gutters.</b> You list them; two of the five competitors have a gutter page and three do not.</li><li><b>The family story.</b> Real, specific and local. Most competitor homepages are generic.</li></ul></div></div></section><section><div class="wrap"><div class="h">Where we stop</div><div class="card warn"><span class="lab">Not assessed</span><ul><li>Site speed: Not measured: no lab test was run on 10 November.</li><li>Social media activity: Not read. Your website links to no social profile.</li><li>Where you rank in Google: Not measured as a position. We only recorded which firms Google showed for three searches.</li><li>Any advertising spend: Cannot be seen from outside anyone&rsquo;s ad account, yours or a competitor&rsquo;s.</li></ul></div></div></section>
+<footer><div class="wrap">Prepared by Andrei Givero &middot; AG1 Consulting &middot; 10 November 2026, for our second call with
+Emmanuel Duran at Pro Seasons Roofing LLC, Wednesday 11 November 2026, 12:00pm Pacific / 8:00pm UK.
+<b>&#9888; This is a discussion document, not a proposal or a statement of work.</b>
+<b>&#9888; Your website, Google search results and competitor websites were read on 10 November 2026 and describe what was there
+that day. Licence facts come from the Oregon Construction Contractors Board public register (data.oregon.gov), read the same day.
+Google star ratings and review counts are as Google displayed them in its local results on 10 November 2026.</b>
+<b>&#9888; The only things attributed to you are the notes our team took when the first call was booked. They are reported, not
+verified. We contacted no one.</b>
+<b>&#9888; Nothing in this pack is priced, and nothing in it forecasts or promises an enquiry volume, cost, ranking, job count or revenue.</b>
+</div></footer></body></html>
