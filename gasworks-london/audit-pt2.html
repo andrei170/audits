@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en-GB"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
+<title>Audit Pt.2 &middot; Gasworks London &middot; AG1 Consulting</title>
+<style>
+:root{--bg:#f3f6f8;--line:#dbe3e9;--ink:#13202a;--acc:#1d5f99;--accd:#154a78;--red:#c62d2d}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink);overflow-x:hidden;font:16px/1.62 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+.wrap{max-width:1080px;margin:0 auto;padding:0 16px}
+header.hh{background:linear-gradient(140deg,#0a1220,#0f1e33 55%,#1d5f99);padding:30px 0 26px}
+header.hh *{color:#fff}
+.eyebrow{font-size:12px;letter-spacing:1.4px;text-transform:uppercase;color:#b9e2f7!important;font-weight:700}
+h1{font-size:30px;line-height:1.22;margin:8px 0 10px;letter-spacing:-.4px}
+.sub{color:#dbe5ef!important;font-size:14.5px}
+nav.hb{background:#0a1220;position:sticky;top:0;z-index:9;overflow-x:auto}
+nav.hb .wrap{display:flex;gap:2px;padding:0 16px}
+nav.hb a{color:#b9c7d0;text-decoration:none;font-size:13.5px;font-weight:600;padding:12px 11px;white-space:nowrap;border-bottom:3px solid transparent}
+nav.hb a:hover{color:#fff}nav.hb a.on{color:#fff;border-bottom-color:#6fc3ef}
+section{padding:24px 0}
+.h{font-size:12px;letter-spacing:1.3px;text-transform:uppercase;color:#56636d;font-weight:800;margin-bottom:12px}
+.card{background:#fff;border:1px solid var(--line);border-radius:11px;padding:19px 21px;margin-bottom:11px}
+.card.bad{border-left:5px solid #b02a20}.card.warn{border-left:5px solid #c7971a}.card.good{border-left:5px solid #157a52}
+.card.note{background:#eef5fb;border-left:5px solid var(--acc)}.card.priv{background:#fff7e6;border-left:5px solid #b45309}
+.lab{font-weight:800;font-size:16px;display:block;margin-bottom:7px}
+p{margin:0 0 9px}p:last-child{margin-bottom:0}b{color:#000}a{color:var(--accd)}
+ul,ol{margin:0 0 4px;padding-left:20px}li{margin-bottom:6px}
+.tiles{display:grid;grid-template-columns:1fr 1fr;gap:0 12px}.tiles>*{min-width:0}
+.tile{display:block;background:#fff;border:1px solid var(--line);border-radius:11px;padding:18px 20px;margin-bottom:11px;text-decoration:none;color:inherit}
+.tile:hover{border-color:var(--acc);box-shadow:0 2px 14px rgba(29,95,153,.18)}
+.tile .t{font-weight:800;font-size:17px;color:#0a1220;margin-bottom:5px}.tile .d{color:#3b4852;font-size:14.5px}
+.tile .m{color:var(--accd);font-size:13px;font-weight:700;margin-top:8px}
+.tile.big{background:linear-gradient(140deg,#0a1220,#0f1e33);border:0}.tile.big .t{color:#fff}.tile.big .d{color:#cfdcea}.tile.big .m{color:#9fd6f3}
+@media(max-width:700px){.tiles{grid-template-columns:1fr}}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:11px}
+.kpi{background:#fff;border:1px solid var(--line);border-radius:11px;padding:14px 16px}
+.kpi b{display:block;font-size:26px;line-height:1.1;color:#0a1220}.kpi span{font-size:13px;color:#56636d}
+@media(max-width:700px){.kpis{grid-template-columns:1fr 1fr}}
+.tw{overflow-x:auto;background:#fff;border:1px solid var(--line);border-radius:11px;margin-bottom:11px}
+table{border-collapse:collapse;width:100%;font-size:14px}
+th{background:#0a1220;color:#fff;text-align:left;padding:9px 10px;font-size:12.5px;white-space:nowrap}
+td{border-top:1px solid var(--line);padding:9px 10px;vertical-align:top}
+tr.me td{background:#e5f1fa!important;font-weight:600}
+.gb{display:inline-block;min-width:38px;text-align:center;color:#fff!important;font-weight:800;border-radius:6px;padding:3px 6px}
+.bar{height:7px;background:#e6ebef!important;border-radius:4px;margin-top:6px}.bar i{display:block;height:7px;border-radius:4px}
+.sc-hero{display:flex;gap:22px;align-items:center;background:#fff!important;border:1px solid var(--line);border-radius:11px;padding:20px 22px;margin-bottom:12px;flex-wrap:wrap}
+.sc-g{font-size:64px;font-weight:900;line-height:1}
+.sc-s{font-size:15px;color:#56636d!important}.sc-s b{font-size:22px;color:#000!important}
+.sc-v{flex:1;min-width:240px;font-size:15px;color:#13202a!important}
+.proj{display:flex;gap:14px;align-items:center;flex-wrap:wrap;background:#fff!important;border:1px dashed #1d5f99;border-radius:11px;padding:16px 20px;margin-bottom:12px}
+.proj .arrow{font-size:28px;color:#1d5f99!important}
+.q{background:#fff;border:1px solid var(--line);border-radius:11px;padding:14px 18px;margin-bottom:9px}.q b{display:block}
+.src{font-size:12.5px;color:#56636d}
+.num{display:inline-flex;width:28px;height:28px;border-radius:50%;background:#1d5f99;color:#fff!important;font-weight:900;align-items:center;justify-content:center;margin-right:8px}
+.shot{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:8px}.shot img{width:100%;height:120px;object-fit:cover;border-radius:8px}
+@media(max-width:700px){.shot{grid-template-columns:1fr 1fr}}
+footer{border-top:1px solid var(--line);margin-top:24px;padding:18px 0 34px}
+footer,footer b{color:#66727b;font-size:11.5px;line-height:1.62}footer b{display:block;margin-top:7px}
+@media(max-width:620px){h1{font-size:24px}.sc-g{font-size:48px}th{white-space:normal}table{font-size:13px}td,th{padding:7px 8px}.card{padding:16px 15px}}
+.sc-hero{flex-wrap:wrap}.proj{flex-wrap:wrap}@media(max-width:700px){.tw{overflow-x:auto}}</style></head>
+<body>
+<header class="hh"><div class="wrap"><div class="eyebrow">Prepared 23 November 2026 &middot; after our call, for our next one, Tuesday 24 November, 12:00pm UK time</div><h1>What you said you need, and what fixes it.</h1>
+<div class="sub">Gasworks London &middot; gas engineering and air conditioning &middot; Acton, West London &middot; AG1 Consulting</div></div></header>
+<nav class="hb"><div class="wrap"><a href="assets.html">Start here</a><a href="index.html">The audit</a><a href="index.html#scorecard">Scorecard</a><a href="competitors.html">Competitors and hiring</a><a href="recap.html">Call recap</a><a href="audit-pt2.html" class="on">Audit Pt.2</a><a href="plan.html">The engineer plan</a><a href="agenda.html">The call</a><a href="https://andrei170.github.io/gasworks-london-demo/">Demo careers site</a></div></nav>
+<section><div class="wrap"><div class="h">How to read this</div>
+<div class="card note"><p>Each section starts with something you told us on 23 November, then what we found, then what would fix it. Your figures are as you gave them. Nothing here is set up or priced; on Tuesday we will walk through how each piece would work.</p></div></div></section>
+
+<section><div class="wrap"><div class="h">1. &quot;We need an experienced engineer straight away, air conditioning first&quot;</div>
+<div class="card warn"><span class="lab">What we found</span><ul>
+<li>Nothing on your site tells an engineer you are hiring: no careers page and nowhere to apply.</li>
+<li>Air conditioning is invisible to an F-Gas engineer: it is not on the archived pages we read and not a category on your Google listing.</li>
+</ul></div>
+<div class="card good"><span class="lab">What fixes it</span><ul>
+<li>A careers page with the <b>air conditioning engineer role first</b>, and the <b>two or three days a week</b> option stated up front, so the right person knows it fits around what they already do.</li>
+<li>Small, targeted adverts aimed at West London, on Facebook and Google, sending people to that page, with tracking so you can see which advert brought which applicant.</li>
+<li>Air conditioning added as a category on your Google listing, so the trade can see you do it.</li>
+</ul></div></div></section>
+
+<section><div class="wrap"><div class="h">2. &quot;Indeed and the groups send mostly poor people&quot;</div>
+<div class="card good"><span class="lab">What fixes it</span><ul>
+<li><b>References required to apply</b>: name and contact for at least one previous employer, before the form can be sent. As we said, fewer applications, but more of the right ones.</li>
+<li>Knock-out questions up front: at least five years&rsquo; experience, Gas Safe and F-Gas numbers, a full UK driving licence and the right to work. Anyone who does not meet them gets a polite no straight away.</li>
+<li>You only spend time on people who have already passed.</li>
+</ul></div></div></section>
+
+<section><div class="wrap"><div class="h">3. &quot;You only find out what someone is like after three or four weeks&quot;</div>
+<div class="card good"><span class="lab">What would help</span><ul>
+<li>Your questionnaire as the second step, before the trial day, so the first day with you is spent on people who have already shown what they know.</li>
+<li>The trial terms written on the careers page (trial day, then a few weeks where either side can walk away), so good people know exactly what they are signing up to.</li>
+<li>Simple check-in points at week one, two and four, so problems show up before they become habits.</li>
+</ul></div></div></section>
+
+<section><div class="wrap"><div class="h">4. &quot;Apprentices stay&quot;</div>
+<div class="card good"><ul>
+<li>Your apprenticeship route works, so keep it full: an apprenticeship page on the careers site built around your own story, and the colleges you already use linked to it.</li>
+<li>When we checked the government apprenticeship service, no gas apprenticeship was advertised within 15 miles of Acton. Being the visible option nearby is an opening.</li>
+</ul></div></div></section>
+
+<section><div class="wrap"><div class="h">5. The office and AI: &quot;We want to streamline the office and use AI a bit more&quot;</div>
+<div class="card note"><span class="lab">What you told us</span><ul>
+<li>Every phone call goes to your two office staff.</li>
+<li>You spend your own time quoting, handling complaints and helping with scheduling, across about 10,000 customers.</li>
+<li>You asked about AI answering phone calls, and about automating WhatsApp.</li>
+</ul></div>
+<div class="card good"><span class="lab">What we would look at</span><ul>
+<li><b>AI call answering for overflow and out of hours</b>: picks up when the office is busy or closed, takes the customer&rsquo;s details and the job, and passes it to the office or books it. It supports your office team; it does not replace them.</li>
+<li><b>Missed-call text back</b>: anyone who rings and is not answered gets a text within a minute, so they do not ring the next firm.</li>
+<li><b>WhatsApp</b>: automatic replies, booking confirmations, &quot;your engineer is on the way&quot;, and a job-done message with a review link.</li>
+<li><b>Quote follow-ups</b>: a short automatic follow-up after every quote you send, so you are not chasing them yourself.</li>
+<li><b>Complaints</b>: one simple place they are logged and answered, so none slip through.</li>
+<li><b>Service reminders timed for summer</b>: annual boiler and air conditioning service reminders to past customers in the quieter months, when you have the capacity, rather than in winter when you are turning work away.</li>
+</ul></div></div></section>
+
+<section><div class="wrap"><div class="h">Questions that change what we would build</div>
+<div class="card note"><ol>
+<li>For a two or three day engineer: employed or self-employed, a day rate or a salary, and would they need one of your vans?</li>
+<li>What do the office team use to book jobs and send quotes now, and do you use WhatsApp Business?</li>
+<li>Roughly how many calls come in a day, and how many get missed at busy times?</li>
+<li>Which colleges do your apprentices come from?</li>
+</ol></div></div></section>
+<footer><div class="wrap">Prepared by Andrei Givero &middot; AG1 Consulting &middot; for Dave Halpin at Gasworks London, 23 November 2026.<b>&#9888; Everything attributed to you is as you told us on our call of 23 November 2026 and has not been independently checked by us.</b><b>&#9888; Your website and listings were read from public and archived sources before our call. We contacted nobody and submitted no forms.</b><b>&#9888; Nothing here is priced, and nothing promises a hire, a number of applicants, a date or revenue.</b></div></footer></body></html>
