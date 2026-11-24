@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en-GB"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
+<title>The campaigns, one by one, and what an enquiry costs</title>
+<style>
+:root{--bg:#f3f6f8;--line:#dbe3e9;--ink:#13202a;--acc:#16a34a;--accd:#15803d;--red:#c62d2d}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink);overflow-x:hidden;font:16px/1.62 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+.wrap{max-width:1080px;margin:0 auto;padding:0 16px}
+header.hh{background:linear-gradient(140deg,#0b1a12,#14532d 55%,#16a34a);padding:30px 0 26px}
+header.hh *{color:#fff}
+.eyebrow{font-size:12px;letter-spacing:1.4px;text-transform:uppercase;color:#bbf7d0!important;font-weight:700}
+h1{font-size:30px;line-height:1.22;margin:8px 0 10px;letter-spacing:-.4px}
+.sub{color:#d9eedf!important;font-size:14.5px}
+nav.hb{background:#08130c;position:sticky;top:0;z-index:9;overflow-x:auto}
+nav.hb .wrap{display:flex;gap:2px;padding:0 16px}
+nav.hb a{color:#b9c7d0;text-decoration:none;font-size:13.5px;font-weight:600;padding:12px 11px;white-space:nowrap;border-bottom:3px solid transparent}
+nav.hb a:hover{color:#fff}nav.hb a.on{color:#fff;border-bottom-color:#86efac}
+section{padding:24px 0}
+.h{font-size:12px;letter-spacing:1.3px;text-transform:uppercase;color:#56636d;font-weight:800;margin-bottom:12px}
+.card{background:#fff;border:1px solid var(--line);border-radius:11px;padding:19px 21px;margin-bottom:11px}
+.card.bad{border-left:5px solid #b02a20}.card.warn{border-left:5px solid #c7971a}.card.good{border-left:5px solid #157a52}
+.card.note{background:#effaf2;border-left:5px solid var(--acc)}.card.priv{background:#fff7e6;border-left:5px solid #b45309}
+.lab{font-weight:800;font-size:16px;display:block;margin-bottom:7px}
+p{margin:0 0 9px}p:last-child{margin-bottom:0}b{color:#000}a{color:var(--accd)}
+ul,ol{margin:0 0 4px;padding-left:20px}li{margin-bottom:6px}
+.tiles{display:grid;grid-template-columns:1fr 1fr;gap:0 12px}.tiles>*{min-width:0}
+.tile{display:block;background:#fff;border:1px solid var(--line);border-radius:11px;padding:18px 20px;margin-bottom:11px;text-decoration:none;color:inherit}
+.tile:hover{border-color:var(--acc);box-shadow:0 2px 14px rgba(22,163,74,.18)}
+.tile .t{font-weight:800;font-size:17px;color:#0b1a12;margin-bottom:5px}.tile .d{color:#3b4852;font-size:14.5px}
+.tile .m{color:var(--accd);font-size:13px;font-weight:700;margin-top:8px}
+.tile.big{background:linear-gradient(140deg,#0b1a12,#14532d);border:0}.tile.big .t{color:#fff}.tile.big .d{color:#cfe8d6}.tile.big .m{color:#bbf7d0}
+@media(max-width:700px){.tiles{grid-template-columns:1fr}}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:11px}
+.kpi{background:#fff;border:1px solid var(--line);border-radius:11px;padding:14px 16px}
+.kpi b{display:block;font-size:26px;line-height:1.1;color:#0b1a12}.kpi span{font-size:13px;color:#56636d}
+@media(max-width:700px){.kpis{grid-template-columns:1fr 1fr}}
+.tw{overflow-x:auto;background:#fff;border:1px solid var(--line);border-radius:11px;margin-bottom:11px}
+table{border-collapse:collapse;width:100%;font-size:14px}
+th{background:#0b1a12;color:#fff;text-align:left;padding:9px 10px;font-size:12.5px;white-space:nowrap}
+td{border-top:1px solid var(--line);padding:9px 10px;vertical-align:top}
+tr.me td{background:#e8f7ec!important;font-weight:600}
+.gb{display:inline-block;min-width:38px;text-align:center;color:#fff!important;font-weight:800;border-radius:6px;padding:3px 6px}
+.bar{height:7px;background:#e6ebef!important;border-radius:4px;margin-top:6px}.bar i{display:block;height:7px;border-radius:4px}
+.sc-hero{display:flex;gap:22px;align-items:center;background:#fff!important;border:1px solid var(--line);border-radius:11px;padding:20px 22px;margin-bottom:12px;flex-wrap:wrap}
+.sc-g{font-size:64px;font-weight:900;line-height:1}
+.sc-s{font-size:15px;color:#56636d!important}.sc-s b{font-size:22px;color:#000!important}
+.sc-v{flex:1;min-width:240px;font-size:15px;color:#13202a!important}
+.proj{display:flex;gap:14px;align-items:center;flex-wrap:wrap;background:#fff!important;border:1px dashed #16a34a;border-radius:11px;padding:16px 20px;margin-bottom:12px}
+.proj .arrow{font-size:28px;color:#16a34a!important}
+.q{background:#fff;border:1px solid var(--line);border-radius:11px;padding:14px 18px;margin-bottom:9px}.q b{display:block}
+.src{font-size:12.5px;color:#56636d}
+.num{display:inline-flex;width:28px;height:28px;border-radius:50%;background:#16a34a;color:#fff!important;font-weight:900;align-items:center;justify-content:center;margin-right:8px}
+.shot{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:8px}.shot img{width:100%;height:120px;object-fit:cover;border-radius:8px}
+@media(max-width:700px){.shot{grid-template-columns:1fr 1fr}}
+footer{border-top:1px solid var(--line);margin-top:24px;padding:18px 0 34px}
+footer,footer b{color:#66727b;font-size:11.5px;line-height:1.62}footer b{display:block;margin-top:7px}
+@media(max-width:620px){h1{font-size:24px}.sc-g{font-size:48px}th{white-space:normal}table{font-size:13px}td,th{padding:7px 8px}.card{padding:16px 15px}}
+.sc-hero{flex-wrap:wrap}.proj{flex-wrap:wrap}@media(max-width:700px){.tw{overflow-x:auto}}.calc{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:10px}.calc label{font-weight:700;font-size:14px;display:block}.calc input{width:100%;font:inherit;font-size:18px;padding:9px;border:1px solid #c9d9cf;border-radius:8px}.calc .out{font-size:28px;font-weight:800;color:#15803d}@media(max-width:700px){.calc{grid-template-columns:1fr}}</style></head>
+<body>
+<header class="hh"><div class="wrap"><div class="eyebrow">Prepared 23 November 2026 &middot; for our call on Tuesday 24 November, 5:00pm UK time</div><h1>The campaigns, one by one, and what an enquiry costs.</h1>
+<div class="sub">Green Solar Solutions LTD &middot; solar panels and battery storage &middot; Stockport &middot; AG1 Consulting</div></div></header>
+<nav class="hb"><div class="wrap"><a href="assets.html">Start here</a><a href="index.html">The audit</a><a href="index.html#scorecard">Scorecard</a><a href="competitors.html">Competitors</a><a href="recap.html">Call recap</a><a href="audit-pt2.html">Audit Pt.2</a><a href="competitors-pt2.html">Competitors Pt.2</a><a href="recap2.html">Call 2 recap</a><a href="ads-plan.html">The ads plan</a><a href="campaigns.html" class="on">The campaigns</a><a href="pricing.html">Pricing</a><a href="plan.html">What we would do</a><a href="https://andrei170.github.io/green-solar-solutions-demo/">Demo site</a></div></nav>
+<section><div class="wrap"><div class="h">The three campaigns in one line</div><div class="card good"><span class="lab">Panels and batteries for existing homes, batteries for homes that already have solar, and a reminder for anyone who looked.</span><p>These are the campaigns behind the ads plan. Each has its own adverts so you can see which one brings surveys, all built from your own photos and drone footage, all sending people to one survey page.</p></div></div></section><section><div class="wrap"><div class="h">Campaign by campaign</div><div class="card note"><span class="lab"><span class="num">1</span>Panels and a battery, for homes around Stockport</span><p><b>The goal:</b> survey bookings for the jobs you said you want more of: turn up, install, go.</p><ul><li><b>Who sees it:</b> homeowners in the areas you pick around Stockport and North Cheshire. Aimed by area, never by age or gender.</li><li><b>What it shows:</b> a drone video of a finished roof, a set of real install photos, and one of you saying who Green Solar is and that every system is quoted to the house.</li><li><b>Where it sends them:</b> the survey page: postcode, type of home, what they want and roughly when.</li></ul><p><b>Why this one:</b> this is the main job, and the one that is best for your cash flow, rather than extensions where the profit waits for the builders.</p></div><div class="card note"><span class="lab"><span class="num">2</span>A battery for homes that already have panels</span><p><b>The goal:</b> quicker, smaller jobs from people who already understand solar.</p><ul><li><b>Who sees it:</b> homeowners in the same areas. Over time, the people who respond to it teach the adverts who else to show it to.</li><li><b>What it shows:</b> a battery install from one of your jobs, and the plain point: store what your panels make in the day, use it in the evening.</li><li><b>Where it sends them:</b> the survey page: postcode, type of home, what they want and roughly when.</li></ul><p><b>Why this one:</b> a battery on an existing system is a shorter decision and a shorter install. It keeps the van busy between bigger jobs.</p></div><div class="card note"><span class="lab"><span class="num">3</span>A reminder for anyone who looked</span><p><b>The goal:</b> bring back people who watched the video or opened the survey page but did not book.</p><ul><li><b>Who sees it:</b> only people who have already watched or visited.</li><li><b>What it shows:</b> your Google reviews, a finished job, and &ldquo;book your free survey&rdquo;.</li><li><b>Where it sends them:</b> the survey page: postcode, type of home, what they want and roughly when.</li></ul><p><b>Why this one:</b> solar is a considered buy. People compare, as you saw when one install went to Solarus. A reminder keeps Green Solar in the comparison.</p></div></div></section><section><div class="wrap"><div class="h">How the budget is split, to start</div><div class="tw"><table><tr><th>Campaign</th><th>Share of your budget</th><th>Why</th></tr><tr><td>Panels and a battery</td><td>about 60%</td><td>The main job</td></tr><tr><td>Battery for existing solar</td><td>about 25%</td><td>Shorter decision, keeps the van busy</td></tr><tr><td>Reminder</td><td>about 15%</td><td>Small audience, already interested</td></tr></table></div><div class="card note"><span class="lab">Your budget, your card.</span><p>You mentioned about &pound;200 to &pound;300 a month, about &pound;7 to &pound;10 a day. After the first fortnight we move it towards whichever campaign is booking surveys, not whichever gets the most clicks.</p></div></div></section><section><div class="wrap"><div class="h">What one enquiry is likely to cost, around Stockport</div><div class="card warn"><span class="lab">A rough guide, not a promise. Your real figure shows within the first few weeks.</span><p>These are published UK figures for solar adverts on Facebook and Instagram. Stockport is not London, so there is no reason to expect the top of the range, but a small budget learns more slowly.</p></div><div class="tw"><table><tr><th>What</th><th>Rough cost per enquiry</th><th>Source</th></tr><tr><td>Panels, to a survey page like yours</td><td>about &pound;20 to &pound;45</td><td>UK installer lead guides, 2026, for adverts sending people to a landing page.</td></tr><tr><td>A battery on its own</td><td>about &pound;25 to &pound;50</td><td>UK solar lead guide, 2026.</td></tr><tr><td>The middle of most UK estimates</td><td>about &pound;15 to &pound;40</td><td>Agency and lead firm figures for residential solar, 2026.</td></tr></table></div><div class="card note"><span class="lab">What that means against one job</span><p>You told us a typical job keeps you about &pound;3,000. If an enquiry cost &pound;40 and only one in ten became a job, that job would have cost about &pound;400 in adverts. Your own close rate is the number that turns this into something real, and the weekly check shows it.</p></div></div></section><section><div class="wrap"><div class="h">What we are not saying</div><div class="card warn"><span class="lab">No number of enquiries, jobs or revenue is promised.</span><p>The figures above are published UK benchmarks, not a forecast for your account. What the campaigns do is put your real installs in front of homeowners near you, screen out far-away and unsuitable enquiries before you drive anywhere, and count every one so you can see what each pound did.</p></div></div></section>
+<footer><div class="wrap">Prepared by Andrei Givero &middot; AG1 Consulting &middot; for Jonathan Marsh at Green Solar Solutions, 23 November 2026. Next call: Tuesday 24 November, 5:00pm UK time.<b>&#9888; Cost figures are published UK benchmarks from solar marketing and lead firms (2026). They are not a quote and not a forecast for your account.</b><b>&#9888; Nothing here promises a number of enquiries, jobs, a ranking or revenue.</b></div></footer></body></html>
